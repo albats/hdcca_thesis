@@ -1,0 +1,38 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{12}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Literature Review}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Classical Canonical Correlation Analysis}{15}{section.2.1}%
+\contentsline {paragraph}{Conceptual Overview.}{15}{section.2.1}%
+\contentsline {paragraph}{Eigenvalue Representation.}{16}{equation.2.2}%
+\contentsline {paragraph}{Statistical Properties Under Classical Asymptotics.}{17}{equation.2.7}%
+\contentsline {paragraph}{Practical Implications and Limitations.}{17}{equation.2.7}%
+\contentsline {section}{\numberline {2.2}Breakdown in High Dimensions}{18}{section.2.2}%
+\contentsline {paragraph}{Dimensionality and Covariance Instability.}{18}{section.2.2}%
+\contentsline {paragraph}{Eigenvalue Distortion and Spurious Correlations.}{19}{section.2.2}%
+\contentsline {paragraph}{The High-Dimensional CCA Framework.}{19}{section.2.2}%
+\contentsline {paragraph}{Inconsistency of Canonical Directions.}{20}{section.2.2}%
+\contentsline {paragraph}{Correction and Benchmark Implications.}{20}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Variants of Canonical Correlation Analysis}{21}{section.2.3}%
+\contentsline {paragraph}{Ridge-Type Regularization.}{22}{section.2.3}%
+\contentsline {paragraph}{Sparse CCA.}{22}{section.2.3}%
+\contentsline {paragraph}{Conceptual Difference from High-Dimensional CCA Theory.}{23}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Monte Carlo Simulations}{24}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Methodology}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Objective and empirical strategy}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Empirical setting}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Empirical diagnostics}{27}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Rolling-window design}{28}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Robustness}{28}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Empirical Application to Stock Return Panels}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Data description}{29}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Main result}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Top-k subspace stability and the rotation problem}{30}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Eigengaps and the failure of credible inversion}{31}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Interpreting the spectrum}{31}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Robustness}{32}{section.5.6}%
+\contentsline {chapter}{Bibliography}{38}{figure.caption.14}%
+\contentsline {chapter}{Appendix}{39}{chapter*.15}%
+\contentsline {chapter}{\numberline {6}Appendix}{40}{chapter.6}%
+\contentsline {section}{\numberline {6.1}APPENDIX 1:Monte Carlo Full Results}{40}{section.6.1}%
+\contentsline {section}{\numberline {6.2}APPENDIX 2: Empirical Application Supplementary Results}{52}{section.6.2}%
+\contentsfinish 

@@ -1,0 +1,32 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{8}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Literature Review}{12}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Classical Canonical Correlation Analysis}{12}{section.2.1}%
+\contentsline {paragraph}{Conceptual Overview.}{12}{section.2.1}%
+\contentsline {paragraph}{Eigenvalue Representation.}{13}{equation.2.2}%
+\contentsline {paragraph}{Statistical Properties.}{14}{equation.2.6}%
+\contentsline {paragraph}{Practical Implications and Limitations.}{14}{equation.2.6}%
+\contentsline {section}{\numberline {2.2}Breakdown in High Dimensions}{15}{section.2.2}%
+\contentsline {paragraph}{Eigenvalue Distortion and Spurious Correlations.}{15}{section.2.2}%
+\contentsline {paragraph}{The High-Dimensional CCA Framework.}{16}{section.2.2}%
+\contentsline {paragraph}{Correction and Benchmark Implications.}{17}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Monte Carlo Simulations}{18}{chapter.3}%
+\contentsline {paragraph}{Diagnostic Measures.}{18}{chapter.3}%
+\contentsline {paragraph}{Central Findings.}{19}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Methodology}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Objective and empirical strategy}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Empirical setting}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Empirical diagnostics}{21}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Rolling-window design}{22}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Robustness}{22}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Empirical Application to Stock Return Panels}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Data description}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Main result}{24}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Top-k subspace stability and the rotation problem}{25}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Eigengaps and the failure of credible inversion}{26}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Interpreting the spectrum}{26}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Robustness}{27}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Discussion and Conclusion}{27}{chapter.6}%
+\contentsline {chapter}{Bibliography}{28}{chapter.6}%
+\contentsline {chapter}{Appendix}{44}{section*.35}%
+\contentsfinish 

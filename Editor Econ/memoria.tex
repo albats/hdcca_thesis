@@ -1,0 +1,1708 @@
+%----------
+%   WARNING
+%----------
+% THIS TEMPLATE IS BASED ON THE APA STYLE 
+
+%----------
+% DOCUMENT SETTINGS
+%----------
+
+\documentclass[12pt]{report} % font: 12pt
+
+% margins: 2.5 cm top and bottom; 3 cm left and right
+\usepackage[
+a4paper,
+top=2.25cm,
+bottom=2.25cm,
+left=2.25cm,
+right=2.25cm
+]{geometry}
+
+% Paragraph Spacing and Line Spacing: Narrow (6 pt / 1.15 spacing) or Moderate (6 pt / 1.5 spacing)
+\usepackage{setspace}
+\doublespacing
+\parskip=6pt
+
+% Color settings for cover and code listings 
+\usepackage[table]{xcolor}
+\definecolor{azulUC3M}{RGB}{0,0,102}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+% PDF/A -- Important for its inclusion in e-Archive. 
+
+% In the template we include the file OUTPUT.XMPDATA. 
+% You can download that file and include the metadata that will be incorporated into the PDF file when you compile the memoria.tex file. 
+% Then upload it back to your project. 
+\usepackage[a-1b]{pdfx}
+
+% LINKS
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+	linkcolor=black, % links to parts of the document (e.g. index) in black
+	urlcolor=blue} % links to resources outside the document in blue
+
+% MATH EXPRESSIONS
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+% Character encoding
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% English settings
+\usepackage[english]{babel} 
+\usepackage[babel, english=american]{csquotes}
+\AtBeginEnvironment{quote}{\small}
+
+% Footer settings
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\thepage}
+\fancypagestyle{plain}{\pagestyle{fancy}}
+
+% DESIGN OF THE TITLES of the parts of the work (chapters and epigraphs or sub-chapters)
+\usepackage{titlesec}
+\usepackage{titletoc}
+\titleformat{\chapter}[block]
+{\large\bfseries\filcenter}
+{\thechapter.}
+{5pt}
+{\MakeUppercase}
+{}
+\titlespacing{\chapter}{0pt}{0pt}{*3}
+\titlecontents{chapter}
+[0pt]                                               
+{}
+{\contentsmargin{0pt}\thecontentslabel.\enspace\uppercase}
+{\contentsmargin{0pt}\uppercase}                        
+{\titlerule*[.7pc]{.}\contentspage}                 
+
+\titleformat{\section}
+{\bfseries}
+{\thesection.}
+{5pt}
+{}
+\titlecontents{section}
+[5pt]                                               
+{}
+{\contentsmargin{0pt}\thecontentslabel.\enspace}
+{\contentsmargin{0pt}}
+{\titlerule*[.7pc]{.}\contentspage}
+
+\titleformat{\subsection}
+{\normalsize\bfseries}
+{\thesubsection.}
+{5pt}
+{}
+\titlecontents{subsection}
+[10pt]                                               
+{}
+{\contentsmargin{0pt}                          
+	\thecontentslabel.\enspace}
+{\contentsmargin{0pt}}                        
+{\titlerule*[.7pc]{.}\contentspage}  
+
+% Chapter page-break controls. Activate the no-break behavior only for the main text.
+\makeatletter
+\let\chapterwithpagebreak\chapter
+\newcommand{\chapterscontinue}{%
+  \renewcommand{\chapter}{%
+    \par
+    \thispagestyle{plain}%
+    \global\@topnum\z@
+    \@afterindentfalse
+    \secdef\@chapter\@schapter}}
+\newcommand{\chaptersnewpage}{%
+  \let\chapter\chapterwithpagebreak}
+\makeatother
+
+% Tables and figures settings
+\usepackage{multirow} % combine cells 
+\usepackage{caption} % customize the title of tables and figures
+\usepackage{floatrow} % we use this package and its \ ttabbox and \ ffigbox macros to align the table and figure names according to the defined style.
+\usepackage{array} % with this package we can define in the following line a new type of column for tables: custom width and centered content
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\DeclareCaptionFormat{upper}{#1#2\uppercase{#3}\par}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{xparse}
+\graphicspath{{imagenes/}} % images fodler
+
+\newcounter{savedempfigure}
+\newcounter{savedemptable}
+\newcommand{\setresultnumbering}[1]{%
+    \renewcommand{\thefigure}{#1.\arabic{figure}}%
+    \renewcommand{\thetable}{#1.\arabic{table}}%
+}
+\newcommand{\resetresultnumbering}[1]{%
+    \setcounter{figure}{0}%
+    \setcounter{table}{0}%
+    \setresultnumbering{#1}%
+}
+
+%% i have added the following so that figures aren't floated to the end of the doc but appear wxactly where they are included
+\usepackage{float}
+\usepackage{placeins}
+
+% Table layout for social sciences and humanities
+\captionsetup*[table]{
+	justification=raggedright,
+	labelsep=newline,
+	labelfont=small,
+	singlelinecheck=false,
+	labelfont=bf,
+	font=small,
+	textfont=it
+}
+
+% Figure layout for social sciences and humanities
+\captionsetup[figure]{
+	%name=Figura,
+	singlelinecheck=off,
+	labelsep=newline,
+	font=small,
+	labelfont=bf,
+	textfont=it
+}
+\floatsetup[figure]{
+    style=plaintop,
+    heightadjust=caption,
+    footposition=bottom,
+    font=small
+}
+
+% Figures and tables footnote layout 
+\captionsetup*[floatfoot]{
+    footfont={small, up}
+}
+
+\NewDocumentCommand{\mcfigure}{m o m m}{
+\begin{figure}[!htbp]
+    \centering
+    \IfFileExists{imagenes/#1}{
+        \includegraphics[width=0.9\linewidth]{#1}
+    }{
+        \fbox{\parbox{0.85\linewidth}{Run the Monte Carlo export cell in \texttt{Empirical\_Analysis/simulations.ipynb} to generate \texttt{#1}.}}
+    }
+    \IfNoValueTF{#2}{\caption{#3}}{\caption[#2]{#2 #3}}
+    \label{#4}
+\end{figure}
+}
+
+\NewDocumentCommand{\mctable}{O{\linewidth} m o m m}{
+\begin{table}[!htbp]
+    \centering
+    \IfNoValueTF{#3}{\caption{#4}}{\caption[#3]{#3 #4}}
+    \label{#5}
+    \IfFileExists{#2}{
+        \begin{adjustbox}{max width=#1}
+            \input{#2}
+        \end{adjustbox}
+    }{
+        \fbox{\parbox{0.85\linewidth}{Run the Monte Carlo export cell in \texttt{Empirical\_Analysis/simulations.ipynb} to generate \texttt{#2}.}}
+    }
+\end{table}
+}
+
+\NewDocumentCommand{\empfigure}{m o m m}{
+\begin{figure}[p]
+    \centering
+    \IfFileExists{#1}{
+        \includegraphics[width=0.9\linewidth]{#1}
+    }{
+        \fbox{\parbox{0.85\linewidth}{Run the CRSP export cell in \texttt{CRSP\_Analysis/hdcca\_empirical\_analysis\_crsp.ipynb} to generate \texttt{#1}.}}
+    }
+    \IfNoValueTF{#2}{\caption{#3}}{\caption[#2]{#2 #3}}
+    \label{#4}
+\end{figure}
+}
+
+\NewDocumentCommand{\emptable}{O{\linewidth} m o m m}{
+\begin{table}[p]
+    \centering
+    \IfNoValueTF{#3}{\caption{#4}}{\caption[#3]{#3 #4}}
+    \label{#5}
+    \IfFileExists{#2}{
+        \begin{adjustbox}{max width=#1}
+            \input{#2}
+        \end{adjustbox}
+    }{
+        \fbox{\parbox{0.85\linewidth}{Generate \texttt{#2} from the CRSP empirical export workflow before compiling this table.}}
+    }
+\end{table}
+}
+
+% FOOTNOTES
+\usepackage{chngcntr} % continuous numbering of footnotes
+\counterwithout{footnote}{chapter}
+
+% CODE LISTINGS 
+% support and styling for listings. 
+\usepackage{listings}
+
+% Custom listing
+\lstdefinestyle{estilo}{ frame=Ltb,
+	framerule=0pt,
+	aboveskip=0.5cm,
+	framextopmargin=3pt,
+	framexbottommargin=3pt,
+	framexleftmargin=0.4cm,
+	framesep=0pt,
+	rulesep=.4pt,
+	backgroundcolor=\color{gray97},
+	rulesepcolor=\color{black},
+	%
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\bfseries,
+	stringstyle=\ttfamily,
+	showstringspaces = false,
+	commentstyle=\color{gray45},     
+	%
+	numbers=left,
+	numbersep=15pt,
+	numberstyle=\tiny,
+	numberfirstline = false,
+	breaklines=true,
+	xleftmargin=\parindent
+}
+
+\captionsetup*[lstlisting]{font=small, labelsep=period}
+ 
+\lstset{style=estilo}
+\renewcommand{\lstlistingname}{\uppercase{Código}}
+
+
+% REFERENCES 
+
+% APA bibliography setup
+\usepackage[style=apa, backend=biber, natbib=true, hyperref=true, uniquelist=false, sortcites]{biblatex}
+
+\addbibresource{referencias.bib} % The references.bib file in which the bibliography used should be
+
+%-------------
+%	DOCUMENT
+%-------------
+
+\begin{document}
+\pagenumbering{arabic}
+	
+%----------
+%	COVER
+%----------	
+\begin{titlepage}
+\thispagestyle{plain}
+	\color{azulUC3M}
+	\begin{center}
+		\begin{figure}[H] % UC3M Logo
+			\makebox[\textwidth][c]{\includegraphics[width=16cm]{logo_UC3M.png}}
+		\end{figure}
+		\vspace{2.5cm}
+		\begin{Large}
+			University Degree in Economics\\			
+			 2025-2026\\ % Academic year
+			\vspace{2cm}		
+			\textsl{Bachelor Thesis}
+			\bigskip
+			
+		\end{Large}
+		 	{\Huge ``High Dimensional Canonical Correlation Analysis: Applications to Financial Data''}\\
+		 	\vspace*{0.5cm}
+	 		\rule{10.5cm}{0.1mm}\\
+			\vspace*{0.9cm}
+			{\LARGE Alba Torres Sánchez}\\ 
+			\vspace*{1cm}
+		\begin{Large}
+			Tutor: Nazarii Salish\\
+			Madrid, June 2026\\
+		\end{Large}
+	\end{center}
+	\vfill
+	\color{black}
+	% IF OUR WORK IS TO BE PUBLISHED UNDER A CREATIVE COMMONS LICENSE, INCLUDE THESE LINES. IS THE RECOMMENDED OPTION.
+	\includegraphics[width=4.2cm]{creativecommons.png}\\ % Creative Commons Logo
+    This work is licensed under Creative Commons \textbf{Attribution – Non Commercial – Non Derivatives}
+\end{titlepage}
+\setcounter{page}{2}
+
+\newpage % blank page
+\thispagestyle{plain}
+\mbox{}
+
+%----------
+%	ABSTRACT AND KEYWORDS 
+%----------	
+\renewcommand\abstractname{\large\bfseries\filcenter\uppercase{Summary}}
+\begin{abstract}
+\thispagestyle{plain}
+	
+	Canonical correlation analysis (CCA) measures dependence between two panels by finding the linear combinations of each 
+	panel that are maximally correlated. This thesis studies whether high-dimensional CCA (HDCCA) provides a useful 
+	framework for detecting co-movement between cyclical and defensive stock-return panels. Building on the theoretical 
+	results of \citet{BykhovskayaGorin2023}, the analysis combines Monte Carlo simulations with an empirical application 
+	to stock panel data. The simulations show that large in-sample canonical roots can arise from high-dimensional noise and 
+	that reliable interpretation requires comparison with finite-sample benchmarks, directional stability, and out-of-sample 
+	performance. In the empirical application, the leading canonical roots are large relative to the HDCCA bulk benchmark and 
+	the permutation null, indicating strong spectral dependence between the two panels. However, the associated canonical 
+	directions are unstable, weakly separated from nearby roots, and perform poorly out of sample. Overall, the evidence 
+	suggests that HDCCA is useful as a diagnostic framework for detecting cross-sector dependence, but that in-sample 
+	spectral strength alone is not sufficient to establish a stable or economically meaningful low-rank structure.
+	
+	\textbf{Keywords:} High-dimensional CCA; canonical correlation analysis; random matrix theory; financial returns; Monte Carlo simulation; CRSP.
+
+	\vfill
+\end{abstract}
+
+\renewcommand\abstractname{\large\bfseries\filcenter\uppercase{Resumen}}
+\begin{abstract}
+\thispagestyle{plain}
+	El análisis de correlación canónica (CCA) mide la dependencia entre dos paneles mediante la identificación de las combinaciones lineales de cada panel que están máximamente correlacionadas. 
+	Esta tesis estudia si el CCA en alta dimensión (HDCCA) proporciona un marco útil para detectar co-movimientos entre paneles de acciones cíclicas y defensivas. 
+	A partir de los resultados teóricos de \citet{BykhovskayaGorin2023}, el análisis combina simulaciones de Monte Carlo con una aplicación empírica a datos de panel de rendimientos accionarios. 
+	Las simulaciones muestran que raíces canónicas muestrales elevadas pueden surgir por ruido de alta dimensión y que su interpretación requiere compararlas con referencias de muestra finita, estabilidad direccional y desempeño fuera de muestra. 
+	En la aplicación empírica, las raíces canónicas principales son elevadas respecto del borde del bulk de HDCCA y del nulo por permutación, lo que indica una fuerte dependencia espectral entre ambos paneles. 
+	Sin embargo, las direcciones canónicas asociadas son inestables, están débilmente separadas de raíces cercanas y muestran bajo desempeño fuera de muestra. 
+	En conjunto, la evidencia sugiere que HDCCA es útil como marco diagnóstico para detectar dependencia entre sectores, pero que la fuerza espectral dentro de muestra no basta para establecer una estructura de bajo rango estable o económicamente significativa.
+
+	\textbf{Palabras clave:} CCA de alta dimensión; análisis de correlación canónica; teoría de matrices aleatorias; rendimientos financieros; simulación de Monte Carlo; CRSP.
+	
+	\vfill
+\end{abstract}
+
+
+
+%----------
+%	Dedication
+%----------	
+\chapter*{Dedication}
+	
+	\emph{To my parents, for always encouraging me to aim higher.}
+
+	\emph{To my friends, for accompanying me throughout these years.}
+	
+	\emph{And to Carlos, for your unconditional support and trust in me.}
+		
+	\vfill
+	
+	\newpage % blank page
+	\thispagestyle{plain}
+	\mbox{}
+	
+
+%----------
+%	TOC
+%----------	
+
+\tableofcontents
+\thispagestyle{fancy}
+
+% \newpage % blank page
+% \thispagestyle{plain}
+% \mbox{}
+
+% List of figures. 
+\listoffigures
+\thispagestyle{fancy}
+
+% \newpage % blank page
+% \thispagestyle{plain}
+% \mbox{}
+
+% List of tables.
+\listoftables
+\thispagestyle{fancy}
+
+\newpage % blankpage
+\thispagestyle{plain}
+\mbox{}
+
+
+%----------
+%	THESIS
+%----------	
+\chapterscontinue
+\clearpage
+
+\chapter{Introduction}
+% IMPORTANT: Latex special characters are: # $ % & \ ^ _ { } ~. 
+% To avoid mistakes when compiling try writing \ before. For: \ use \textbackslash ; for ^ \textasciitilde and ~ \textasciicircum.
+
+
+%     Example of figure:
+%     \begin{figure}[H]
+%     	\ffigbox[\FBwidth] {
+%     	\caption[Name as seen in Index]{Figure name}
+%     	\floatfoot{Image source}% P.e.: \floatfoot{Image source: \textcite[p. 35]{id-referencia}}
+%         }
+%     	{\includegraphics[scale=0.6]{imagenes/creativecommons.png}}
+%     \end{figure}
+    
+%     Example of table:
+% \begin{table}[H]
+% 	\ttabbox[\FBwidth]
+% 	{\caption{Lorem ipsum}
+% 	\floatfoot{Source: BOE}}
+% 	{\begin{tabular}{|c|P{1.5cm}|c|P{1.5cm}|P{2cm}|c|P{1.5cm}|P{2cm}|}
+% 		\hline
+% 		\multicolumn{2}{|c|}{\textbf{I}} & \multicolumn{2}{c|}{\textbf{II}} & \multicolumn{3}{c|}{\textbf{III}} & \textbf{IV} \\
+% 		\hline
+% 		x & y & x & y & x & y & x & y \\
+% 		\hline
+% 		10.0 & 8.04 & 10.0 & 9.14 & 10.0 & 7.46 & 8.0 & 6.58 \\
+% 		\hline
+% 		8.0 & 6.95 & 8.0 & 8.14 & 8.0 & 6.77 & 8.0 & 5.76 \\
+% 		\hline
+% 		13.0 & 7.58 & 13.0 & 8.74 & 13.0 & 12.74 & 8.0 & 7.71 \\
+% 		\hline
+% 		9.0 & 8.81 & 9.0 & 8.77 & 9.0 & 7.11 & 8.0 & 8.84 \\
+% 		\hline
+% 		11.0 & 8.33 & 11.0 & 9.26 & 11.0 & 7.81 & 8.0 & 8.47 \\
+% 		\hline
+% 		14.0 & 9.96 & 14.0 & 8.10 & 14.0 & 8.84 & 8.0 & 7.04 \\
+% 		\hline
+% 		6.0 & 7.24 & 6.0 & 6.13 & 6.0 & 6.08 & 8.0 & 5.25 \\
+% 		\hline
+% 		4.0 & 4.26 & 4.0 & 3.10 & 4.0 & 5.39 & 19.0 & 12.50 \\
+% 		\hline
+% 		12.0 & 10.84 & 12.0 & 9.13 & 12.0 & 8.15 & 8.0 & 5.56 \\
+% 		\hline
+% 		7.0 & 4.82 & 7.0 & 7.26 & 7.0 & 6.42 & 8.0 & 7.91 \\
+% 		\hline
+% 		5.0 & 5.68 & 5.0 & 4.74 & 5.0 & 5.73 & 8.0 & 6.89 \\
+% 		\hline
+% 	\end{tabular}}
+% \end{table}
+
+% Start writing here ---------------------------------------------
+\textit{"Sir, I will not say but that it is the part of a wise man to keep himself to-day 
+for to-morrow, and not venture all his eggs in one basket."}
+
+What was true for farmers half a millennium ago continues to be true nowadays for 
+financial investors. They have changed eggs for investments and baskets for portfolios, 
+but the lesson endures: in the face of uncertainty, it is often safer not to rely on a 
+single plan. Like eggs in a basket, some assets tend to fall at the same time, so the true 
+choice lies in holding investments that do not all depend on the same sources of risk. This 
+is called \textit{diversification}, to spread investments across different opportunities, 
+reducing dependence on any one investment; and it is essentially the theoretical financial 
+equivalent to \textit{Don’t Put All Your Eggs in One Basket}. Effective diversification 
+therefore requires attention to the relationships between investments, whether they tend to 
+move together, move differently, and how they respond to changing conditions.
+For this reason, the statistical problem relies both on the number of assets held and on 
+the dependence structure among their returns.
+
+One important source of changing conditions is the business cycle, the pattern of expansion 
+and slowdown that economies experience over time. During periods of economic growth, some 
+companies may benefit from rising demand and increased spending. During downturns, others 
+may prove more resilient because they provide goods or services that people continue to 
+need.
+
+This distinction gives rise to the contrast between cyclical and defensive stocks. 
+\textit{Cyclical stocks} are shares in companies whose performance is closely linked to 
+the strength of the economy, such as firms in energy, industrials, or consumer 
+discretionary sectors. \textit{Defensive stocks}, by contrast, are shares in companies 
+that tend to be less sensitive to economic downturns, such as utilities or consumer staples. 
+This difference in sensitivity entails that defensive stocks are less risky; however, 
+they typically underperform during economic expansions when investors favor cyclical 
+sectors to capture rising market momentum (\cite{deLongisZaninEllis2022}).
+
+Investors often turn to defensive stocks for protection when an economic slump hits, then 
+rotate back toward cyclical stocks at the first signs of recovery 
+(\cite{StanglJacobsenVisaltanachoti2007}). This shifting balance is 
+central to the broader problem of managing portfolio risk across the business cycle. The 
+objective is not simply to choose the best-performing sectors at a single point in time, 
+but to build a portfolio that optimizes risk-adjusted returns across the business cycle. 
+The cyclical-defensive distinction is thus used as a financially relevant partition 
+through which cross-sector dependence can be studied.
+
+Nonetheless, the usefulness of this distinction 
+depends on how these groups behave in relation to one another. If they fall together 
+during periods of stress, then the protection offered by the defensive part of the 
+portfolio may be weaker than expected. For this reason, portfolio risk depends not only 
+on the individual investments selected, or on the amount of money assigned to each one, 
+but also on the relationships between them. These relationships can be understood as 
+patterns of co-movement\footnote{Note that in this thesis, co-movement refers to linear 
+dependence between return panels, measured through canonical correlations between linear 
+combinations of cyclical and defensive stock returns.}, the extent to which asset returns 
+tend to rise or fall together. 
+A portfolio may appear diversified because it contains many stocks or several sectors, 
+but if those investments are all influenced by the same economic forces, 
+then the portfolio may still be exposed to a common source of risk. 
+
+Consider, for example, two portfolios that both allocate 60\% of their value to cyclical 
+stocks and 40\% to defensive stocks. At first glance, they appear equally diversified 
+because their allocations are identical. Yet their risk may be very different. In one 
+portfolio, the cyclical and defensive stocks may move largely independently, so the 
+defensive portion can help offset losses during downturns. In the other, the two groups 
+may move closely together, meaning that losses in one part of the portfolio are likely to 
+be accompanied by losses in the other. The difference between these portfolios is therefore 
+not visible from the allocation alone; it lies in the pattern of relationships between the 
+assets.
+
+The economic forces that may drive this co-movement can arise due to changes in interest 
+rates, inflation, investor confidence, or market-wide uncertainty, which affect many 
+sectors at once. Therefore, the relationship between cyclical and defensive stocks is not 
+fixed but may change as market conditions evolve. For investors using sector rotation, 
+this makes the central question not only when to move between sectors, but which patterns 
+of \textit{joint movement} should guide that decision.
+
+This motivates the need for methods that can study relationships between groups of stocks 
+rather than individual stocks alone. Canonical Correlation Analysis (CCA) provides 
+a natural framework for this problem because it measures dependence between two multivariate 
+panels. In simple terms, CCA asks whether two groups of variables share 
+common patterns of movement by extracting linear combinations within each group that 
+maximize their cross-correlation. In this paper, the two groups may be understood as 
+different sets of stocks, such as cyclical and defensive stocks.
+
+However, applying this idea to financial data is not straightforward. Stock-market data 
+often contain many assets observed over a limited time span. For example, a 
+dataset based on the S\&P 500 includes hundreds of stocks, but only a finite number of 
+daily, weekly, or monthly observations. This creates a problem because, with many assets, 
+the number of possible relationships grows quickly, and the data may not contain enough 
+information to measure all of them reliably. The estimated relationships would partly 
+reflect estimation noise rather than genuine economic relationships. 
+
+Recent theoretical work has formalised this difficulty. \citet{BykhovskayaGorin2023} study 
+high-dimensional CCA, where the number of variables in the two datasets grows together 
+with the number of observations. They show that, in this setting, classical CCA results in 
+biased estimates. Additionally, they derive ways to assess the size of the estimation error, 
+suggesting that the behaviour of CCA in large datasets can still be informative if treated 
+carefully. Rather than using CCA as a perfect map of the market, the method can be used as a 
+diagnostic tool. It can help identify whether the relationship between groups of stocks 
+appears to be concentrated around a few common patterns (\textit{low-rank}), or whether it is 
+more dispersed across many different sources of movement (\textit{diffuse}). This can be 
+described in terms of the \textit{spectral structure}, meaning how strongly the relationship is 
+concentrated in a few dominant patterns, and the \textit{geometric structure}, meaning how 
+closely the directions of movement between the two groups are aligned.
+
+This distinction is directly related to diversification. If the relationship between cyclical 
+and defensive stocks is largely explained by a small number of common patterns, then the 
+portfolio may be more exposed to shared economic forces than its sector labels suggest. If 
+the relationship is more spread out, then the groups may provide more distinct sources of 
+return and risk. Understanding this structure therefore helps assess whether sector rotation 
+and diversification strategies are genuinely reducing risk, or whether they are simply 
+rearranging investments that remain driven by the same underlying forces.
+
+Despite these advances, it remains unknown whether these high-dimensional phenomena 
+meaningfully describe the structure of \textit{real} equity markets. This paper seeks to 
+address this gap in the literature by answering the following question: to what extent 
+does HDCCA theory accurately describe the spectral and geometric structure of 
+cross-sector return dependence in large equity panels? 
+
+This contribution is important for three reasons. First, it provides empirical evidence 
+of high-dimensional CCA theory in real financial markets. Second, it clarifies whether 
+canonical methods remain informative in large equity universes despite theoretical 
+inconsistency. Third, it offers a structural perspective on cross-sector dependence that 
+bridges random matrix theory and applied asset pricing, thereby informing both risk 
+management and factor modelling practice.
+
+To answer this question, we combine simulation evidence with an empirical application. The 
+theoretical framework is reviewed in \autoref{ch:LitRev}, covering classical CCA, its breakdown 
+in high-dimensional settings, and the Bykhovskaya-Gorin framework. Building on this, 
+\autoref{ch:MonteCarlo} presents the Monte Carlo simulations, where the relevance of the 
+HDCCA framework is assessed under controlled data-generating processes calibrated to realistic 
+financial dimensions.  These simulations act as a stepping stone to \autoref{ch:Methodology}, 
+as they provide the intuition behind the benchmarks and the diagnostic framework in the 
+empirical application. The results of the empirical application to large equity panels are 
+reported in \autoref{ch:EmpiricalApplication}. Finally, \autoref{ch:Conclusion} concludes 
+with a discussion of implications and final remarks.
+
+
+\clearpage
+\chapter{Literature Review}
+\label{ch:LitRev}
+
+\section{Classical Canonical Correlation Analysis}
+
+\paragraph{Conceptual Overview.}
+
+Canonical Correlation Analysis (CCA), first introduced by \citet{Hotelling1936}, 
+is a classical multivariate statistical method designed to measure the 
+strength of linear association between two random vectors. Let $X_t \in \mathbb{R}^p$ 
+and $Y_t \in \mathbb{R}^q$ denote two zero-mean random vectors observed over $t = 1, \dots, n$. 
+In the context of this paper, these vectors represent panels of cyclical and defensive 
+stock returns, respectively. 
+
+CCA seeks linear combinations of vectors $a \in \mathbb{R}^p$ and $b \in \mathbb{R}^q$ that 
+maximize the correlation between linear projections of the two variable sets: 
+\[
+\rho= \max_{a, b} corr(a^\top X,b^\top Y)
+\]
+Define $U = a^\top X, V = b^\top Y$, which are referred to as the \emph{canonical variables}. 
+The vectors $a$ and $b$ are known as \emph{canonical directions}, and the resulting 
+correlation ($\rho$) between $U$ and $V$ is the \emph{canonical correlation}. 
+
+Intuitively, CCA identifies the directions in the two variable spaces that exhibit the strongest 
+shared variation. Formally, this corresponds to the first pair of canonical directions
+$(a_1, b_1)$ which solves the optimization problem
+\begin{equation}
+(a_1, b_1) 
+= \arg\max_{a \in \mathbb{R}^p,\, b \in \mathbb{R}^q}
+\frac{a^\top \Sigma_{XY} b}
+{\sqrt{a^\top \Sigma_{XX} a} \sqrt{b^\top \Sigma_{YY} b}},
+\end{equation}
+where
+\[
+\Sigma_{XX} = \mathbb{E}[X_t X_t^\top], 
+\quad
+\Sigma_{YY} = \mathbb{E}[Y_t Y_t^\top], 
+\quad
+\Sigma_{XY} = \mathbb{E}[X_t Y_t^\top]
+\]
+denote the covariance matrices within and between the two variable sets. The maximum 
+value of this objective function is the first canonical correlation, denoted $\rho_1$. 
+The first pair of canonical variables represents the strongest possible linear 
+relationship between the two datasets. 
+
+After the first pair of canonical variables is obtained, subsequent pairs are obtained recursively 
+under orthogonality constraints, 
+
+\begin{equation}
+a_k^\top \Sigma_{XX} a_j = 0, 
+\quad 
+b_k^\top \Sigma_{YY} b_j = 0,
+\quad \text{for } j < k.
+\end{equation}
+
+ensuring that each successive pair captures a new orthogonal mode of cross-sectional 
+dependence between the two datasets. 
+
+\paragraph{Eigenvalue Representation.}
+
+For the optimization problem defined in Equation [2.1], as demonstrated by \cite[pp.~539--574]{johnson2007applied} 
+in Chapter 10, solving this constrained maximization through the method of Lagrange multipliers 
+is equivalent to solving a generalized eigenvalue problem. Specifically, the weights are 
+determined by the eigenvectors of the product of the inverse covariance matrices and 
+their cross-covariances (a process known as whitening).
+
+CCA can then be expressed as an ordinary symmetric eigenvalue problem for the matrix 
+\begin{equation}
+\mathcal{C} 
+= \Sigma_{XX}^{-1/2} \Sigma_{XY} 
+\Sigma_{YY}^{-1} 
+\Sigma_{YX} \Sigma_{XX}^{-1/2}.
+\end{equation}
+The eigenvalues of this matrix $\mathcal{C}$ correspond to the squared canonical correlations 
+$\rho_k^2$, and the canonical directions for $X_t$ correspond to its eigenvectors. 
+Let $u_k$ denote the eigenvector associated with the $k$-th largest eigenvalue $\rho_k^2$ 
+(such that $\mathcal{C} u_k = \rho_k^2 u_k$.) Then the canonical directions for $X_t$ are 
+obtained as $a_k = \Sigma_{XX}^{-1/2} u_k$. An analogous representation holds for $Y_t$. 
+
+The same result can also be expressed through the singular value decomposition of the 
+whitened cross-covariance matrix
+
+\[
+M =
+\Sigma_{XX}^{-1/2}
+\Sigma_{XY}
+\Sigma_{YY}^{-1/2}.
+\]
+Since
+\[
+\mathcal{C} = MM^\top,
+\]
+the eigenvalues of \(\mathcal{C}\) are the squared singular values of \(M\).
+Thus, the canonical correlations \(\rho_k\) are the singular values of \(M\),
+and the canonical directions are obtained by transforming the corresponding
+singular vectors back to the original coordinate systems.
+
+In empirical applications, population covariance matrices are unknown and replaced by their 
+sample counterparts:
+\begin{align}
+S_{XX} &= \frac{1}{n} \sum_{t=1}^n X_t X_t^\top, \\
+S_{YY} &= \frac{1}{n} \sum_{t=1}^n Y_t Y_t^\top, \\
+S_{XY} &= \frac{1}{n} \sum_{t=1}^n X_t Y_t^\top.
+\end{align}
+
+The squared sample canonical correlations are therefore the eigenvalues of 
+$\widehat{\mathcal{C}} 
+= S_{XX}^{-1/2} S_{XY} 
+S_{YY}^{-1} 
+S_{YX} S_{XX}^{-1/2}$.
+
+This matrix formulation provides the basis for the statistical analysis of CCA estimators. 
+Since the sample canonical correlations and directions are obtained from the eigenvalues and 
+eigenvectors of $\widehat{\mathcal{C}}$, 
+large-sample behavior can be studied through the convergence of the sample covariance matrices 
+and the corresponding changes in the eigensystem.
+
+\paragraph{Statistical Properties.}
+
+Under the classical asymptotic framework in which $p$ and $q$ are fixed while $n \to \infty$, CCA 
+enjoys the following well-established statistical guarantees:
+\begin{itemize}
+    \item Sample covariance matrices $(S_{XX}, S_{YY}, S_{XY})$ are consistent estimators 
+	of their population counterparts.
+    \item Sample canonical correlations $\hat{\rho}_k$ converge in probability to the population 
+	counterpart ($\rho_k$).
+    \item Sample canonical directions converge (up to sign) to their population directions.
+\end{itemize}
+Under multivariate normality, likelihood-based inference is possible, and asymptotic 
+distributions for canonical correlations can be derived. In this regime, CCA provides a 
+consistent and efficient method for detecting and estimating cross-dependence between 
+two multivariate systems.
+
+\paragraph{Practical Implications and Limitations.} Despite these theoretical guarantees, CCA 
+has historically received limited attention in empirical finance applications. One reason is 
+computational and statistical fragility as CCA requires inversion of covariance matrices, 
+which becomes unstable when the cross-sectional dimension is large relative to the sample size. 
+% In contrast, PCA remains well-defined even when covariance matrices are unstable, and regression 
+% frameworks impose a directional structure that simplifies estimation. 
+
+% La siguiente frase tmb la quitamos pq se repite debajo:
+% Additionally, classical asymptotic theory assumes fixed dimension and large sample size, conditions 
+% that are rarely satisfied in financial panels with many assets.
+
+In recent times, the increasing availability of large cross-sectional datasets has renewed 
+interest in multivariate techniques capable of capturing joint dependence structures. 
+% Unlike PCA, which focuses on variation within a single panel, CCA directly targets cross-panel relationships. 
+% In settings where understanding interactions between groups of assets is central, CCA offers 
+% a sound framework for capturing shared variation. 
+% Most literature has focused on domains such as neuroimaging, genomics, or ecology. 
+% More recently, due to the advances in data collection methods, it has been applied in 
+% natural language processing and computer vision to align textual and visual representations, 
+% enabling cross-modal retrieval and feature learning \citep{Andrew2013, Gatto2017, Sun2019, Yang2017, Yang2021}. 
+In finance, applications include studying relationships between asset returns and macroeconomic variables to 
+extract joint factor structures and analyze cross-market dependence \citep{FiroozyeTanZohren2023}. 
+CCA is useful in these contexts because it captures shared dependence between two systems without imposing a directional model.
+% does not impose a directional relationship between $X_t$ and $Y_t$, but instead 
+% identifies mutually maximizing linear combinations that capture shared variation. 
+
+Nonetheless, the classical consistency results rely critically on the assumption that 
+dimensionality remains fixed as the sample size grows. When $p$ and $q$ increase 
+proportionally with $n$, the spectral behavior of sample covariance matrices changes fundamentally, 
+and classical asymptotic theory no longer applies. Understanding CCA in such settings 
+requires a high-dimensional asymptotic framework.
+
+\section{Breakdown in High Dimensions}
+
+\paragraph{Eigenvalue Distortion and Spurious Correlations.}
+
+% \paragraph{Dimensionality and Covariance Instability.} 
+
+As noted above, the assumption that the dimensions $p$ and $q$ (e.g.: number of assets in an equity universe)
+remain fixed as the sample size $n$ increases is not usually satisfied in financial datasets. In such settings, the ratios
+\[
+\frac{p}{n} \to c_1 > 0, 
+\quad 
+\frac{q}{n} \to c_2 > 0
+\]
+are non-negligible.
+
+When $p$ or $q$ is comparable to $n$, sample covariance matrices become unstable.
+If $p \geq n$, the matrix $S_{XX}$ is singular and cannot be inverted, rendering classical CCA 
+undefined without regularization. Even when $p < n$ but $p/n$ is not small, eigenvalues 
+of sample covariance matrices exhibit systematic distortion relative to their population 
+counterparts. 
+
+% In particular, the largest sample eigenvalues tend to be too large, and the  smallest sample eigenvalues tend to be too small, relative to the true population eigenvalues.
+
+% Because CCA is fundamentally a spectral method, relying on inverses and eigenvalues of  covariance-based matrices, these distortions directly affect canonical correlations and canonical directions.
+
+% \paragraph{Eigenvalue Distortion and Spurious Correlations.}
+
+Random matrix theory provides precise predictions for these distortions. Theory thus suggests that 
+in high-dimensional settings, even when the true cross-covariance $\Sigma_{XY}$ is zero, 
+sample canonical correlations will converge to a non-degenerate limiting law, implying that 
+apparent cross-panel dependence may arise purely from dimensionality-induced noise.
+
+Addtionally, when a finite number of population canonical correlations are present, 
+the empirical canonical correlations follow a structured bulk–outlier pattern instead of 
+converging to their population values. A large fraction of empirical 
+canonical correlations accumulate within a deterministic interval (the ``bulk''), while 
+only sufficiently strong population correlations generate isolated eigenvalues outside this 
+region.
+
+\paragraph{The High-Dimensional CCA Framework.}
+\label{Sec:HDCCA}
+
+These phenomena are formalized in \emph{High-Dimensional Canonical Correlation Analysis} 
+by \citet{BykhovskayaGorin2023}. They consider a regime in which
+\[
+p, q, n \to \infty
+\quad \text{with} \quad
+\frac{p}{n} \to c_1 \in (0,1), 
+\quad
+\frac{q}{n} \to c_2 \in (0,1).
+\]
+
+Under suitable regularity conditions, they show that:
+
+\begin{itemize}
+    \item The empirical distribution of squared canonical correlations converges to a 
+	deterministic limit characterized by a Wachter-type distribution.
+    \item Population canonical correlations below a critical threshold are not individually 
+	identifiable: their sample counterparts are absorbed into the bulk.
+    \item Only population correlations exceeding a phase transition threshold generate 
+	isolated empirical eigenvalues.
+\end{itemize}
+
+The existence of this critical threshold separating two regimes (the bulk, where weak 
+signals are absorbed into the noise, and the outliers) is called a \emph{phase transition} 
+phenomenon. It is analogous to the Baik–Ben Arous–Péché (BBP) phenomenon 
+in random matrix theory as it implies that detectability of cross-panel dependence 
+depends not only on signal strength but also on dimensional ratios $c_1$ and $c_2$.
+
+As estimators of canonical directions are inconsistent in high dimensions, even when a 
+population canonical correlation is strong enough to exceed the phase transition threshold 
+and produce an isolated empirical eigenvalue, the associated sample canonical vector 
+does not converge to its population counterpart.
+
+Instead, the sample direction remains only partially aligned with the true direction. 
+The limiting absolute cosine of the angle between these vectors is strictly 
+less than one and depends explicitly on signal strength and dimensional ratios. Thus, 
+estimation error does not vanish asymptotically; the sample direction remains separated 
+from the population direction by a non-zero limiting angle.
+
+\paragraph{Correction and Benchmark Implications.}
+
+Importantly, the theory not only diagnoses high-dimensional inconsistencies but also quantifies it. 
+Given observed empirical canonical correlations and known dimensional ratios $(p/n, q/n)$, 
+the framework provides formulas that map sample quantities back to the corresponding 
+population canonical correlations. First, an isolated sample canonical correlation can be mapped back to its 
+population canonical correlation. Second, the alignment between the sample and population 
+canonical directions can be measured through the limiting cosine of the angle between them.
+
+These correction formulas provide a way to interpret canonical components despite their 
+formal inconsistency. In light of this, the Bykhovskaya-Gorin theory serves as the 
+benchmark for the  empirical analysis. 
+% Instead of replacing classical CCA with alternative regularization schemes, which present a number of limitations, 
+This paper evaluates whether the structural patterns they show for high-dimensional 
+asymptotics are visible in real equity panels. 
+
+In this financial application, the canonical directions define \emph{canonical variates}, 
+that is, linear combinations of the variables in each panel. When the variables are asset 
+returns, these variates can be interpreted as return-based factors.
+
+In particular, the analysis examines whether the empirical canonical correlations exhibit a 
+bulk-outlier structure and whether the instability of the estimated canonical directions 
+aligns with the theoretical cone-angle behaviours seen in HDCCA. Evidence of these patterns would suggest that high-dimensional CCA 
+provides a useful structural description of cross-sector dependence.
+
+% \section{Variants of Canonical Correlation Analysis}
+% \label{Sec:VariantsofCCA}
+
+% The limitations of classical CCA in high-dimensional environments have led to the 
+% development of numerous extensions and variants designed to improve stability and
+% interpretability. These approaches fall into two categories: the first modifies 
+% the estimation procedure through regularization or structural constraints in 
+% order to stabilize the inversion of large covariance matrices. The second extends the 
+% CCA framework to capture more complex relationships, such as nonlinear dependencies 
+% between datasets. Examples of the latter include kernel CCA 
+% \citep{Akaho2006, Hardoon2004} and more recent deep learning–based approaches 
+% \citep{Andrew2013}. While these methods are powerful in machine learning contexts, 
+% they typically sacrifice interpretability and introduce additional layers of modeling  complexity.
+
+% In the context of financial applications, where interpretability and economic structure 
+% are often essential, regularized linear methods tend to be more widely used. In particular, 
+% ridge-type regularization addresses the instability of covariance matrix inversion in 
+% high dimensions by shrinking eigenvalues, while sparse CCA imposes parsimony by selecting 
+% a subset of variables that drive the canonical relationship. These approaches are especially 
+% relevant for financial datasets, which often feature a large number of assets or signals
+% relative to the available sample size. Moreover, sparse representations can provide economically 
+% interpretable canonical portfolios linked to specific sectors or characteristics. For these 
+% reasons, ridge and sparse variants of CCA have become among the most commonly applied 
+% regularized extensions in empirical research \citep{Vinod1976, Witten2009, Waaijenborg2008}. 
+% The following subsections briefly describe these approaches before contrasting them with 
+% the high-dimensional asymptotic framework that constitutes the focus of this study.
+
+%\paragraph{Ridge-Type Regularization.}
+
+% This approach replaces covariance matrices with shrinkage estimators: the matrices $S_{XX}$ and
+% $S_{YY}$ are regularized according to
+% \[
+% S_{XX}^{-1} \quad \rightarrow \quad (S_{XX} + \lambda I)^{-1},
+% \]
+% and analogously for $S_{YY}$, where $\lambda > 0$ is a tuning parameter.
+% The ridge term guarantees invertibility and mitigates the amplification of
+% estimation noise in high dimensions.
+
+% From a statistical perspective, ridge regularization reduces variance while
+% introducing bias. Such shrinkage-based approaches are closely related to regularization methods
+% widely used in high-dimensional regression and covariance estimation.
+
+% \paragraph{Sparse CCA.}
+
+% An alternative class of methods imposes sparsity directly on the canonical vectors. 
+% Sparse CCA formulations introduce $\ell_1$ penalties, solving optimization problems of 
+% the form
+% \[
+% \max_{a,b} \quad a^\top S_{XY} b 
+% \quad \text{s.t.} \quad 
+% \|a\|_2 \leq 1, \;
+% \|b\|_2 \leq 1, \;
+% \|a\|_1 \leq c_1, \;
+% \|b\|_1 \leq c_2.
+% \]
+
+% The $\ell_1$ constraints encourage many coefficients to be exactly zero,
+% producing canonical vectors supported on a subset of variables.
+% This sparsity improves interpretability and can substantially reduce estimation
+% variance in high-dimensional settings.
+% Sparse CCA has therefore become particularly popular in applications such as
+% genomics and bioinformatics, where the underlying signal is often believed to
+% involve only a small number of relevant variables.
+
+% In financial datasetes, the appropriateness of sparsity as a structural assumption
+% remains an open question. Several studies suggest that the cross-sectional
+% structure of asset returns and predictive signals is often relatively dense,
+% with many variables contributing small but non-negligible effects rather than a
+% few dominant exposures. In such settings, imposing sparsity may distort the
+% underlying correlation structure by forcing the estimator to concentrate weight
+% on a limited subset of assets. Empirical evidence from large panels of equity
+% characteristics and returns frequently points toward diffuse factor structures
+% rather than strictly sparse relationships \citep{Kozakt2019, Bryzgalova2023}. 
+% This observation further motivates studying the behavior
+% of classical CCA in high-dimensional environments without imposing strong
+% structural constraints.
+
+% \paragraph{Conceptual Difference from High-Dimensional CCA Theory.}
+
+% It is important to highlight the distiction between regularization-based approaches 
+% from the high-dimensional asymptotic framework discussed in \autoref{Sec:HDCCA}. Regularized 
+% CCA modifies the estimator itself in order to improve performance
+% in finite samples. The introduction of additional structure allow to
+% control the estimation noise that arises in high-dimensional settings, mitigating the 
+% the statistical and computational difficulties.
+
+% In contrast, the high-dimensional CCA framework does not modify the classical
+% estimator. Instead, it analyzes how the standard CCA solution behaves when both
+% the sample size and the dimensionality of the datasets increase simultaneously.
+% Within this asymptotic regime, the focus is not on correcting the estimator but
+% on understanding the distortions introduced by high dimensionality. In
+% particular, the goal is to analyse how sample canonical correlations and
+% canonical vectors deviate from their population counterparts.
+
+% This distinction is central to the present study. Our objective is not to propose a new 
+% regularized estimator, but to evaluate whether the phenomena predicted by high-dimensional 
+% asymptotics describe real equity panels. Regularized CCA will therefore 
+% serve only as a robustness benchmark in the empirical section, allowing us to assess how 
+% imposing structural constraints alters the observed canonical components.
+
+% The literature thus presents two perspectives: classical CCA, which is consistent only in 
+% low dimensions; and regularized methods, which impose structural constraints. High-dimensional 
+% CCA theory provides a third perspective, offering explicit predictions for the behavior of 
+% the classical estimator when dimensionality is large. The empirical relevance of these 
+% predictions remains largely unexplored in financial markets.
+
+\clearpage
+\chapter{Monte Carlo Simulations}
+\label{ch:MonteCarlo}
+
+% The Monte Carlo simulations evaluate whether the deviations from classical CCA that can be  expected in high dimensions, as presented by Bykhovskaya and Gorin, are large enough to  affect inference when the number of assets is large relative to the number of time  observations, as is common in finance. This chapter therefore motivates the empirical  diagnostics formalized in Chapter~\ref{ch:Methodology} by showing how the phenomena  they present, manifests under controlled data-generating processes.
+
+To determine whether the bulk-outlier behaviour expected from HDCCA is large enough to affect inference, 
+Monte Carlo simulations are performed. Through a controlled data-generating process, six 
+different experiments are evaluated: a pure-noise scenario, a one-spike signal, a near-critical case, 
+a multi-spike case, diffuse multi-spikes and finance-style robustness checks that introduce heavy-tailed 
+observations and non-identity within-panel covariance structures usually found in financial panel data. 
+
+\paragraph{Diagnostic Measures.}
+
+Three main diagnostics are reported both in the simulations and the empirical analysis. 
+% Throughout these sections, a canonical root denotes a squared canonical correlation, \(\lambda_k=\rho_k^2\). 
+First, the largest squared sample canonical correlation 
+(the leading sample root) is 
+$\widehat{\lambda}_1=\widehat{\rho}_1^2=s_1(\widehat{M})^2$,
+% \widehat{M}=S_{XX}^{-1/2}S_{XY}S_{YY}^{-1/2}$
+and measures the strongest in-sample linear association between the two panels. 
+
+Second, to assess whether this relation is stable, the in-sample root is compared to its out-of-sample 
+counterpart. A canonical relation is considered stable when it produces a large 
+correlation both within the estimation window and in a held-out sample. Within each window, the 
+canonical directions are estimated on a training subsample and then applied to held-out observations 
+from both panels. Next, the out-of-sample root is computed as
+$\widehat{\lambda}_{1,\mathrm{oos}}
+=
+\operatorname{corr}^2
+\left(
+X_{\mathrm{test}}\widehat{a}_{1,\mathrm{train}},
+Y_{\mathrm{test}}\widehat{b}_{1,\mathrm{train}}
+\right)$.
+A large gap between \(\widehat{\lambda}_{1,\mathrm{in}}\) and \(\widehat{\lambda}_{1,\mathrm{oos}}\) is interpreted as evidence of overfitting.
+
+Third, the split-sample directional overlap measures the stability of the estimated canonical 
+directions across two subsamples, using the absolute cosine similarity between the corresponding 
+weight vectors. For the \(X\)-side direction,
+\[
+\mathrm{Overlap}_X
+=
+\left(
+\frac{
+\widehat{a}_{1}^{(1)\prime}\widehat{a}_{1}^{(2)}
+}{
+\|\widehat{a}_{1}^{(1)}\|\|\widehat{a}_{1}^{(2)}\|
+}
+\right)^2,
+\]
+with an analogous definition for the \(Y\)-side direction. 
+
+% For the first \(k\) directions, I use the subspace overlap
+% $\mathrm{Overlap}_k = \frac{1}{k}\|Q_1^\prime Q_2\|_F^2$,
+% where \(Q_1\) and \(Q_2\) span the leading \(k\)-dimensional canonical subspaces estimated from two subsamples.
+
+\paragraph{Central Findings.}
+
+The simulations yield three central findings (supplementary evidence is reported in 
+Appendix 1).
+The first experiment, the pure-noise benchmark, shows that in high dimensions CCA 
+can produce a large leading sample root even under exact independence. 
+Table~\ref{tab:mc-exp1-summary} and Figures~\ref{fig:mc-exp1-scree}--\ref{fig:mc-exp1-hist} 
+show that the leading root is centered around 0.50, whereas the out-of-sample root 
+and split-sample overlaps are essentially zero. This illustrates that large in-sample roots 
+cannot be interpreted as evidence of genuine cross-panel structure 
+unless they exceed what would be expected from high-dimensional noise alone. For this reason, 
+the pure-noise distribution is used as a finite-sample benchmark.
+
+Second, the one-spike and threshold experiments confirm the phase-transition logic defined in HDCCA. 
+The one-spike sweep in Table~\ref{tab:mc-exp2-summary} and 
+Figures~\ref{fig:mc-exp2-spectral}--\ref{fig:mc-exp2-angles} show that weak population spikes 
+do not generate a distinct sample outlier as the leading sample root remains close to the pure-noise
+benchmark, and the estimated canonical directions show little recovery. Moreover, the threshold zoom in 
+Table~\ref{tab:mc-exp3-summary} and Figures~\ref{fig:mc-exp3-detection}--\ref{fig:mc-exp3-angles} 
+shows that crossing \(\rho_c \approx 0.426\) (the critical threshold) does not produce a sharp 
+finite-sample discontinuity. Instead, the probability of detecting the signal as an outlier 
+increases gradually around the threshold, and both vector recovery and held-out canonical 
+correlation improve more slowly than the in-sample root. Taken together, the results indicate
+that spectral separation alone is not sufficient evidence of stable or economically meaningful 
+cross-panel dependence.
+
+Third, the multi-spike and diffuse designs show that detecting the signals also depends on how 
+they are distributed. In the multiple-spike design, only the strongest components separate most 
+clearly, while weaker components are harder to distinguish from the bulk; see 
+Tables~\ref{tab:mc-exp4-summary}--\ref{tab:mc-exp4-components} and Figure~\ref{fig:mc-exp4-scree}. 
+The low-rank versus diffuse comparison in Figures~\ref{fig:mc-exp5-lowrank}--\ref{fig:mc-exp5-diffuse}
+portrays this point as concentrated dependence produces clearer leading roots and greater directional
+stability (see Table~\ref{tab:mc-exp5-summary}), whereas diffuse dependence 
+produces a smoother spectrum that remains closer to the high-dimensional bulk.
+
+Finally, the robustness exercise in Table~\ref{tab:mc-exp6-summary} and 
+Figure~\ref{fig:mc-exp6-robustness} shows that the main conclusions survive moderate 
+covariance misspecification. Detection remains strong when the clean 
+Gaussian benchmark is relaxed and introducing within-panel covariance has limited effects in this 
+calibration, whereas heavy-tailed observations do increase the in-sample root and weaken 
+directional recovery and stability.
+
+These results motivate the empirical methodology developed in Chapter 4. The simulations 
+show that a large leading sample root is informative only when it is large relative to an 
+appropriate high-dimensional or finite-sample benchmark and is supported by stable 
+canonical directions and held-out performance. They also show that the presence of several 
+nonzero roots is not, by itself, evidence of a strongly identified low-rank dependence 
+structure, since diffuse weak links can generate a broad spectrum without producing 
+robust canonical directions. 
+The empirical analysis therefore evaluates the cyclical and defensive panels using a 
+joint set of diagnostics: spectral magnitude, benchmark comparison, eigengap separation, 
+vector and subspace stability, and out-of-sample canonical correlation. 
+This approach avoids interpreting in-sample fit alone as evidence of economically meaningful co-movement.
+
+
+\chapter{Methodology}
+\label{ch:Methodology}
+
+\section{Objective and empirical strategy}
+
+Guided by the Monte Carlo evidence, the following empirical analysis is designed to evaluate
+whether HDCCA provides a useful description of the dependence between cyclical and defensive stock returns.
+To do this, classical CCA is applied to rolling windows of stock returns and the results are then evaluated 
+using the high-dimensional and finite-sample benchmarks developed above. The analysis is centred
+around three main questions. First, are the leading canonical roots larger than would be expected 
+under high-dimensional noise? Second, are the estimated canonical directions stable across samples? 
+Third, do they remain informative out of sample?
+
+Through these diagnostics, the purpose is to evaluate whether the high-dimensional effects characterized
+by Bykhovskaya and Gorin are visible in the data, particularly inflated in-sample roots, bulk-outlier 
+separation, and instability of the estimated canonical directions. As shown in Appendix 1, 
+in high dimensions, large sample roots do not necessarily imply that the corresponding canonical 
+vectors are reliably estimated. For that reason, the empirical analysis does not rely on 
+in-sample fit alone and instead evaluates spectral strength, stability, and out-of-sample 
+performance jointly.
+
+\section{Empirical setting}
+
+The empirical application uses weekly stock returns constructed from CRSP data. The stocks are divided into 
+two balanced panels, cyclical and defensive, based on FF12 industry groups derived from SIC codes. 
+This partition is economically motivated by the business-cycle distinction and 
+is related to Bykhovskaya and Gorin’s own empirical illustration. Cyclical stocks are defined as firms in durable goods, 
+manufacturing, energy, chemicals, and retail or services, while defensive stocks are defined as firms 
+in non-durables, health, telecom, and utilities. Further data details and sample composition are reported in Chapter 5.
+
+\section{Empirical diagnostics}
+
+Empirical results are interpreted using a joint diagnostic criterion: Evidence for a strong and economically 
+meaningful low-rank structure requires three conditions at the same time: the leading root 
+must lie clearly above the bulk and pure-noise benchmarks, the associated canonical directions 
+must be reproducible across subsamples, and the estimated dependence must persist out of sample.
+Otherwise, a large in-sample canonical root is not treated as evidence of a reliably recoverable 
+canonical direction. To evaluate these conditions, six diagnostics are computed for each window.
+
+First, in each window, the observed canonical roots are compared with the HDCCA bulk edge $\lambda_+$ 
+and with a permutation-based null to determine whether the leading root is larger than would be 
+expected under high-dimensional noise. The permutation null refers to the distribution of the leading 
+root obtained by randomly permuting the time ordering of one panel relative to the other, which 
+breaks any genuine cross-panel dependence while preserving the marginal structure of each panel. 
+Additionally, the number of canonical roots above the bulk edge in each window is also used as a diagnostic. 
+This second diagnostic helps distinguish a single dominant factor from broader multi-direction dependence.
+
+Roots above this threshold provide evidence of cross-panel dependence relative to the specified 
+high-dimensional benchmark; however, the corresponding vectors must also be stable. To measure 
+such directional stability each window is split into two halves and the leading canonical 
+vectors across the two subsamples are compared. Low overlap would 
+indicate that the leading canonical portfolio is unstable.
+
+This third measure is complemented by top-$k$ subspace stability, which evaluates the overlap of the 
+leading $k$-dimensional subspaces across subsamples. This is important because even when the first vector is 
+unstable, the leading subspace may still be well-defined if there are several closely spaced roots. In other words,
+instability of the first vector may reflect either genuine noise or simple rotation within
+a weakly separated leading subspace.
+
+The fifth diagnostic is eigengap separation: $\lambda_1-\lambda_2$, $\lambda_2-\lambda_3$,
+and $\lambda_3-\lambda_4$. These show whether the leading root is sufficiently separated to be interpreted as 
+an individual component. This step is essential as, when eigengaps are too small, the Bykhovskaya-Gorin 
+inversion formulas cannot be applied credibly.
+
+Finally, out-of-sample performance is evaluated: canonical weights estimated in one part of the data are 
+applied to the other part, and the held-out leading squared canonical correlation is recorded. This shows whether 
+the apparent dependence survives out of sample.
+
+By relying on these six diagnostics jointly, the empirical analysis can evaluate whether large in-sample canonical 
+roots are accompanied by stable and economically meaningful canonical directions, or whether they are more consistent 
+with high-dimensional noise and instability.
+
+\section{Rolling-window design}
+
+The baseline specification uses rolling windows of a fixed length of 260 weeks and fixed step size of 4 weeks, yielding
+144 windows over the sample. This design allows the canonical spectrum to vary over time while keeping the empirical 
+setting explicitly high-dimensional. For each window, the six diagnostics are computed and a leading root is treated as
+credibly identified only if the first root is clearly separated from the second one.
+
+\section{Robustness}
+
+The main results are checked using alternative window lengths and subsamples. Shorter and longer windows test 
+sensitivity to the time-series dimension, while pre-2020 and post-2020 subsamples test whether the results 
+depend on a particular market period. 
+
+% add footnote about 2020: This is motivated by the fact that we see a big change in the number of roots above 
+% the bulk edge, which could be related to the COVID crisis. The COVID crisis was a major market event that 
+% could have affected the dependence structure between cyclical and defensive stocks.
+% By splitting the sample around this period, we can assess 
+% whether the observed phenomena are robust to such structural breaks.
+
+\clearpage
+\chapter{Empirical Application to Stock Return Panels}
+\label{ch:EmpiricalApplication}
+
+\section{Data description}
+
+The HDCCA framework is applied to a large weekly equity panel constructed from CRSP daily stock data. 
+The final sample contains 832 weekly observations running from 8 January 2010 to 12 December 2025, 
+together with two balanced cross-sections of 80 cyclical and 80 defensive stocks. 
+In the final panel, the cyclical group is composed mainly of retail/services, manufacturing, 
+energy, and chemicals, while the defensive group is concentrated in health, utilities, non-durables, and telecom. 
+This composition is intended to ensure that the two panels represent distinct sectors of the economy and differ in their 
+sensitivity to business-cycle conditions.
+
+The central empirical question is whether this panel contains stable and economically usable leading 
+canonical directions, or only strong spectral evidence of cross-panel dependence. 
+As the results below show, the data support the latter much more strongly than the former.
+
+\section{Main result}
+
+Table~\ref{tab:emp-main-summary} summarizes the baseline 260-week rolling specification. These windows are
+stepped every four weeks, resulting in 144 rolling windows. The settings are therefore high-dimensional,
+with $p$=$q$=80 and $n$=260, allowing the use of HDCCA. 
+
+The leading empirical root is large, with a mean value of 0.9731 across windows, compared with a 
+mean HDCCA bulk edge of 0.8521. The leading root exceeds the bulk edge in  every window, and the 
+mean number of roots above the bulk is 4.17. This is supported by Figure~\ref{fig:emp-leading-root-null}
+where the leading root is consistently too large to be explained either by the HDCCA bulk edge or 
+by high-dimensional noise alone, as represented by the permutation null. Figure~\ref{fig:emp-outlier-count} 
+further shows that the evidence is not confined to a single isolated component as multiple roots lie 
+above the bulk in all windows. This suggests that the cross-panel dependence is multidimensional 
+at the spectral level, rather than being driven only by the first canonical relation. Overall, the 
+effect is strong enough to suggest that, at the level of the sample spectrum, cyclical and defensive 
+returns exhibit persistent and meaningful cross-panel dependence.
+
+However, the estimated first canonical direction is not reproducible across halves of the sample. 
+The mean split-sample squared cosine overlap of the first vector is only 0.0219 on the cyclical side and 
+0.0329 on the defensive side, as reported in Table~\ref{tab:emp-main-summary} and visualized in 
+Figure~\ref{fig:emp-split-stability}. These values are extremely low and imply that the first canonical 
+directions extracted in one half of the data contain almost no directional information about the first 
+canonical portfolio extracted in the other half.
+
+The same instability appears out of sample as the mean held-out leading squared root is only 0.0128, 
+which is very small relative to the mean in-sample value of 0.9731, as depicted in Figure~\ref{fig:emp-insample-heldout}.
+This is exactly the gap highlighted by the Monte Carlo analysis. A large in-sample canonical root is not enough
+to be economically meaningful; the corresponding dependence must also survive out of sample.
+
+The overall implication is that the leading empirical root is observed as a spectral phenomenon, but the 
+leading empirical vector is not recoverable as a stable economic portfolio. In other words, the 
+spectrum indicates detectable cross-sector dependence, but the first canonical direction does not 
+behave like a reliable low-rank factor.
+
+\section{Top-k subspace stability and the rotation problem}
+
+The weak split-sample stability of the first vector raises an important ambiguity. A low top-1 overlap 
+does not by itself prove that the leading dependence structure is meaningless. It may instead reflect a 
+rotation problem: if the top few roots are close to each other, different samples may estimate different 
+linear combinations inside essentially the same low-dimensional subspace.
+
+To address this possibility, the analysis examines top-$k$ subspace overlap for $k=1,2,3,5$. 
+Figure~\ref{fig:emp-topk} shows that the top-$k$ subspaces are somewhat more stable than the top-1 
+vectors, suggesting that part of the first-vector instability may be due to rotation among the 
+leading directions rather than pure noise at a single rank. Nonetheless, the gains are modest and 
+the top-5 subspace overlap remains low, at 0.0958 on the cyclical side and 0.1297 on the defensive side 
+(see Table~\ref{tab:emp-main-summary}). 
+
+As the leading dependence space is only weakly identified despite allowing for rotational ambiguity, 
+the evidence is more consistent with clustered or diffuse multi-direction 
+dependence than with a sharply separated low-rank structure.
+
+% This distinction matters for the interpretation of the chapter. The results do not say that there is no 
+% cross-sector dependence. They say that the dependence does not appear to be concentrated in one clean, 
+% stable canonical direction. A more defensible reading is that dependence is spread across several nearby 
+% directions, none of which is sufficiently dominant to produce a reproducible leading portfolio.
+
+\section{Eigengaps and the failure of credible inversion}
+
+Eigengap diagnostics reinforce this interpretation. Figure~\ref{fig:emp-eigengap} shows that the 
+gaps between the leading roots are too small to support credible leading-root inversion. In the 
+baseline run, there are zero credible leading windows out of 144, i.e.: no rolling window satisfies the 
+separation rule required to safely apply the Bykhovskaya-Gorin outlier formulas on a window-by-window basis.
+
+This finding has two consequences. First, it explains why the first-vector overlaps are so low: when 
+$\lambda_1$ and $\lambda_2$ are not well separated, the estimated leading eigenvector can rotate 
+substantially across samples even if the broader leading space contains real dependence. Second, it 
+implies that successful empirical recovery of population signal strength from rolling outliers 
+cannot be claimed.
+
+Accordingly, a phase-transition recovery exercise cannot be performed as the leading roots are spectrally 
+strong but geometrically fragile. This finding is itself consistent with the HDCCA perspective. 
+
+
+\section{Interpreting the spectrum}
+
+Taken together, the spectral and geometric evidence points to a strong and persistent cross-sector 
+dependence between cyclical and defensive stock returns. It is not plausibly attributable to noise alone. 
+But at the same time, the leading empirical canonical portfolio is not a stable object as the estimated 
+first direction changes materially across halves of the sample and fails to transport out of sample.
+
+Evidence suggests a diffuse structure in which several nearby directions contribute to cross-panel 
+dependence, but no single one is stably estimated as the dominant direction. That reading also matches the 
+Monte Carlo comparison between concentrated low-rank and diffuse dependence designs, where broad nonzero 
+spectra can coexist with weak directional recovery.
+
+\section{Robustness}
+
+The robustness exercises show that the main conclusion is not driven by the baseline window length or 
+by the specific pre-/post-2020 sample split as seen in Table~\ref{tab:emp-robustness-summary} and Figure~\ref{fig:emp-robustness}.
+
+With shorter 208-week windows, the leading root remains an outlier in every window, but vector stability, 
+top-5 subspace overlap, and held-out performance all remain very weak, and there are again no credible 
+leading windows. With longer 364-week windows, spectral separation becomes stronger and the mean held-out 
+root rises materially to 0.3385, well above the baseline value of 0.0128. Longer windows allow a larger part 
+of the broad cross-panel dependence to survive out of sample, which is consistent with lower estimation noise and 
+with more persistent low-frequency co-movement being captured over longer horizons. However, this improvement does 
+not solve the main identification problem. First-vector overlap remains very low, top-5 overlap stays near 0.10, 
+and the number of credible leading windows is still zero, failing to deliver a stable leading canonical portfolio 
+that could be interpreted as a clean, well-identified factor. 
+
+The subsample analysis leads to the same conclusion. In both the pre-2020 and post-2020 samples, the leading 
+root remains an outlier throughout, but overlap measures remain low, held-out roots remain small, 
+and no credible leading windows emerge.
+
+Overall, the robustness results confirm the baseline message that the spectrum consistently indicates cross-sector 
+dependence, but the leading canonical portfolio is not a well-identified economic direction under reasonable 
+alternative specifications.
+
+
+%% \section{Concluding assessment}
+
+% The empirical application supports HDCCA theory in an asymmetric way. It strongly supports the spectral 
+% side of the theory: the canonical spectrum displays persistent outliers and cannot be understood using 
+% classical low-dimensional intuition. It also supports the geometric side in a negative but theoretically 
+% important sense: the leading canonical direction is unstable, weakly reproducible, and often economically 
+% empty out of sample, which is exactly the kind of identification problem HDCCA predicts in high dimensions.
+
+% What the evidence does not support is a simple claim that one can recover a stable leading canonical 
+% portfolio and interpret it as a robust cross-sector factor for portfolio construction. The appropriate 
+% conclusion is more cautious. HDCCA appears to describe the distortion and fragility of canonical estimates 
+% in large stock panels well, but the empirical dependence structure itself looks broader, more weakly 
+% separated, and more rotationally unstable than a clean low-rank factor model would suggest.
+
+\chapter{Discussion and Conclusion}
+\label{ch:Conclusion}
+
+This paper studied whether HDCCA provides a useful description of cross-sector dependence in large 
+stock-return panels. The empirical application suggests that HDCCA is useful as a 
+diagnostic framework, as the canonical spectrum 
+displays strong and persistent dependence between cyclical and defensive stocks. However, the leading canonical 
+directions are not recovered as a stable economic direction. Vector stability is low, out-of-sample performance 
+is weak, and the leading root is not sufficiently separated from nearby roots to support credible inversion.
+
+This distinction is central to the interpretation of classical CCA in high dimensions. A large in-sample canonical
+root can contain genuine information about cross-panel dependence even when the leading estimated
+direction is too fragile to support a clean economic interpretation. 
+
+In practice, HDCCA helps explain why large canonical roots in 
+high-dimensional data must be interpreted cautiously. Specifically, for large financial panels, classical CCA 
+should not be interpreted using in-sample fit alone. For portfolio construction, risk management, or factor
+interpretation, large canonical roots are only economically meaningful if they are also stable across
+samples and persist out of sample. Otherwise, the estimated canonical portfolio may reflect
+high-dimensional estimation error rather than a reliable source of common risk.
+
+More broadly, the results suggest that cross-sector dependence in equity markets may be real but
+more diffuse than a simple low-rank model would imply. The evidence is therefore more consistent
+with several weakly separated directions than with one clean and stable leading canonical factor.
+
+There are several limitations to the study as the empirical analysis focuses on one panel design, one frequency,
+and classical CCA interpreted through the HDCCA benchmark. It does not compare alternative
+regularized estimators in detail, nor does it study other asset partitions or richer time-series
+structures. These limitations point naturally to future research. Future extensions could include
+a comparison of classical CCA with regularized or sparse alternatives and examine whether economically
+meaningful information survives more clearly at the subspace level than at the level of the first
+canonical vector.
+
+
+%========================================================
+%	BIBLIOGRAPHY
+%========================================================
+
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\printbibliography
+
+%========================================================
+% MONTE CARLO FIGURES AND TABLES
+%========================================================
+\clearpage
+
+\resetresultnumbering{3}
+\subsection*{Monte Carlo Simulation - Experiment 1: Pure-Noise Benchmark}
+\mctable[0.45\textwidth]{imagenes/mc_exp1_summary.tex}[Experiment 1 summary statistics under the pure-noise benchmark.]{ }{tab:mc-exp1-summary}
+\mcfigure{mc_exp1_scree.pdf}[Scree plot for the mean canonical roots for the pure-noise scenario (Experiment 1).]{ 
+The scree plot figure displays the ordered canonical roots, \(\widehat{\lambda}_1 \geq \widehat{\lambda}_2 \geq \cdots\), where 
+\(\widehat{\lambda}_k=\widehat{\rho}_k^2\) (the \emph{rank} in the x-axis refers to the position of 
+each canonical root after sorting them from largest to smallest) and it can be used to assess whether the leading 
+canonical roots separate from the rest of the spectrum. In the pure-noise scenario it displays a smooth, bulk-like structure.}{fig:mc-exp1-scree}
+\mcfigure{mc_exp1_histogram.pdf}[Experiment 1 pure-noise distribution of the leading sample canonical correlation.]{ 
+The vertical lines report the 95th and 99th percentiles of the leading-root distribution generated. }{fig:mc-exp1-hist}
+\FloatBarrier
+
+\subsection*{Monte Carlo Simulation - Experiment 2: One-Spike Signal-Strength Sweep}
+\mctable{imagenes/mc_exp2_summary.tex}[Experiment 2 summary table for the one-spike signal-strength sweep.]{ }{tab:mc-exp2-summary}
+\mcfigure{mc_exp2_spectral.pdf}[Experiment 2 in-sample spectral response to one true spike.]{
+The figure reports the mean leading and second sample canonical roots as the population canonical correlation \(\rho\) increases. 
+The leading root remains near the high-dimensional noise level for weak signals and separates from the bulk only above the 
+critical value \(\rho_c\) (represented by the vertical line). The second root remains close to the bulk level, consistent 
+with a one-spike design.}{fig:mc-exp2-spectral}
+\mcfigure{mc_exp2_stability.pdf}[Experiment 2 out-of-sample strength and split-sample stability.]{
+The figure reports the held-out leading canonical root and the split-sample directional overlaps. 
+Both diagnostics remain close to zero for weak signals and become substantial only for sufficiently strong population 
+canonical correlations, showing that in-sample separation alone does not guarantee stable or generalizable canonical structure.}{fig:mc-exp2-stability}
+\mcfigure{mc_exp2_angles.pdf}[Experiment 2 geometric recovery of the leading canonical vectors.]{
+The figure reports the angle between the estimated and the true leading canonical directions for the \(X\)- and \(Y\)-side panels. 
+Angles close to \(90^\circ\) indicate little directional recovery. Recovery improves only once the population signal moves 
+above the critical region (represented by the vertical line).}{fig:mc-exp2-angles}
+\FloatBarrier
+
+\subsection*{Monte Carlo Simulation - Experiment 3: Threshold Zoom}
+\mctable{imagenes/mc_exp3_summary.tex}[Experiment 3 summary table around the near-critical region.]{ }{tab:mc-exp3-summary}
+\mcfigure{mc_exp3_detection.pdf}[Experiment 3 detection probability around the critical threshold.]{
+The figure reports the fraction of Monte Carlo replications in which the leading root is detected. 
+Detection probability is low below and near \(\rho_c\), and increases only when the population canonical 
+correlation moves further above the critical value.}{fig:mc-exp3-detection}
+\mcfigure{mc_exp3_strength.pdf}[Experiment 3 in-sample and out-of-sample strength near the threshold.]{
+The figure compares the mean in-sample leading root with the mean out-of-sample leading root. 
+The in-sample root remains close to the high-dimensional pure-noise cutoff, while the out-of-sample root 
+stays close to zero, showing that near-threshold signals do not necessarily produce stable 
+held-out canonical correlation.}{fig:mc-exp3-strength}
+\mcfigure{mc_exp3_angles.pdf}[Experiment 3 vector recovery around the threshold.]{
+The figure reports the angle between the estimated and true leading canonical directions for the \(X\)- and \(Y\)-side panels. 
+Angles decline as the population canonical correlation \(\rho\) increases, but remain large near the critical 
+value \(\rho_c\), indicating weak directional recovery in the near-threshold region.}{fig:mc-exp3-angles}
+\FloatBarrier
+
+\subsection*{Monte Carlo Simulation - Experiment 4: Multiple-Spike Low-Rank Design}
+\mctable[0.45\textwidth]{imagenes/mc_exp4_summary.tex}[Experiment 4 summary statistics for the three-spike low-rank design.]{ }{tab:mc-exp4-summary}
+\mctable[0.65\textwidth]{imagenes/mc_exp4_components.tex}[Experiment 4 component-by-component recovery measures.]{ }{tab:mc-exp4-components}
+\mcfigure{mc_exp4_scree.pdf}[Experiment 4 mean scree plot under the three-spike low-rank design.]{
+The figure reports the mean ordered sample canonical roots. The spectrum displays a steep decline 
+at the leading ranks followed by a smoother decay across the remaining roots. This pattern is 
+consistent with dependence concentrated in a small number of canonical directions, although the 
+lower-ranked components merge progressively into the high-dimensional bulk.}{fig:mc-exp4-scree}
+\FloatBarrier
+
+\subsection*{Monte Carlo Simulation - Experiment 5: Diffuse Versus Low-Rank Dependence}
+\mctable{imagenes/mc_exp5_summary.tex}[Experiment 5 comparison of the low-rank and diffuse designs.]{ }{tab:mc-exp5-summary}
+\mcfigure{mc_exp5_low_rank_scree.pdf}[Experiment 5A mean scree plot under the low-rank design.]{
+The figure reports the mean ordered sample canonical roots where the leading roots are visibly 
+larger than the rest of the spectrum, after which the curve declines smoothly. This indicates 
+that the simulated dependence is concentrated in a limited number of directions.}{fig:mc-exp5-lowrank}
+\mcfigure{mc_exp5_diffuse_scree.pdf}[Experiment 5B mean scree plot under the diffuse design.]{
+The figure reports the mean ordered sample canonical roots. Unlike the low-rank case, the 
+spectrum declines gradually without a clear break between leading and non-leading roots. 
+This shows that diffuse dependence is harder to identify through isolated sample outliers, 
+since signal strength is spread across several directions rather than concentrated in a 
+small number of dominant roots.}{fig:mc-exp5-diffuse}
+\FloatBarrier
+
+\subsection*{Monte Carlo Simulation - Experiment 6: Finance-Style Robustness Checks}
+\mctable{imagenes/mc_exp6_summary.tex}[Experiment 6 summary statistics across the robustness designs.]{
+The table reports the main Monte Carlo diagnostics for three data-generating processes that keep the 
+same one-spike population signal, \(\rho=0.70\), but vary the distributional and covariance assumptions. 
+Specifically, the designs include (i) the Gaussian identity benchmark, (ii) the Gaussian spiked-covariance design, 
+(iii) and the Student-\(t\) identity design. Detection probability is equal to one in all three settings, 
+showing that the leading root remains clearly distinguishable from the pure-noise benchmark. 
+However, the recovery diagnostics differ across designs. 
+The Student-\(t\) identity case produces the largest in-sample root, but also the weakest 
+out-of-sample root, the lowest split-sample stability, and the largest average angles between 
+estimated and true canonical directions. 
+Thus, heavy tails do not prevent detection in this calibration, but they reduce the reliability 
+of the estimated canonical vectors.}{tab:mc-exp6-summary}
+\mcfigure{mc_exp6_robustness.pdf}[Experiment 6 robustness comparison across finance-style data-generating processes.]{
+The Gaussian spiked-covariance case changes the within-panel covariance structure, 
+while the Student-\(t\) case changes the tail behavior of the observations. 
+Detection remains strong across the three designs, as reflected in large leading in-sample roots. 
+However, the Student-\(t\) design produces weaker directional recovery, shown by a larger 
+average angle for the \(X\)-side canonical vector, and lower stability relative to the Gaussian cases.}{fig:mc-exp6-robustness}
+\FloatBarrier
+
+%========================================================
+% EMPIRICAL FIGURES AND TABLES 
+%========================================================
+\clearpage
+
+\resetresultnumbering{5}
+\subsection*{Empirical Analysis for CRSP Stock Return Panels}
+\mctable[0.62\textwidth]{imagenes/emp_main260_summary.tex}[Baseline 260-week rolling summary for the CRSP empirical application.]{ }{tab:emp-main-summary}
+
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png}[Baseline rolling leading squared canonical root against the HDCCA bulk edge and the permutation null benchmark.]{
+The leading root remains well above both benchmarks throughout the sample, indicating persistent in-sample 
+spectral dependence between the cyclical and defensive panels, rather than a pattern that appears only in 
+isolated windows.}{fig:emp-leading-root-null}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png}[Baseline rolling count of squared canonical roots above the HDCCA bulk edge.]{
+The count is consistently positive and varies over time, with more roots exceeding the bulk edge in the middle 
+part of the sample. This may suggest that the empirical dependence is not limited to the first canonical root.}{fig:emp-outlier-count}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png}[Baseline split-sample stability of the first canonical direction on the cyclical and defensive sides.]{
+The squared cosine overlaps remain close to zero for most rolling windows, implying that the leading
+weight vectors are not consistently recovered across subsamples, despite the large in-sample canonical root.}{fig:emp-split-stability}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png}[Baseline comparison between the in-sample leading squared root and the held-out leading squared root.]{
+The in-sample root is persistently large, while the held-out root remains close to zero in most windows. 
+This large gap indicates that the strongest in-sample canonical relation does not translate into comparable 
+out-of-sample dependence.}{fig:emp-insample-heldout}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png}[Baseline top-k subspace overlap for k = 1, 2, 3, and 5 on the cyclical and defensive sides.]{
+Allowing for several leading directions slightly increases the overlap in some windows, but the values remain low overall. 
+Thus, the lack of stability is not only a feature of the first canonical direction; it also persists at the level 
+of the leading canonical subspaces.}{fig:emp-topk}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png}[Baseline eigengap diagnostics for the first few rolling canonical roots.]{
+The eigengaps remain well below the credibility rule throughout the sample, suggesting that the leading roots 
+are not sharply separated from neighboring roots, which makes the associated canonical directions harder to 
+interpret as individually well-identified components.}{fig:emp-eigengap}
+\emptable{imagenes/emp_robustness_summary.tex}[Robustness summary across alternative rolling-window lengths and subsamples.]{
+Across specifications, the mean leading root remains above the corresponding HDCCA bulk edge, confirming that 
+the spectral evidence is robust to these sample choices. However, the held-out root and stability measures 
+are much weaker and less uniform across specifications. 
+The credible share is zero in all cases, indicating that the empirical canonical directions do not satisfy 
+the stablished credibility criterion under these robustness checks.}{tab:emp-robustness-summary}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png}[Cross-specification robustness comparison for spectral strength, stability, and held-out dependence.]{ }{fig:emp-robustness}
+\setcounter{savedempfigure}{\value{figure}}
+\setcounter{savedemptable}{\value{table}}
+
+
+%========================================================
+% APPENDIX
+%========================================================
+\chaptersnewpage
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Appendix}
+\chapter*{Appendix}
+\section*{Appendix 1: Monte Carlo Full Results}
+\label{app:mc-results}
+
+This appendix reports the full Monte Carlo evidence underlying the main results. 
+The discussion below summarizes the main patterns in the simulations, while the complete tables and figures are collected afterward on a separate page.
+
+\subsection*{Data generation}
+
+The Monte Carlo experiments implement a two-panel, low-rank (spiked) covariance model calibrated to the same 
+dimensions later used in the empirical application. The baseline configuration for the data generation process 
+(DGP) is therefore, $p=80$, $q=80$, and $n=520$ observations. Main experiments use $2{,}000$ independent 
+replications whereas the pure-noise and near-threshold designs use $5{,}000$ replications for greater 
+precision in tail and detection-rate estimates.
+
+Population cross-covariance is constructed as
+\[ \Sigma_{xy} = \sqrt{\Sigma_{xx}}\;K\;\sqrt{\Sigma_{yy}}, \qquad K = U_0\,\mathrm{diag}(\rho_1,\ldots,\rho_r)\,V_0^\top, \]
+where $\{\rho_j\}_{j=1}^r$ are the population canonical correlations (the spikes) and $U_0, V_0$ are orthonormal
+direction matrices. By default $\Sigma_{xx}=I_p$ and $\Sigma_{yy}=I_q$ meaning each panel's variables are 
+standardized and independent in the baseline DGP. Robustness checks then replace these with
+(i) spiked within-panel covariances to model stronger internal correlation among assets, which is more
+realistic for financial series; and (ii) heavy-tailed sampling; introducing large outliers and tail 
+risk typical of returns.
+
+For each replication the pipeline is:
+\begin{enumerate}
+	\item Construct the joint covariance $\Sigma=\begin{pmatrix}\Sigma_{xx} & \Sigma_{xy}\\[2pt] \Sigma_{xy}^\top & \Sigma_{yy}\end{pmatrix}$;
+	\item Draw $n$ i.i.d. observations from the chosen law (baseline: multivariate normal; robustness: Student-$t$ with $\mathrm{df}=7$);
+	\item Compute sample covariance blocks $S_{xx},S_{yy},S_{xy}$ from mean-centered data;
+	\item Whiten the cross-covariance and compute $M = S_{xx}^{-1/2} S_{xy} S_{yy}^{-1/2}$;
+	\item Obtain the SVD $M=U\,\mathrm{diag}(\sigma_j)\,V^\top$ and record $\widehat{\lambda}_j=\sigma_j^2$, the estimated
+		canonical weights $\widehat{A}=S_{xx}^{-1/2}U$ and $\widehat{B}=S_{yy}^{-1/2}V$, and all downstream diagnostics.
+\end{enumerate}
+
+The recorded metrics per replication include: spectral diagnostics ($\widehat{\lambda}_j$, outlier counts relative to
+null cutoffs), inflation measures ($\widehat{\lambda}_1-\rho_1^2$, held-out $\lambda_{1,\mathrm{OOS}}$), geometric
+measures (principal angles and squared-cosine overlaps between estimated and true canonical directions), and stability
+measures (split-sample overlaps). These quantities are aggregated across replications to produce the summary tables and
+figures collected in the Monte Carlo results that follow.
+
+\subsection*{Experiment 1: Pure-Noise Benchmark}
+
+Experiment 1 provides the pure-noise benchmark for the Monte Carlo study. When the two panels are truly 
+independent, the leading sample canonical root ($\hat\lambda_1$) is nevertheless large in finite samples, 
+with a mean value of 0.5047, and a standard deviation of 0.0156 (as seen in Table~\ref{tab:mc-exp1-summary}).
+% The 95\% and 99\% null cutoffs are 0.5312 and 0.5454, respectively. 
+
+This is visually represented in the histogram for the pure noise scenario seen in \autoref{fig:mc-exp1-hist} 
+which depicts the leading root centered around a nonzero value despite independence between panels. 
+% These simulation-based thresholds show how large \(\widehat{\lambda}_1\) can be under exact independence for the same values of \(n\), \(p\), and \(q\). 
+Such results are reinforced by the scree plot figure \autoref{fig:mc-exp1-scree} which reflects how, 
+for the pure-noise scenario, there is no dominant root, but rather a smooth bulk-like shape. 
+Experiment 1 makes clear that the empirical leading root must be compared with these thresholds before it can be interpreted 
+as unusually large relative to high-dimensional noise.
+
+The pure-noise design also reveals that the signal captured is unstable as the mean out-of-sample leading 
+root is only 0.0039, while the split-sample squared cosine overlaps are approximately 0.0124 for the 
+$X$-side vectors and 0.0124 for the $Y$-side vectors. In simpler terms, the canonical directions extracted 
+under pure noise do not replicate across samples. Taken together, these results imply that a large leading 
+sample root is not, by itself, evidence of meaningful dependence. This experiment therefore provides the 
+finite-sample reference distribution used later to distinguish genuine outliers from noise-generated spikes.
+
+\subsection*{Experiment 2: One-Spike Signal-Strength Sweep}
+
+Experiment 2 studies how the leading canonical root reacts when a single true population spike is 
+introduced and its strength is varied. The theoretical high-dimensional threshold is approximately 
+$\rho_c \approx 0.426$, so the key question is whether the sample spectrum begins to separate from 
+the null benchmark before that point. The results, as seen in Figure~\ref{fig:mc-exp2-spectral},
+indicate that the leading sample root remains very close to its pure-noise value throughout the 
+weak-signal region. As $\rho$ increases from 0 to 0.345, the mean of $\hat\lambda_1$ rises only from 
+0.5047 to 0.5098, while the second sample root remains essentially unchanged, moving only from 
+0.4793 to 0.4840. Hence, for subcritical or near-subcritical signal strengths, the sample spectrum 
+is still largely dominated by the high-dimensional noise bulk; see Table~\ref{tab:mc-exp2-summary} 
+
+The instability diagnostics reinforce this conclusion. As depicted in Figure~\ref{fig:mc-exp2-stability}, 
+over the same range, the mean out-of-sample leading root stays near zero, fluctuating around 0.004, 
+which is negligible relative to the in-sample value of about 0.50. Likewise, figure \ref{fig:mc-exp2-angles} 
+shows that the estimated canonical vectors remain poorly recovered: the average angles are still extremely 
+large, falling only from about $85^\circ$ to $78^\circ$, and the squared cosine overlaps rise 
+only modestly from roughly 0.01 to 0.06. These findings imply that weak population dependence is 
+absorbed into the bulk rather than emerging as a clean, interpretable outlier. Thus, before the signal 
+reaches the threshold region, CCA substantially overstates the strength of dependence in sample while 
+delivering almost no out-of-sample persistence or reliable vector recovery.
+
+\subsection*{Experiment 3: Threshold Zoom}
+
+Experiment 3 focuses on the neighborhood of the theoretical high-dimensional threshold, which in this 
+calibration is approximately $\rho_c \approx 0.426$. Here, detection probability measures how often, 
+for a given population canonical correlation \(\rho\), the simulated leading sample root 
+\(\widehat{\lambda}_1\) is large enough to exceed the 99\% pure-noise cutoff \(c_{0.99}\) estimated 
+in Experiment 1. The main result is that detection improves only 
+gradually through this region rather than appearing as a sharp finite-sample jump. When $\rho=0.306$, 
+the empirical detection probability is only 0.0148; at $\rho=0.346$ it remains 0.0190; at $\rho=0.386$ 
+it is still only 0.0326. Even exactly at the theoretical threshold, the detection probability is just 0.0598. 
+Clearer separation only emerges above the threshold where detection rises to 0.1370 at $\rho=0.466$, 
+to 0.3324 at $\rho=0.506$, and to 0.6130 at $\rho=0.546$; see Table~\ref{tab:mc-exp3-summary}. 
+Figure~\ref{fig:mc-exp3-detection} depicts the detection probabilities in a visual manner.
+
+Figure~\ref{fig:mc-exp3-strength} shows that reliable recovery lags behind in-sample spectral separation. The mean 
+leading sample root increases from 0.5087 below the threshold to 0.5531 at the strongest value considered, 
+but the mean out-of-sample root remains extremely small, rising only from 0.0038 to 0.0058 over the same range. 
+At the same time, Figure~\ref{fig:mc-exp3-angles} depicts how the canonical directions become gradually 
+more stable as the average angle on the $X$ side falls from about $80^\circ$ at $\rho=0.306$ to 
+$47^\circ$ at $\rho=0.546$, while the squared cosine overlap rises from 0.0439 to 0.4674. Thus, the 
+threshold region should be interpreted as a transition zone rather than a knife-edge boundary. 
+Above $\rho_c$, outliers become more likely, but vector recovery and out-of-sample persistence still 
+improve only progressively.
+
+\subsection*{Experiment 4: Multiple-Spike Low-Rank Design}
+
+For experiment 4, three spikes with population canonical correlations $(0.80, 0.55, 0.30)$ are considered.
+On average, the number of detected outliers is 1.5785, which implies that finite samples 
+typically separate only the strongest part of the low-rank structure. The mean leading three 
+sample roots are 0.7544, 0.5515, and 0.4934, respectively, so the spectrum remains clearly 
+ordered, but only the first two components are meaningfully distinguishable from the noise benchmark; see 
+Table~\ref{tab:mc-exp4-summary} and Figure~\ref{fig:mc-exp4-scree}.
+
+Recovery reported in Table~\ref{tab:mc-exp4-components} confirm this ranking. Recalling that 
+mean angles close to $90^\circ$ and mean squared cosine overlaps close to zero indicate poor 
+recovery, the results show that the first component is estimated well with a mean angle on 
+the $X$ side of only $20.84^\circ$ and with mean squared cosine overlap 0.8725. The second 
+component is recovered only moderately well, with mean angle $47.05^\circ$ and mean squared 
+cosine overlap 0.4692. By contrast, the third component is effectively lost in the bulk as
+its mean angle is $80.45^\circ$ and its mean squared cosine overlap is only 0.0407. 
+
+Furthermore, the average out-of-sample leading root remains small (at 0.1881), and the mean 
+split-sample squared cosine overlaps are about 0.272 on both sides, again indicating that 
+only part of the latent low-rank structure is stably recovered. Overall, the experiment 
+supports the behavior of HDCCA Bykhovskaya-Gorin formulate, confirming that in a multi-spike 
+design only sufficiently strong spikes emerge as reliable empirical outliers, while weaker 
+ones remain statistically present but practically unrecoverable.
+
+\subsection*{Experiment 5: Diffuse Versus Low-Rank Dependence}
+
+Experiment 5 focuses on comparing the behavior under a concentrated low-rank dependence structure 
+and a diffuse alternative. That is, a low-rank design where cross-panel dependence 
+is concentrated in a small number of dominant canonical directions. Versus a diffuse design, 
+where the same type of dependence is spread across many weaker directions, making individual 
+components harder to separate from the high-dimensional bulk. Figure~\ref{fig:mc-exp5-lowrank} and 
+Figure~\ref{fig:mc-exp5-diffuse} compare the spectral shapes produced by each of these designs.
+The low-rank designs produce a steeper decline at the leading ranks, indicating that part of 
+the dependence is concentrated in a small number of components. By contrast, the diffuse design 
+produces a smoother spectrum with no clear separation point. These results highlight that dependence 
+across several components is not always visible as a few clear outliers. When the signal is spread 
+across many directions, the spectrum changes more gradually and becomes harder to separate from 
+the high-dimensional noise bulk.
+
+\subsection*{Experiment 6: Finance-Style Robustness Checks}
+
+Experiment 6 examines whether the main qualitative conclusions survive under more realistic 
+data-generating mechanisms. Three  processes are considered while keeping the same 
+one-spike population signal, \(\rho=0.70\), but varying the distributional and covariance assumptions. 
+Specifically, the designs are: (i) the Gaussian identity benchmark, (ii) the Gaussian 
+spiked-covariance design, and (iii) the Student-\(t\) identity design. 
+These cases are used as finance-style robustness checks because equity return panels typically 
+exhibit both within-panel dependence, as stocks in the same group tend to co-move, and heavier 
+tails than the Gaussian benchmark, reflecting the presence of large return observations. 
+Holding \(\rho\) fixed ensures that differences across the three designs are attributed to 
+covariance structure and tail behavior rather than to changes in the underlying canonical signal.
+
+Table~\ref{tab:mc-exp6-summary} shows that all three finance-style designs produce detection 
+probability equal to one when the population spike is fixed at \(\rho=0.70\). 
+This indicates that the signal remains strong enough to separate from the pure-noise benchmark 
+under each specification. The main differences appear in the stability and recovery measures. 
+The Student-\(t\) design has the largest mean in-sample root, but a lower out-of-sample root, 
+lower split-sample stability, larger vector angles, and lower squared cosine recovery than the 
+Gaussian cases. This suggests that heavy-tailed observations can make the in-sample canonical 
+relation appear stronger while making the estimated directions less stable.
+
+\clearpage
+\section*{Appendix 2: Empirical Application Supplementary Results}
+\label{app:emp-results}
+\setresultnumbering{5}
+\setcounter{figure}{\value{savedempfigure}}
+\setcounter{table}{\value{savedemptable}}
+
+This appendix collects the supplementary tables and figures for the CRSP empirical application in 
+Chapter~\ref{ch:EmpiricalApplication}. Table~\ref{tab:emp-baseline-sample} reports the baseline 
+sample design used in the rolling analysis. Table~\ref{tab:emp-full-spectrum} and 
+Figure~\ref{fig:emp-full-spectrum} summarize the full-sample static spectrum, which confirms that 
+the presence of multiple outliers is not solely a rolling-window artifact. 
+
+\emptable[0.48\textwidth]{imagenes/emp_baseline_sample.tex}[Baseline CRSP sample design used in the empirical rolling-window application.]{ }{tab:emp-baseline-sample}
+\emptable[0.42\textwidth]{imagenes/emp_full_spectrum_top10.tex}[Top ten squared canonical roots from the full-sample static spectrum, with the HDCCA bulk-edge classification.]{ }{tab:emp-full-spectrum}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png}[Full-sample static canonical spectrum for the CRSP cyclical and defensive panels.]{ }{fig:emp-full-spectrum}
+
+\end{document}

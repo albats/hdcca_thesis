@@ -1,0 +1,227 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand \babel@aux [2]{\global \let \babel@toc \@gobbletwo }
+\@nameuse{bbl@beforestart}
+\abx@aux@refcontext{apa/global//global/global/global}
+\providecommand \oddpage@label [2]{}
+\babel@aux{english}{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{BykhovskayaGorin2023}
+\abx@aux@segm{0}{0}{BykhovskayaGorin2023}
+\abx@aux@cite{0}{BykhovskayaGorin2023}
+\abx@aux@segm{0}{0}{BykhovskayaGorin2023}
+\abx@aux@page{2}{11}
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{Hotelling1936}
+\abx@aux@segm{0}{0}{Hotelling1936}
+\abx@aux@cite{0}{Hotelling1936}
+\abx@aux@segm{0}{0}{Hotelling1936}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Literature Review}{13}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch:LitRev}{{2}{13}{Literature Review}{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Classical Canonical Correlation Analysis}{13}{section.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Conceptual Overview.}{13}{section.2.1}\protected@file@percent }
+\abx@aux@page{4}{13}
+\@writefile{toc}{\contentsline {paragraph}{Eigenvalue Representation.}{14}{equation.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Statistical Properties Under Classical Asymptotics.}{15}{equation.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Practical Implications and Limitations.}{15}{equation.2.7}\protected@file@percent }
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{Andrew2013}
+\abx@aux@segm{0}{0}{Andrew2013}
+\abx@aux@cite{0}{Gatto2017}
+\abx@aux@segm{0}{0}{Gatto2017}
+\abx@aux@cite{0}{Sun2019}
+\abx@aux@segm{0}{0}{Sun2019}
+\abx@aux@cite{0}{Yang2017}
+\abx@aux@segm{0}{0}{Yang2017}
+\abx@aux@cite{0}{Yang2021}
+\abx@aux@segm{0}{0}{Yang2021}
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{FiroozyeTanZohren2023}
+\abx@aux@segm{0}{0}{FiroozyeTanZohren2023}
+\abx@aux@page{5}{16}
+\abx@aux@page{6}{16}
+\abx@aux@page{7}{16}
+\abx@aux@page{8}{16}
+\abx@aux@page{9}{16}
+\abx@aux@page{10}{16}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Breakdown in High Dimensions}{16}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Dimensionality and Covariance Instability.}{16}{section.2.2}\protected@file@percent }
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{BykhovskayaGorin2023}
+\abx@aux@segm{0}{0}{BykhovskayaGorin2023}
+\abx@aux@cite{0}{BykhovskayaGorin2023}
+\abx@aux@segm{0}{0}{BykhovskayaGorin2023}
+\@writefile{toc}{\contentsline {paragraph}{Eigenvalue Distortion and Spurious Correlations.}{17}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The High-Dimensional CCA Framework.}{17}{section.2.2}\protected@file@percent }
+\newlabel{Sec:HDCCA}{{2.2}{17}{The High-Dimensional CCA Framework}{section.2.2}{}}
+\abx@aux@page{12}{17}
+\@writefile{toc}{\contentsline {paragraph}{Inconsistency of Canonical Directions.}{18}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Correction and Benchmark Implications.}{18}{section.2.2}\protected@file@percent }
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{Akaho2006}
+\abx@aux@segm{0}{0}{Akaho2006}
+\abx@aux@cite{0}{Hardoon2004}
+\abx@aux@segm{0}{0}{Hardoon2004}
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{Andrew2013}
+\abx@aux@segm{0}{0}{Andrew2013}
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{Vinod1976}
+\abx@aux@segm{0}{0}{Vinod1976}
+\abx@aux@cite{0}{Witten2009}
+\abx@aux@segm{0}{0}{Witten2009}
+\abx@aux@cite{0}{Waaijenborg2008}
+\abx@aux@segm{0}{0}{Waaijenborg2008}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Variants of Canonical Correlation Analysis}{19}{section.2.3}\protected@file@percent }
+\newlabel{Sec:VariantsofCCA}{{2.3}{19}{Variants of Canonical Correlation Analysis}{section.2.3}{}}
+\abx@aux@page{13}{19}
+\abx@aux@page{14}{19}
+\abx@aux@page{15}{19}
+\abx@aux@refcontext{apa/apasortcite//global/global/global}
+\abx@aux@cite{0}{Kozakt2019}
+\abx@aux@segm{0}{0}{Kozakt2019}
+\abx@aux@cite{0}{Bryzgalova2023}
+\abx@aux@segm{0}{0}{Bryzgalova2023}
+\abx@aux@page{16}{20}
+\abx@aux@page{17}{20}
+\abx@aux@page{18}{20}
+\@writefile{toc}{\contentsline {paragraph}{Ridge-Type Regularization.}{20}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sparse CCA.}{20}{section.2.3}\protected@file@percent }
+\abx@aux@page{19}{21}
+\abx@aux@page{20}{21}
+\@writefile{toc}{\contentsline {paragraph}{Conceptual Difference from High-Dimensional CCA Theory.}{21}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Monte Carlo Simulations}{22}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch:MonteCarlo}{{3}{22}{Monte Carlo Simulations}{chapter.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Methodology}{24}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch:Methodology}{{4}{24}{Methodology}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Objective and empirical strategy}{24}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Empirical setting}{24}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Empirical diagnostics}{25}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Rolling-window design}{26}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Robustness}{26}{section.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Empirical Application to Stock Return Panels}{27}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch:EmpiricalApplication}{{5}{27}{Empirical Application to Stock Return Panels}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Data description}{27}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Main result}{27}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Top-k subspace stability and the rotation problem}{28}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Eigengaps and the failure of credible inversion}{29}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Interpreting the spectrum}{29}{section.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Robustness}{30}{section.5.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Baseline 260-week rolling summary for the CRSP empirical application.}}{32}{table.caption.6}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:emp-main-summary}{{5.1}{32}{Baseline 260-week rolling summary for the CRSP empirical application}{table.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Baseline rolling leading squared canonical root against the HDCCA bulk edge and the permutation null benchmark.}}{32}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:emp-leading-root-null}{{5.1}{32}{Baseline rolling leading squared canonical root against the HDCCA bulk edge and the permutation null benchmark}{figure.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Robustness summary across alternative rolling-window lengths and subsamples.}}{32}{table.caption.13}\protected@file@percent }
+\newlabel{tab:emp-robustness-summary}{{5.2}{32}{Robustness summary across alternative rolling-window lengths and subsamples}{table.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Baseline rolling count of squared canonical roots above the HDCCA bulk edge.}}{33}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:emp-outlier-count}{{5.2}{33}{Baseline rolling count of squared canonical roots above the HDCCA bulk edge}{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Baseline split-sample stability of the first canonical direction on the cyclical and defensive sides.}}{33}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:emp-split-stability}{{5.3}{33}{Baseline split-sample stability of the first canonical direction on the cyclical and defensive sides}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Baseline comparison between the in-sample leading squared root and the held-out leading squared root.}}{34}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:emp-insample-heldout}{{5.4}{34}{Baseline comparison between the in-sample leading squared root and the held-out leading squared root}{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Baseline top-k subspace overlap for k = 1, 2, 3, and 5 on the cyclical and defensive sides.}}{34}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:emp-topk}{{5.5}{34}{Baseline top-k subspace overlap for k = 1, 2, 3, and 5 on the cyclical and defensive sides}{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Baseline eigengap diagnostics for the first few rolling canonical roots.}}{35}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:emp-eigengap}{{5.6}{35}{Baseline eigengap diagnostics for the first few rolling canonical roots}{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Cross-specification robustness comparison for spectral strength, stability, and held-out dependence.}}{35}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:emp-robustness}{{5.7}{35}{Cross-specification robustness comparison for spectral strength, stability, and held-out dependence}{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{36}{figure.caption.14}\protected@file@percent }
+\abx@aux@page{21}{36}
+\abx@aux@page{22}{36}
+\abx@aux@page{23}{36}
+\abx@aux@page{24}{36}
+\abx@aux@page{25}{36}
+\abx@aux@page{26}{36}
+\abx@aux@page{27}{36}
+\abx@aux@page{28}{36}
+\abx@aux@page{29}{36}
+\abx@aux@page{30}{36}
+\abx@aux@page{31}{36}
+\abx@aux@page{32}{36}
+\abx@aux@page{33}{37}
+\abx@aux@page{34}{37}
+\abx@aux@page{35}{37}
+\@writefile{toc}{\contentsline {chapter}{Appendix}{37}{chapter*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Appendix}{38}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}APPENDIX 1:Monte Carlo Full Results}{38}{section.6.1}\protected@file@percent }
+\newlabel{app:mc-results}{{6.1}{38}{APPENDIX 1:Monte Carlo Full Results}{section.6.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Experiment 1 summary statistics under the pure-noise benchmark.}}{42}{table.caption.16}\protected@file@percent }
+\newlabel{tab:mc-exp1-summary}{{6.1}{42}{Experiment 1 summary statistics under the pure-noise benchmark}{table.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Experiment 1 mean null scree plot.}}{42}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:mc-exp1-scree}{{6.1}{42}{Experiment 1 mean null scree plot}{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Experiment 1 null distribution of the leading sample canonical correlation.}}{43}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:mc-exp1-hist}{{6.2}{43}{Experiment 1 null distribution of the leading sample canonical correlation}{figure.caption.18}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Experiment 2 summary table for the one-spike signal-strength sweep.}}{43}{table.caption.19}\protected@file@percent }
+\newlabel{tab:mc-exp2-summary}{{6.2}{43}{Experiment 2 summary table for the one-spike signal-strength sweep}{table.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Experiment 2 in-sample spectral response to one true spike.}}{44}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:mc-exp2-spectral}{{6.3}{44}{Experiment 2 in-sample spectral response to one true spike}{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Experiment 2 out-of-sample strength and split-sample stability.}}{44}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:mc-exp2-stability}{{6.4}{44}{Experiment 2 out-of-sample strength and split-sample stability}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Experiment 2 geometric recovery of the leading canonical vectors.}}{45}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:mc-exp2-angles}{{6.5}{45}{Experiment 2 geometric recovery of the leading canonical vectors}{figure.caption.22}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Experiment 3 summary table around the near-critical region.}}{45}{table.caption.23}\protected@file@percent }
+\newlabel{tab:mc-exp3-summary}{{6.3}{45}{Experiment 3 summary table around the near-critical region}{table.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Experiment 3 detection probability around the critical threshold.}}{46}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:mc-exp3-detection}{{6.6}{46}{Experiment 3 detection probability around the critical threshold}{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Experiment 3 in-sample and out-of-sample strength near the threshold.}}{46}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:mc-exp3-strength}{{6.7}{46}{Experiment 3 in-sample and out-of-sample strength near the threshold}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Experiment 3 vector recovery around the threshold.}}{47}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:mc-exp3-angles}{{6.8}{47}{Experiment 3 vector recovery around the threshold}{figure.caption.26}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Experiment 4 summary statistics for the three-spike low-rank design.}}{47}{table.caption.27}\protected@file@percent }
+\newlabel{tab:mc-exp4-summary}{{6.4}{47}{Experiment 4 summary statistics for the three-spike low-rank design}{table.caption.27}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Experiment 4 component-by-component recovery measures.}}{47}{table.caption.28}\protected@file@percent }
+\newlabel{tab:mc-exp4-components}{{6.5}{47}{Experiment 4 component-by-component recovery measures}{table.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Experiment 4 mean scree plot under the three-spike low-rank design.}}{48}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:mc-exp4-scree}{{6.9}{48}{Experiment 4 mean scree plot under the three-spike low-rank design}{figure.caption.29}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Experiment 5 comparison of the low-rank and diffuse designs.}}{48}{table.caption.30}\protected@file@percent }
+\newlabel{tab:mc-exp5-summary}{{6.6}{48}{Experiment 5 comparison of the low-rank and diffuse designs}{table.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Experiment 5A mean scree plot under the low-rank design.}}{48}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:mc-exp5-lowrank}{{6.10}{48}{Experiment 5A mean scree plot under the low-rank design}{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Experiment 5B mean scree plot under the diffuse design.}}{49}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:mc-exp5-diffuse}{{6.11}{49}{Experiment 5B mean scree plot under the diffuse design}{figure.caption.32}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Experiment 6 summary statistics across the robustness designs.}}{49}{table.caption.33}\protected@file@percent }
+\newlabel{tab:mc-exp6-summary}{{6.7}{49}{Experiment 6 summary statistics across the robustness designs}{table.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Experiment 6 robustness comparison across finance-style data-generating processes.}}{49}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:mc-exp6-robustness}{{6.12}{49}{Experiment 6 robustness comparison across finance-style data-generating processes}{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}APPENDIX 2: Empirical Application Supplementary Results}{50}{section.6.2}\protected@file@percent }
+\newlabel{app:emp-results}{{6.2}{50}{APPENDIX 2: Empirical Application Supplementary Results}{section.6.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Baseline CRSP sample design used in the empirical rolling-window application.}}{51}{table.caption.35}\protected@file@percent }
+\newlabel{tab:emp-baseline-sample}{{6.8}{51}{Baseline CRSP sample design used in the empirical rolling-window application}{table.caption.35}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.9}{\ignorespaces Top ten squared canonical roots from the full-sample static spectrum, with the HDCCA bulk-edge classification.}}{51}{table.caption.36}\protected@file@percent }
+\newlabel{tab:emp-full-spectrum}{{6.9}{51}{Top ten squared canonical roots from the full-sample static spectrum, with the HDCCA bulk-edge classification}{table.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Full-sample static canonical spectrum for the CRSP cyclical and defensive panels.}}{51}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:emp-full-spectrum}{{6.13}{51}{Full-sample static canonical spectrum for the CRSP cyclical and defensive panels}{figure.caption.37}{}}
+\ttl@finishall
+\abx@aux@read@bbl@mdfivesum{4B7073690EDB7EFE4417D91ABAAC4EF3}
+\abx@aux@defaultrefcontext{0}{Akaho2006}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Andrew2013}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Bryzgalova2023}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{BykhovskayaGorin2023}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{FiroozyeTanZohren2023}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Gatto2017}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Hardoon2004}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Hotelling1936}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Kozakt2019}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Sun2019}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Vinod1976}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Waaijenborg2008}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Witten2009}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Yang2021}{apa/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{Yang2017}{apa/global//global/global/global}
+\gdef \@abspage@last{54}

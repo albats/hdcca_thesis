@@ -1,0 +1,519 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{BykhovskayaGorin2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=660a0fdf9cb20df72a8fc6d2d7e0f047}{%
+           family={Bykhovskaya},
+           familyi={B\bibinitperiod},
+           given={Anastasia},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c5cfdbd0b01e197566efd7a293a6253}{%
+           family={Gorin},
+           familyi={G\bibinitperiod},
+           given={Vadim},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0853073063b40a735786978f9ef463a0}
+      \strng{fullhash}{0853073063b40a735786978f9ef463a0}
+      \strng{fullhashraw}{0853073063b40a735786978f9ef463a0}
+      \strng{bibnamehash}{0853073063b40a735786978f9ef463a0}
+      \strng{authorbibnamehash}{0853073063b40a735786978f9ef463a0}
+      \strng{authornamehash}{0853073063b40a735786978f9ef463a0}
+      \strng{authorfullhash}{0853073063b40a735786978f9ef463a0}
+      \strng{authorfullhashraw}{0853073063b40a735786978f9ef463a0}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.ST}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2306.16393}
+      \field{title}{High-Dimensional Canonical Correlation Analysis}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2306.16393
+      \endverb
+    \endentry
+    \entry{deLongisZaninEllis2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2409a3dca1597e14cd0ed859ce97754f}{%
+           family={Longis},
+           familyi={L\bibinitperiod},
+           given={Alessio},
+           giveni={A\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=67a9674994c1d9c6c8c88f9932164e5b}{%
+           family={Zanin},
+           familyi={Z\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c55d7cce81cbde3da28c68498b2c7c73}{%
+           family={Ellis},
+           familyi={E\bibinitperiod},
+           given={Dianne},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b6dc6ec68dd7dd6b896f2a2cff0a5270}
+      \strng{fullhash}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{fullhashraw}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{bibnamehash}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{authorbibnamehash}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{authornamehash}{b6dc6ec68dd7dd6b896f2a2cff0a5270}
+      \strng{authorfullhash}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{authorfullhashraw}{c9c7596fc8c7b42a92dc068e35279590}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Beta Investment Strategies}
+      \field{number}{4}
+      \field{title}{Measuring Sector Cyclicality: A Factor-Based Approach}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{pages}{147\bibrangedash 162}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.3905/jbis.2022.1.014
+      \endverb
+    \endentry
+    \entry{FiroozyeTanZohren2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3cfae51b031f54b85c8705a98df6e1ef}{%
+           family={Firoozye},
+           familyi={F\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=349cdbc57fc71f1f352588e51520b785}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Qian},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7bcfc3a5e6df217d673644bbe887698e}{%
+           family={Zohren},
+           familyi={Z\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{07ff543d48e92db13a01457be61b4eea}
+      \strng{fullhash}{586da9a70270d943ef166ea8b89f352e}
+      \strng{fullhashraw}{586da9a70270d943ef166ea8b89f352e}
+      \strng{bibnamehash}{586da9a70270d943ef166ea8b89f352e}
+      \strng{authorbibnamehash}{586da9a70270d943ef166ea8b89f352e}
+      \strng{authornamehash}{07ff543d48e92db13a01457be61b4eea}
+      \strng{authorfullhash}{586da9a70270d943ef166ea8b89f352e}
+      \strng{authorfullhashraw}{586da9a70270d943ef166ea8b89f352e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Banking \& Finance}
+      \field{title}{Canonical Portfolios: Optimal Asset and Signal Combination}
+      \field{volume}{154}
+      \field{year}{2023}
+      \field{pages}{106952}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jbankfin.2023.106952
+      \endverb
+    \endentry
+    \entry{Hotelling1936}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=628a6bd9bb208bfcbeb8394b69088107}{%
+           family={Hotelling},
+           familyi={H\bibinitperiod},
+           given={Harold},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{fullhash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{fullhashraw}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{bibnamehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{authorbibnamehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{authornamehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{authorfullhash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{authorfullhashraw}{628a6bd9bb208bfcbeb8394b69088107}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrika}
+      \field{number}{3/4}
+      \field{title}{Relations Between Two Sets of Variates}
+      \field{volume}{28}
+      \field{year}{1936}
+      \field{pages}{321\bibrangedash 377}
+      \range{pages}{57}
+    \endentry
+    \entry{johnson2007applied}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3e5d90281ce3c8c40502da206f6ae21c}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Richard\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bf1256920bca6ae536f5b087628170d}{%
+           family={Wichern},
+           familyi={W\bibinitperiod},
+           given={Dean\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Prentice Hall}%
+      }
+      \strng{namehash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{fullhash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{fullhashraw}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{bibnamehash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{authorbibnamehash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{authornamehash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{authorfullhash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{authorfullhashraw}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6th}
+      \field{title}{Applied Multivariate Statistical Analysis}
+      \field{year}{2007}
+    \endentry
+    \entry{StanglJacobsenVisaltanachoti2007}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2bdbd36b4dc0db7334a8daa842f328fc}{%
+           family={Stangl},
+           familyi={S\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=24874e1580f17d4aee09ab0d482b8641}{%
+           family={Jacobsen},
+           familyi={J\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4288e2f718b64166dc672154b35526b8}{%
+           family={Visaltanachoti},
+           familyi={V\bibinitperiod},
+           given={Nuttawat},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f02c322e92c94796a85acef6cfe83ae8}
+      \strng{fullhash}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{fullhashraw}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{bibnamehash}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{authorbibnamehash}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{authornamehash}{f02c322e92c94796a85acef6cfe83ae8}
+      \strng{authorfullhash}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{authorfullhashraw}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{Sector rotation over business-cycles}
+      \field{year}{2007}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{BykhovskayaGorin2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=660a0fdf9cb20df72a8fc6d2d7e0f047}{%
+           family={Bykhovskaya},
+           familyi={B\bibinitperiod},
+           given={Anastasia},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c5cfdbd0b01e197566efd7a293a6253}{%
+           family={Gorin},
+           familyi={G\bibinitperiod},
+           given={Vadim},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0853073063b40a735786978f9ef463a0}
+      \strng{fullhash}{0853073063b40a735786978f9ef463a0}
+      \strng{fullhashraw}{0853073063b40a735786978f9ef463a0}
+      \strng{bibnamehash}{0853073063b40a735786978f9ef463a0}
+      \strng{authorbibnamehash}{0853073063b40a735786978f9ef463a0}
+      \strng{authornamehash}{0853073063b40a735786978f9ef463a0}
+      \strng{authorfullhash}{0853073063b40a735786978f9ef463a0}
+      \strng{authorfullhashraw}{0853073063b40a735786978f9ef463a0}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.ST}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:2306.16393}
+      \field{title}{High-Dimensional Canonical Correlation Analysis}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2306.16393
+      \endverb
+    \endentry
+    \entry{deLongisZaninEllis2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2409a3dca1597e14cd0ed859ce97754f}{%
+           family={Longis},
+           familyi={L\bibinitperiod},
+           given={Alessio},
+           giveni={A\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=67a9674994c1d9c6c8c88f9932164e5b}{%
+           family={Zanin},
+           familyi={Z\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c55d7cce81cbde3da28c68498b2c7c73}{%
+           family={Ellis},
+           familyi={E\bibinitperiod},
+           given={Dianne},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b6dc6ec68dd7dd6b896f2a2cff0a5270}
+      \strng{fullhash}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{fullhashraw}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{bibnamehash}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{authorbibnamehash}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{authornamehash}{b6dc6ec68dd7dd6b896f2a2cff0a5270}
+      \strng{authorfullhash}{c9c7596fc8c7b42a92dc068e35279590}
+      \strng{authorfullhashraw}{c9c7596fc8c7b42a92dc068e35279590}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Beta Investment Strategies}
+      \field{number}{4}
+      \field{title}{Measuring Sector Cyclicality: A Factor-Based Approach}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{pages}{147\bibrangedash 162}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.3905/jbis.2022.1.014
+      \endverb
+    \endentry
+    \entry{FiroozyeTanZohren2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3cfae51b031f54b85c8705a98df6e1ef}{%
+           family={Firoozye},
+           familyi={F\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=349cdbc57fc71f1f352588e51520b785}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Qian},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7bcfc3a5e6df217d673644bbe887698e}{%
+           family={Zohren},
+           familyi={Z\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{07ff543d48e92db13a01457be61b4eea}
+      \strng{fullhash}{586da9a70270d943ef166ea8b89f352e}
+      \strng{fullhashraw}{586da9a70270d943ef166ea8b89f352e}
+      \strng{bibnamehash}{586da9a70270d943ef166ea8b89f352e}
+      \strng{authorbibnamehash}{586da9a70270d943ef166ea8b89f352e}
+      \strng{authornamehash}{07ff543d48e92db13a01457be61b4eea}
+      \strng{authorfullhash}{586da9a70270d943ef166ea8b89f352e}
+      \strng{authorfullhashraw}{586da9a70270d943ef166ea8b89f352e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Banking \& Finance}
+      \field{title}{Canonical Portfolios: Optimal Asset and Signal Combination}
+      \field{volume}{154}
+      \field{year}{2023}
+      \field{pages}{106952}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jbankfin.2023.106952
+      \endverb
+    \endentry
+    \entry{Hotelling1936}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=628a6bd9bb208bfcbeb8394b69088107}{%
+           family={Hotelling},
+           familyi={H\bibinitperiod},
+           given={Harold},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{fullhash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{fullhashraw}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{bibnamehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{authorbibnamehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{authornamehash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{authorfullhash}{628a6bd9bb208bfcbeb8394b69088107}
+      \strng{authorfullhashraw}{628a6bd9bb208bfcbeb8394b69088107}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrika}
+      \field{number}{3/4}
+      \field{title}{Relations Between Two Sets of Variates}
+      \field{volume}{28}
+      \field{year}{1936}
+      \field{pages}{321\bibrangedash 377}
+      \range{pages}{57}
+    \endentry
+    \entry{johnson2007applied}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3e5d90281ce3c8c40502da206f6ae21c}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Richard\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bf1256920bca6ae536f5b087628170d}{%
+           family={Wichern},
+           familyi={W\bibinitperiod},
+           given={Dean\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Prentice Hall}%
+      }
+      \strng{namehash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{fullhash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{fullhashraw}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{bibnamehash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{authorbibnamehash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{authornamehash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{authorfullhash}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \strng{authorfullhashraw}{9f154aebfcba5af93d80b9211cb4a1f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6th}
+      \field{title}{Applied Multivariate Statistical Analysis}
+      \field{year}{2007}
+    \endentry
+    \entry{StanglJacobsenVisaltanachoti2007}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2bdbd36b4dc0db7334a8daa842f328fc}{%
+           family={Stangl},
+           familyi={S\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=24874e1580f17d4aee09ab0d482b8641}{%
+           family={Jacobsen},
+           familyi={J\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4288e2f718b64166dc672154b35526b8}{%
+           family={Visaltanachoti},
+           familyi={V\bibinitperiod},
+           given={Nuttawat},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f02c322e92c94796a85acef6cfe83ae8}
+      \strng{fullhash}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{fullhashraw}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{bibnamehash}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{authorbibnamehash}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{authornamehash}{f02c322e92c94796a85acef6cfe83ae8}
+      \strng{authorfullhash}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \strng{authorfullhashraw}{e082e72d3f0541fbaa2dbb6ac83da723}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{Sector rotation over business-cycles}
+      \field{year}{2007}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
