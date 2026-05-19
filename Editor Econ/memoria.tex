@@ -1533,6 +1533,9 @@ dimensions later used in the empirical application. The baseline configuration f
 (DGP) is therefore, $p=80$, $q=80$, and $n=520$ observations. Main experiments use $2{,}000$ independent 
 replications whereas the pure-noise and near-threshold designs use $5{,}000$ replications for greater 
 precision in tail and detection-rate estimates.
+The code implementing these data-generating processes and the associated diagnostics is available in the project 
+repository at \url{https://github.com/albats/hdcca_thesis}, with the Monte Carlo notebook located in 
+\texttt{Simulations/simulations.ipynb}.
 
 Population cross-covariance is constructed as
 \[ \Sigma_{xy} = \sqrt{\Sigma_{xx}}\;K\;\sqrt{\Sigma_{yy}}, \qquad K = U_0\,\mathrm{diag}(\rho_1,\ldots,\rho_r)\,V_0^\top, \]

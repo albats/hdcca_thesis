@@ -1,21 +1,21 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'memoria.blg'
-[50] biber-darwin:342> INFO - === Mon May 18, 2026, 22:59:55
-[63] Biber.pm:421> INFO - Reading 'memoria.bcf'
-[114] Biber.pm:1002> INFO - Found 6 citekeys in bib section 0
-[128] Biber.pm:4487> INFO - Processing section 0
-[134] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[134] bibtex.pm:1713> INFO - LaTeX decoding ...
-[144] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[185] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[185] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[185] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[185] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[194] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[194] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[194] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[194] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[198] bbl.pm:676> INFO - Writing 'memoria.bbl' with encoding 'UTF-8'
-[201] bbl.pm:779> INFO - Output to memoria.bbl
-[201] Biber.pm:132> WARN - Duplicate entry key: 'Andrew2013' in file 'referencias.bib', skipping ...
-[201] Biber.pm:134> INFO - WARNINGS: 1
+[37] biber-darwin:342> INFO - === Tue May 19, 2026, 07:22:58
+[46] Biber.pm:421> INFO - Reading 'memoria.bcf'
+[92] Biber.pm:1002> INFO - Found 6 citekeys in bib section 0
+[103] Biber.pm:4487> INFO - Processing section 0
+[108] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[108] bibtex.pm:1713> INFO - LaTeX decoding ...
+[117] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[151] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[151] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[151] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[151] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[160] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[160] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[160] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[160] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[163] bbl.pm:676> INFO - Writing 'memoria.bbl' with encoding 'UTF-8'
+[166] bbl.pm:779> INFO - Output to memoria.bbl
+[166] Biber.pm:132> WARN - Duplicate entry key: 'Andrew2013' in file 'referencias.bib', skipping ...
+[166] Biber.pm:134> INFO - WARNINGS: 1

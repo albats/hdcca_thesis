@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.6)  19 MAY 2026 06:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.6)  19 MAY 2026 07:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1994,14 +1994,21 @@ Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8
 (pdftex.def)             Requested size: 422.52057pt x 316.01038pt.
  [39
 
-] [40 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png> <../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png>] [41 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png> <../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png>] [42 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png>] [43 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png> <../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png>] [44
+] [40 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png> <../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png>] [41 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png> <../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png>] [42 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png>] [43 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png> <../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png>]
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 1538.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+File: t1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 12.0pt on input line 1538.
+ [44
 
 
 ] [45] [46] [47] [48] [49] (./imagenes/emp_baseline_sample.tex) (./imagenes/emp_full_spectrum_top10.tex)
-<../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png, id=1216, 644.4075pt x 369.5406pt>
+<../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png, id=1218, 644.4075pt x 369.5406pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png  used on input line 1706.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png  used on input line 1709.
 (pdftex.def)             Requested size: 422.52057pt x 242.30742pt.
  [50
 
@@ -2017,17 +2024,17 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32880 strings out of 467525
- 555785 string characters out of 5418983
+ 32918 strings out of 467525
+ 556412 string characters out of 5418983
  1488433 words of memory out of 5000000
- 61125 multiletter control sequences out of 15000+600000
- 725520 words of font info for 179 fonts, out of 8000000 for 9000
+ 61159 multiletter control sequences out of 15000+600000
+ 725842 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,13n,117p,751b,5185s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on memoria.pdf (55 pages, 2337932 bytes).
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on memoria.pdf (55 pages, 2343289 bytes).
 PDF statistics:
- 1308 PDF objects out of 1440 (max. 8388607)
+ 1314 PDF objects out of 1440 (max. 8388607)
  128 named destinations out of 1000 (max. 500000)
  291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

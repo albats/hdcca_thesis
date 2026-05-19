@@ -688,6 +688,10 @@ INPUT ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary
 INPUT ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png
 INPUT ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png
 INPUT ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
 INPUT ./imagenes/emp_baseline_sample.tex
 INPUT ./imagenes/emp_baseline_sample.tex
 INPUT imagenes/emp_baseline_sample.tex
@@ -706,6 +710,7 @@ OUTPUT memoria.run.xml
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsym.pfb
