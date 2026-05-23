@@ -5,16 +5,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Scree plot for the mean canonical roots for the pure-noise scenario (Experiment 1).}}{30}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Experiment 1 pure-noise distribution of the leading sample canonical correlation.}}{31}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Experiment 2 in-sample spectral response to one true spike.}}{32}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Experiment 2 out-of-sample strength and split-sample stability.}}{32}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Experiment 2 geometric recovery of the leading canonical vectors.}}{33}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Experiment 3 detection probability around the critical threshold.}}{34}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Experiment 3 in-sample and out-of-sample strength near the threshold.}}{34}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Experiment 3 vector recovery around the threshold.}}{35}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Experiment 4 mean scree plot under the three-spike low-rank design.}}{36}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Experiment 5A mean scree plot under the low-rank design.}}{37}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Scree plot for the mean canonical roots for the pure-noise scenario (Experiment 1).}}{29}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Experiment 1 pure-noise distribution of the leading sample canonical correlation.}}{30}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Experiment 2 in-sample spectral response to one true spike.}}{31}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Experiment 2 out-of-sample strength and split-sample stability.}}{31}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Experiment 2 geometric recovery of the leading canonical vectors.}}{32}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Experiment 3 detection probability around the critical threshold.}}{33}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Experiment 3 in-sample and out-of-sample strength near the threshold.}}{33}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Experiment 3 vector recovery around the threshold.}}{34}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Experiment 4 mean scree plot under the three-spike low-rank design.}}{35}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Experiment 5A mean scree plot under the low-rank design.}}{36}{figure.caption.22}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Experiment 5B mean scree plot under the diffuse design.}}{37}{figure.caption.23}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Experiment 6 robustness comparison across finance-style data-generating processes.}}{38}{figure.caption.25}%
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Baseline rolling leading squared canonical root against the HDCCA bulk edge and the permutation null benchmark.}}{40}{figure.caption.27}%
