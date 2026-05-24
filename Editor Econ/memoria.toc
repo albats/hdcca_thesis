@@ -17,16 +17,16 @@
 \contentsline {section}{\numberline {4.1}Objective and empirical strategy}{20}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Empirical setting}{21}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Empirical diagnostics}{21}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Rolling-window design}{22}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Rolling-window design}{23}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Robustness}{23}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Empirical Application to Stock Return Panels}{24}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Data description}{24}{section.5.1}%
+\contentsline {chapter}{\numberline {5}Empirical Application to Stock Return Panels}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Data description}{23}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Main result}{24}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Top-k subspace stability and the rotation problem}{25}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Eigengaps and the failure of credible inversion}{26}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Eigengaps and the failure of credible inversion}{25}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Interpreting the spectrum}{26}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Robustness}{27}{section.5.6}%
+\contentsline {section}{\numberline {5.6}Robustness}{26}{section.5.6}%
 \contentsline {chapter}{\numberline {6}Discussion and Conclusion}{27}{chapter.6}%
 \contentsline {chapter}{Bibliography}{28}{chapter.6}%
-\contentsline {chapter}{Appendix}{39}{section*.23}%
+\contentsline {chapter}{Appendix}{39}{section*.24}%
 \contentsfinish 

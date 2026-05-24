@@ -1062,7 +1062,7 @@ The simulations yield four central findings (supplementary evidence is reported 
 Appendix 1).
 The first experiment, the pure-noise benchmark, shows that in high dimensions CCA 
 can produce a large leading sample root even under exact independence. 
-Table~\ref{tab:mc-exp1-summary} and Figures~\ref{fig:mc-exp1-scree}--\ref{fig:mc-exp1-hist} 
+Table~\ref{tab:mc-exp1-summary} and Figures~\ref{fig:mc-exp1-scree} and \ref{fig:mc-exp1-hist} 
 show that the leading root is centered around 0.50, whereas the out-of-sample root 
 and split-sample overlaps are essentially zero. This illustrates that large in-sample roots 
 cannot be interpreted as evidence of genuine cross-panel structure 
@@ -1071,10 +1071,10 @@ the pure-noise distribution is used as a finite-sample benchmark.
 
 Second, the one-spike and threshold experiments confirm the phase-transition logic defined in HDCCA. 
 The one-spike sweep in Table~\ref{tab:mc-exp2-summary} and 
-Figures~\ref{fig:mc-exp2-spectral}--\ref{fig:mc-exp2-angles} show that weak population spikes 
+Figure~\ref{fig:mc-exp2-spectral} shows that weak population spikes 
 do not generate a distinct sample outlier as the leading sample root remains close to the pure-noise
 benchmark, and the estimated canonical directions show little recovery. Moreover, the threshold zoom in 
-Table~\ref{tab:mc-exp3-summary} and Figures~\ref{fig:mc-exp3-detection}--\ref{fig:mc-exp3-angles} 
+Table~\ref{tab:mc-exp3-summary} and Figures~\ref{fig:mc-exp3-detection} and \ref{fig:mc-exp3-angles} 
 shows that crossing \(\rho_c \approx 0.426\) (the critical threshold) does not produce a sharp 
 finite-sample discontinuity. Instead, the probability of detecting the signal as an outlier 
 increases gradually around the threshold, and both vector recovery and held-out canonical 
@@ -1084,27 +1084,30 @@ cross-panel dependence.
 
 Third, the multi-spike and diffuse designs show that detecting the signals also depends on how 
 they are distributed. In the multiple-spike design, only the strongest components separate most 
-clearly, while weaker components are harder to distinguish from the bulk; see 
-Tables~\ref{tab:mc-exp4-summary}--\ref{tab:mc-exp4-components} and Figure~\ref{fig:mc-exp4-scree}. 
+clearly, while weaker components are harder to distinguish from the bulk. 
 The low-rank versus diffuse comparison in Figures~\ref{fig:mc-exp5-lowrank}--\ref{fig:mc-exp5-diffuse}
 portrays this point as concentrated dependence produces clearer leading roots and greater directional
 stability (see Table~\ref{tab:mc-exp5-summary}), whereas diffuse dependence 
 produces a smoother spectrum that remains closer to the high-dimensional bulk.
 
-Fourth, when applying the Bykhovskaya-Gorin (BG)correction formulas, the results validate
-the theoretical expectation under clean separated-spike designs. In the one-spike experiment, 
-raw roots are severely inflated: for example, at \(\rho=0.6909\), \(\rho^2=0.4774\) while 
-the mean raw root is \(0.6509\). In contrast, the BG-corrected estimate is \(0.4754\), 
-almost unbiased. However, near or below the threshold, valid correction shares are low 
-and corrected values can still be upward biased. Thus, correction is reliable 
-only after separation.
+Fourth, when applying the Bykhovskaya-Gorin (BG) correction formulas, the results validate
+the theoretical expectation under clean separated-spike designs as clearly depicted in 
+Figure~\ref{fig:mc_exp4_bg_component_correction}. While in the one-spike experiment shown in 
+Figure~\ref{fig:mc_exp3_bg_root_correction}, raw roots are severely inflated with 
+\(\rho^2=0.4774\) at \(\rho=0.6909\), while the mean raw root is \(0.6509\). 
+In contrast, the BG-corrected estimate is \(0.4754\), almost unbiased. 
+However, near or below the threshold, corrected values can still be upward biased. 
+Thus, correction is reliable only after separation. 
 
 Note that the robustness exercise in Table~\ref{tab:mc-exp6-summary} and 
-Figure~\ref{fig:mc-exp6-robustness} shows that the main conclusions survive moderate 
-covariance misspecification. Detection remains strong when the clean 
-Gaussian benchmark is relaxed and introducing within-panel covariance has limited effects in this 
-calibration, whereas heavy-tailed observations do increase the in-sample root and weaken 
-directional recovery and stability.
+Figure \ref{fig:mc-exp6-bg-correction} shows
+that the main conclusions survive moderate covariance misspecification. Detection 
+remains strong when the clean Gaussian benchmark is relaxed and introducing 
+within-panel covariance has limited effects in this calibration, whereas heavy-tailed 
+observations do increase the in-sample root and weaken 
+directional recovery and stability. The same occurs when the BG correction is applied, 
+as the corrected root remains close to the true population value for Gaussian data but 
+remains upward biased under heavy tails.
 
 These results motivate the empirical methodology developed in Chapter 4. The simulations 
 show that a large leading sample root is informative only when it is large relative to an 
@@ -1116,6 +1119,8 @@ robust canonical directions.
 The empirical analysis therefore evaluates the cyclical and defensive panels using a 
 joint set of diagnostics: spectral magnitude, benchmark comparison, eigengap separation, 
 vector and subspace stability, and out-of-sample canonical correlation. 
+Additionally, the simulations show that the Bykhovskaya-Gorin correction formulas are informative 
+only when the empirical root is clearly separated from the high-dimensional bulk.
 This approach avoids interpreting in-sample fit alone as evidence of economically meaningful co-movement.
 
 
@@ -1210,7 +1215,6 @@ depend on a particular market period.
 % By splitting the sample around this period, we can assess 
 % whether the observed phenomena are robust to such structural breaks.
 
-\clearpage
 \chapter{Empirical Application to Stock Return Panels}
 \label{ch:EmpiricalApplication}
 
@@ -1404,6 +1408,10 @@ canonical vector.
 \resetresultnumbering{3}
 \subsection*{Monte Carlo Simulation Results}
 
+\mctable{imagenes/mc_main_results_summary.tex}[Summary of the main Monte Carlo results.]{
+The table summarizes the main simulation evidence on noise inflation, threshold behavior, instability, signal concentration, and robustness.
+}{tab:mc-main-results}
+
 % Experiment 1 - pure noise histogram
 \mcfigure{mc_exp1_histogram.pdf}[Experiment 1 pure-noise distribution of the leading sample 
 canonical correlation.]{The vertical lines report the 95th and 99th percentiles of the 
@@ -1502,7 +1510,7 @@ the stablished credibility criterion under these robustness checks.}{tab:emp-rob
 \phantomsection
 \addcontentsline{toc}{chapter}{Appendix}
 \chapter*{Appendix}
-\section*{Appendix 1: Monte Carlo Full Results}
+\section*{Appendix A: Monte Carlo Full Results}
 \label{app:mc-results}
 
 This appendix reports the full Monte Carlo evidence underlying the main results. 
@@ -1516,7 +1524,7 @@ dimensions later used in the empirical application. The baseline configuration f
 replications whereas the pure-noise and near-threshold designs use $5{,}000$ replications for greater 
 precision in tail and detection-rate estimates.
 The code implementing these data-generating processes and the associated diagnostics is available in the project 
-repository at \url{https://github.com/albats/hdcca_thesis}, with the Monte Carlo notebook located in 
+repository at \texttt{\url{https://github.com/albats/hdcca_thesis}}, with the Monte Carlo notebook located in 
 \texttt{Simulations/simulations.ipynb}.
 
 Population cross-covariance is constructed as
@@ -1528,6 +1536,7 @@ standardized and independent in the baseline DGP. Robustness checks then replace
 realistic for financial series; and (ii) heavy-tailed sampling; introducing large outliers and tail 
 risk typical of returns.
 
+\clearpage
 For each replication the pipeline is:
 \begin{enumerate}
 	\item Construct the joint covariance $\Sigma=\begin{pmatrix}\Sigma_{xx} & \Sigma_{xy}\\[2pt] \Sigma_{xy}^\top & \Sigma_{yy}\end{pmatrix}$;
@@ -1543,6 +1552,23 @@ null cutoffs), inflation measures ($\widehat{\lambda}_1-\rho_1^2$, held-out $\la
 measures (principal angles and squared-cosine overlaps between estimated and true canonical directions), and stability
 measures (split-sample overlaps). These quantities are aggregated across replications to produce the summary tables and
 figures collected in the Monte Carlo results that follow.
+
+\subsection*{Bykhovskaya-Gorin correction}
+
+The BG correction is applied only to sample roots that are separated from the 
+high-dimensional bulk. For each simulated root, the correction inverts the 
+asymptotic mapping between the population canonical root and the observed 
+sample outlier. Roots inside or too close to the bulk are therefore not treated as 
+reliably identifiable population spikes. To account for these, the main tables report
+the fraction of replications for which the correction produces an admissible 
+separated-root estimate (``Valid BG share'').
+
+The corrected value should be interpreted as a de-biased estimate of the population 
+squared canonical correlation, not as an out-of-sample performance measure. 
+The angle predictions provide a separate theoretical benchmark for directional recovery. 
+In the simulations, the correction is most reliable for strong, separated Gaussian 
+spikes and less reliable near the phase-transition boundary or under heavy-tailed 
+sampling.
 
 \subsection*{Experiment 1: Pure-Noise Benchmark}
 
@@ -1612,6 +1638,12 @@ threshold region should be interpreted as a transition zone rather than a knife-
 Above $\rho_c$, outliers become more likely, but vector recovery and out-of-sample persistence still 
 improve only progressively.
 
+Additionally, the BG correction shows that the raw leading roots remain upward biased 
+near the threshold while the BG correction reduces bias once roots separate from the bulk. 
+It should be noted that the fact that below and near the threshold the correction
+is not as reliable is consistent with the theory, and reinforces the idea
+that these roots cannot be properly recovered because they are not sufficiently separated.
+
 \subsection*{Experiment 4: Multiple-Spike Low-Rank Design}
 
 For experiment 4, three spikes with population canonical correlations $(0.80, 0.55, 0.30)$ are considered.
@@ -1635,6 +1667,18 @@ only part of the latent low-rank structure is stably recovered. Overall, the exp
 supports the behavior of HDCCA Bykhovskaya-Gorin formulate, confirming that in a multi-spike 
 design only sufficiently strong spikes emerge as reliable empirical outliers, while weaker 
 ones remain statistically present but practically unrecoverable.
+
+Finally, the component-by-component BG results confirm that correction validity is 
+itself a signal of separation. For the strongest component, with \(\rho_1=0.80\) and 
+\(\rho_1^2=0.6400\), the mean raw sample root is \(0.7545\), while the BG-corrected 
+estimate is \(0.6383\), with a valid BG share of \(1.0000\). For the second component, 
+with \(\rho_2=0.55\) and \(\rho_2^2=0.3025\), the raw root is \(0.5516\), but the 
+BG-corrected estimate is \(0.2996\), again very close to the true value. 
+By contrast, the weakest component, with \(\rho_3=0.30\) 
+and \(\rho_3^2=0.0900\), has a raw sample root of \(0.4943\), but the correction is valid 
+in only \(0.0335\) of replications and produces an average corrected value of \(0.2239\). 
+This indicates that the third component is not reliably separated from the bulk, so its 
+apparent sample root should not be interpreted as a well-identified population signal.
 
 \subsection*{Experiment 5: Diffuse Versus Low-Rank Dependence}
 
@@ -1672,6 +1716,19 @@ The Student-\(t\) design has the largest mean in-sample root, but a lower out-of
 lower split-sample stability, larger vector angles, and lower squared cosine recovery than the 
 Gaussian cases. This suggests that heavy-tailed observations can make the in-sample canonical 
 relation appear stronger while making the estimated directions less stable.
+
+Similarly, the BG correction results show that the formulas remain accurate under the clean 
+Gaussian designs but become less reliable under heavy-tailed sampling. In the Gaussian 
+identity benchmark, where the true value is \(\rho^2=0.4900\), the mean raw leading root 
+is \(0.6582\), while the BG-corrected estimate is \(0.4873\), giving a 
+negligible bias of \(-0.0027\). The Gaussian spiked-covariance design gives almost 
+identical results; the raw root is \(0.6580\), the corrected estimate is \(0.4871\), 
+and the correction bias is \(-0.0029\). In both cases, the valid BG share is \(1.0000\). 
+Under Student-\(t\) sampling, however, the raw root rises to \(0.7138\), and the 
+BG-corrected estimate remains \(0.5755\), implying an upward bias of \(0.0855\). 
+Given that the instability diagnostics move in the same direction, this suggests that the
+heavy tails do not prevent detection in this calibration, but they make both the raw root 
+and the BG-corrected root look stronger than the recoverable canonical direction actually is.
 
 \clearpage 
 \resetresultnumbering{A}
@@ -1763,9 +1820,9 @@ table reports the mean BG-corrected leading root for each design.}{tab:mc-exp6-b
 \FloatBarrier
 
 \clearpage
-\section*{Appendix 2: Empirical Application Supplementary Results}
+\section*{Appendix B: Empirical Application Supplementary Results}
 \label{app:emp-results}
-\setresultnumbering{5}
+\setresultnumbering{B}
 \setcounter{figure}{\value{savedempfigure}}
 \setcounter{table}{\value{savedemptable}}
 
