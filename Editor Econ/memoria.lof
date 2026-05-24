@@ -5,24 +5,27 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Scree plot for the mean canonical roots for the pure-noise scenario (Experiment 1).}}{29}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Experiment 1 pure-noise distribution of the leading sample canonical correlation.}}{30}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Experiment 2 in-sample spectral response to one true spike.}}{31}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Experiment 2 out-of-sample strength and split-sample stability.}}{31}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Experiment 2 geometric recovery of the leading canonical vectors.}}{32}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Experiment 3 detection probability around the critical threshold.}}{33}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Experiment 3 in-sample and out-of-sample strength near the threshold.}}{33}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Experiment 3 vector recovery around the threshold.}}{34}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Experiment 4 mean scree plot under the three-spike low-rank design.}}{35}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Experiment 5A mean scree plot under the low-rank design.}}{36}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Experiment 5B mean scree plot under the diffuse design.}}{37}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Experiment 6 robustness comparison across finance-style data-generating processes.}}{38}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Baseline rolling leading squared canonical root against the HDCCA bulk edge and the permutation null benchmark.}}{40}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Baseline rolling count of squared canonical roots above the HDCCA bulk edge.}}{40}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Baseline split-sample stability of the first canonical direction on the cyclical and defensive sides.}}{41}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Baseline comparison between the in-sample leading squared root and the held-out leading squared root.}}{41}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Baseline top-k subspace overlap for k = 1, 2, 3, and 5 on the cyclical and defensive sides.}}{42}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Baseline eigengap diagnostics for the first few rolling canonical roots.}}{43}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Cross-specification robustness comparison for spectral strength, stability, and held-out dependence.}}{43}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Full-sample static canonical spectrum for the CRSP cyclical and defensive panels.}}{51}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Experiment 1 pure-noise distribution of the leading sample canonical correlation.}}{30}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Experiment 2 in-sample spectral response to one true spike.}}{31}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Experiment 3: Detection probability around the critical threshold.}}{31}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Experiment 3: BG-corrected leading root around the critical threshold.}}{32}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Experiment 4 BG correction by canonical component}}{32}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Experiment 5: BG-corrected leading root comparison between the low-rank and diffuse designs}}{33}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Experiment 6: BG-corrected leading root}}{33}{figure.caption.13}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Baseline rolling leading squared canonical root against the HDCCA bulk edge and the permutation null benchmark.}}{35}{figure.caption.15}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Baseline rolling count of squared canonical roots above the HDCCA bulk edge.}}{35}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Baseline split-sample stability of the first canonical direction on the cyclical and defensive sides.}}{36}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Baseline comparison between the in-sample leading squared root and the held-out leading squared root.}}{36}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Baseline top-k subspace overlap for k = 1, 2, 3, and 5 on the cyclical and defensive sides.}}{37}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Baseline eigengap diagnostics for the first few rolling canonical roots.}}{38}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Cross-specification robustness comparison for spectral strength, stability, and held-out dependence.}}{38}{figure.caption.22}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Scree plot for the mean canonical roots for the pure-noise scenario (Experiment 1).}}{45}{figure.caption.26}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Experiment 2 geometric recovery of the leading canonical vectors.}}{46}{figure.caption.28}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Experiment 3 in-sample and out-of-sample strength near the threshold.}}{47}{figure.caption.30}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Experiment 3: BG-predicted outlier map around the threshold.}}{48}{figure.caption.31}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Experiment 3: Theoretical and simulated angle behavior around the threshold.}}{48}{figure.caption.32}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Experiment 4 mean scree plot under the three-spike low-rank design.}}{50}{figure.caption.34}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Experiment 5A mean scree plot under the low-rank design.}}{51}{figure.caption.37}%
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Experiment 5B mean scree plot under the diffuse design.}}{52}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Full-sample static canonical spectrum for the CRSP cyclical and defensive panels.}}{54}{figure.caption.43}%
 \contentsfinish 
