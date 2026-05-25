@@ -1251,7 +1251,7 @@ returns exhibit persistent and meaningful cross-panel dependence.
 
 However, the estimated first canonical direction is not reproducible across halves of the sample. 
 The mean split-sample squared cosine overlap of the first vector is only 0.0219 on the cyclical side and 
-0.0329 on the defensive side, as reported in Table~\ref{tab:emp-main-summary} and visualized in 
+0.0329 on the defensive side, as reported in Table~\ref{tab:emp-main-summary} and 
 Figure~\ref{fig:emp-split-stability}. These values are extremely low and imply that the first canonical 
 directions extracted in one half of the data contain almost no directional information about the first 
 canonical portfolio extracted in the other half.
@@ -1304,8 +1304,18 @@ substantially across samples even if the broader leading space contains real dep
 implies that successful empirical recovery of population signal strength from rolling outliers 
 cannot be claimed.
 
-Accordingly, a phase-transition recovery exercise cannot be performed as the leading roots are spectrally 
-strong but geometrically fragile. This finding is itself consistent with the HDCCA perspective. 
+Accordingly, a phase-transition recovery exercise cannot be performed credibly as the leading 
+roots are spectrally strong but geometrically fragile. Nonetheless, for the purpose of outlier
+diagnostics the BG corrections are applied to the leading roots above the bulk edge. Results 
+can be seen in Table~\ref{tab:emp-bg-outlier-rank-summary} and Figure~\ref{fig:emp-bg-diagnostics}.
+This exercise shows that there are two persistent outliers that appear in 100\% of windows, 
+whereas the third signal only appears in 83\%.
+For the two stronger signals the mean BG-corrected \(\rho^2\) values are large, at 0.929 and 
+0.767 respectively. The third signal shows much weaker BG-corrected values that seem to 
+blend with the next outliers.
+Thus, the data does show some evidence of persistent multi-dimensional dependence, 
+but the lack of credible inversion and the weak directional stability suggest that this 
+dependence is not organized into clean, well-separated canonical components.
 
 
 \section{Interpreting the spectrum}
@@ -1491,13 +1501,19 @@ of the leading canonical subspaces.}{fig:emp-topk}
 The eigengaps remain well below the credibility rule throughout the sample, suggesting that the leading roots 
 are not sharply separated from neighboring roots, which makes the associated canonical directions harder to 
 interpret as individually well-identified components.}{fig:emp-eigengap}
+
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png}[Outlier BG implied population signal strength and predicted cone-angle diagnostics.]{}{fig:emp-bg-diagnostics}
+\emptable{imagenes/emp_bg_outlier_rank_summary.tex}[Rank-level summary of Bykhovskaya-Gorin diagnostics of outliers]{}{tab:emp-bg-outlier-rank-summary}
+
 \emptable{imagenes/emp_robustness_summary.tex}[Robustness summary across alternative rolling-window lengths and subsamples.]{
 Across specifications, the mean leading root remains above the corresponding HDCCA bulk edge, confirming that 
 the spectral evidence is robust to these sample choices. However, the held-out root and stability measures 
 are much weaker and less uniform across specifications. 
 The credible share is zero in all cases, indicating that the empirical canonical directions do not satisfy 
 the stablished credibility criterion under these robustness checks.}{tab:emp-robustness-summary}
+
 \empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png}[Cross-specification robustness comparison for spectral strength, stability, and held-out dependence.]{ }{fig:emp-robustness}
+
 \setcounter{savedempfigure}{\value{figure}}
 \setcounter{savedemptable}{\value{table}}
 
@@ -1510,6 +1526,7 @@ the stablished credibility criterion under these robustness checks.}{tab:emp-rob
 \phantomsection
 \addcontentsline{toc}{chapter}{Appendix}
 \chapter*{Appendix}
+\label{ch:Appendix1}
 \section*{Appendix A: Monte Carlo Full Results}
 \label{app:mc-results}
 
@@ -1749,7 +1766,7 @@ bulk-like structure.}{fig:mc-exp1-scree}
 % Experiment 2
 \mctable{imagenes/mc_exp2_summary.tex}[Experiment 2 summary table for the one-spike signal-strength 
 sweep.]{ }{tab:mc-exp2-summary}
-% \mcfigure{mc_exp2_stability.pdf}[Experiment 2 out-of-sample strength and split-sample stability.]{The figure reports the held-out leading canonical root and the split-sample directional overlaps. Both diagnostics remain close to zero for weak signals and become substantial only for sufficiently strong population canonical correlations, showing that in-sample separation alone does not guarantee stable or generalizable canonical structure.}{fig:mc-exp2-stability}
+\mcfigure{mc_exp2_stability.pdf}[Experiment 2 out-of-sample strength and split-sample stability.]{The figure reports the held-out leading canonical root and the split-sample directional overlaps. Both diagnostics remain close to zero for weak signals and become substantial only for sufficiently strong population canonical correlations, showing that in-sample separation alone does not guarantee stable or generalizable canonical structure.}{fig:mc-exp2-stability}
 \mcfigure{mc_exp2_angles.pdf}[Experiment 2 geometric recovery of the leading canonical vectors.]{
 The figure reports the angle between the estimated and the true leading canonical directions for the \(X\)- and \(Y\)-side panels. 
 Angles close to \(90^\circ\) indicate little directional recovery. Recovery improves only once the population signal moves 
