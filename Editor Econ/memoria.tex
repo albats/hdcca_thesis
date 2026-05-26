@@ -21,7 +21,7 @@ right=2.25cm
 % Paragraph Spacing and Line Spacing: Narrow (6 pt / 1.15 spacing) or Moderate (6 pt / 1.5 spacing)
 \usepackage{setspace}
 \doublespacing
-\parskip=6pt
+% \parskip=6pt
 
 % Color settings for cover and code listings 
 \usepackage[table]{xcolor}
@@ -289,7 +289,8 @@ right=2.25cm
 %-------------
 
 \begin{document}
-\pagenumbering{arabic}
+\hypersetup{pageanchor=false}
+\pagenumbering{gobble}
 	
 %----------
 %	COVER
@@ -320,7 +321,8 @@ right=2.25cm
 		 	\vspace*{0.5cm}
 	 		\rule{10.5cm}{0.1mm}\\
 			\vspace*{0.9cm}
-			{\LARGE Alba Torres Sánchez}\\ 
+			{\LARGE Alba Torres Sánchez}\\
+			{\large NIU: 100475093}\\ 
 			\vspace*{1cm}
 		\begin{Large}
 			Tutor: Nazarii Salish\\
@@ -337,7 +339,6 @@ right=2.25cm
         }\\ % Creative Commons Logo
     This work is licensed under Creative Commons \textbf{Attribution – Non Commercial – Non Derivatives}
 \end{titlepage}
-\setcounter{page}{2}
 
 \newpage % blank page
 \thispagestyle{plain}
@@ -410,9 +411,6 @@ right=2.25cm
 \tableofcontents
 \thispagestyle{fancy}
 
-% \newpage % blank page
-% \thispagestyle{plain}
-% \mbox{}
 
 % List of figures. 
 \listoffigures
@@ -426,16 +424,31 @@ right=2.25cm
 \listoftables
 \thispagestyle{fancy}
 
-\newpage % blankpage
+
+%----------
+%	AI DECLARATION
+%----------
+\clearpage
+\thispagestyle{plain}
+\begin{center}
+	{\large\bfseries AI DECLARATION}
+\end{center}
+\vspace{1cm}
+
+I declare that I have used the AI tool ChatGPT solely to improve the style and clarity of the text I have written. At no time have I used it to automatically generate text from third-party texts, obtain bibliographic sources, generate programming code, or interpret the results of my work.
+
+\newpage % blank page
 \thispagestyle{plain}
 \mbox{}
-
 
 %----------
 %	THESIS
 %----------	
 \chapterscontinue
 \clearpage
+\hypersetup{pageanchor=true}
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
 \chapter{Introduction}
 % IMPORTANT: Latex special characters are: # $ % & \ ^ _ { } ~. 
@@ -1000,6 +1013,7 @@ provides a useful structural description of cross-sector dependence.
 % the classical estimator when dimensionality is large. The empirical relevance of these 
 % predictions remains largely unexplored in financial markets.
 
+\clearpage
 \chapter{Monte Carlo Simulations}
 \label{ch:MonteCarlo}
 
@@ -1122,7 +1136,6 @@ Additionally, the simulations show that BG corrections are informative
 only when the empirical root is clearly separated from the high-dimensional bulk.
 This approach avoids interpreting in-sample fit alone as evidence of economically meaningful co-movement.
 
-\clearpage
 \chapter{Methodology}
 \label{ch:Methodology}
 
@@ -1141,7 +1154,7 @@ by Bykhovskaya and Gorin are visible in the data, particularly inflated in-sampl
 separation, and instability of the estimated canonical directions. As shown in Appendix A, 
 in high dimensions, large sample roots do not necessarily imply that the corresponding canonical 
 vectors are reliably estimated. For that reason, the empirical analysis does not rely on 
-in-sample fit alone and instead evaluates spectral strength, stability, and out-of-sample 
+in-sample fit alone and evaluates spectral strength, stability, and out-of-sample 
 performance jointly.
 
 \section{Empirical setting}
@@ -1214,6 +1227,7 @@ depend on a particular market period.
 % By splitting the sample around this period, we can assess 
 % whether the observed phenomena are robust to such structural breaks.
 
+\clearpage
 \chapter{Empirical Application to Stock Return Panels}
 \label{ch:EmpiricalApplication}
 
@@ -1325,8 +1339,8 @@ dependence is not organized into clean, well-separated canonical components.
 \section{Interpreting the spectrum}
 
 Taken together, the spectral and geometric evidence points to a strong and persistent cross-sector 
-dependence between cyclical and defensive stock returns. It is not plausibly attributable to noise alone. 
-But at the same time, the leading empirical canonical portfolio is not a stable object as the estimated 
+dependence between cyclical and defensive stock returns whichis not plausibly attributable to noise alone. 
+Nonetheless, the leading empirical canonical portfolio is not stable as the estimated 
 first direction changes materially across halves of the sample and fails to transport out of sample.
 
 Evidence suggests a diffuse structure in which several nearby directions contribute to cross-panel 
@@ -1384,6 +1398,7 @@ alternative specifications.
 % in large stock panels well, but the empirical dependence structure itself looks broader, more weakly 
 % separated, and more rotationally unstable than a clean low-rank factor model would suggest.
 
+\clearpage
 \chapter{Discussion and Conclusion}
 \label{ch:Conclusion}
 
@@ -1421,7 +1436,7 @@ canonical vector.
 %========================================================
 %	BIBLIOGRAPHY
 %========================================================
-
+\clearpage
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \printbibliography
@@ -1484,10 +1499,11 @@ not perform as well under non-Gaussian conditions such as t-Student.}{fig:mc-exp
 \subsection*{Empirical Analysis for CRSP Stock Return Panels}
 
 % data summary table
-\mctable[0.5\textwidth]{imagenes/emp_main260_summary.tex}[Baseline 260-week rolling summary for the CRSP empirical application.]{ }{tab:emp-main-summary}
+\mctable[0.5\textwidth]{imagenes/emp_main260_summary.tex}[Baseline 260-week rolling summary for the CRSP empirical application.]{
+Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{tab:emp-main-summary}
 
 % summary of Bykhovskaya-Gorin diagnostics of outliers
-\mctable[0.95\textwidth]{imagenes/emp_bg_outlier_rank_summary.tex}[Rank-level summary of Bykhovskaya-Gorin diagnostics of outliers]{Importantly remember that none of the identified outliers pass the established credibility criterion (sufficient separation between signals).}{tab:emp-bg-outlier-rank-summary}
+\mctable[0.95\textwidth]{imagenes/emp_bg_outlier_rank_summary.tex}[Rank-level summary of Bykhovskaya-Gorin diagnostics of outliers]{Importantly remember that none of the identified outliers pass the established credibility criterion (sufficient separation between signals). Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{tab:emp-bg-outlier-rank-summary}
 
 % robustness summary table
 \mctable[0.95\textwidth]{imagenes/emp_robustness_summary.tex}[Robustness summary across alternative rolling-window lengths and subsamples.]{
@@ -1495,42 +1511,44 @@ Across specifications, the mean leading root remains above the corresponding HDC
 the spectral evidence is robust to these sample choices. However, the held-out root and stability measures 
 are much weaker and less uniform across specifications. 
 The credible share is zero in all cases, indicating that the empirical canonical directions do not satisfy 
-the established credibility criterion under these robustness checks.}{tab:emp-robustness-summary}
+the established credibility criterion under these robustness checks. Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{tab:emp-robustness-summary}
 \FloatBarrier
 
 % leading squared canonical root against the HDCCA bulk edge 
 \empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png}[Baseline rolling leading squared canonical root against the HDCCA bulk edge and the permutation null benchmark.]{
 The leading root remains well above both benchmarks throughout the sample, indicating persistent in-sample 
 spectral dependence between the cyclical and defensive panels, rather than a pattern that appears only in 
-isolated windows.}{fig:emp-leading-root-null}
+isolated windows. Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-leading-root-null}
 % num outliers
 \empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png}[Baseline rolling count of squared canonical roots above the HDCCA bulk edge.]{
 The count is consistently positive and varies over time, with more roots exceeding the bulk edge in the middle 
-part of the sample. This may suggest that the empirical dependence is not limited to the first canonical root.}{fig:emp-outlier-count}
+part of the sample. This may suggest that the empirical dependence is not limited to the first canonical root. Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-outlier-count}
 % split sample stability
 \empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png}[Baseline split-sample stability of the first canonical direction on the cyclical and defensive sides.]{
 The squared cosine overlaps remain close to zero for most rolling windows, implying that the leading
-weight vectors are not consistently recovered across subsamples, despite the large in-sample canonical root.}{fig:emp-split-stability}
+weight vectors are not consistently recovered across subsamples, despite the large in-sample canonical root. Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-split-stability}
 \empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png}[Baseline comparison between the in-sample leading squared root and the held-out leading squared root.]{
 The in-sample root is persistently large, while the held-out root remains close to zero in most windows. 
 This large gap indicates that the strongest in-sample canonical relation does not translate into comparable 
-out-of-sample dependence.}{fig:emp-insample-heldout}
+out-of-sample dependence. Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-insample-heldout}
 \empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png}[Baseline top-k subspace overlap for k = 1, 2, 3, and 5 on the cyclical and defensive sides.]{
 Allowing for several leading directions slightly increases the overlap in some windows, but the values remain low overall. 
 Thus, the lack of stability is not only a feature of the first canonical direction; it also persists at the level 
-of the leading canonical subspaces.}{fig:emp-topk}
+of the leading canonical subspaces. Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-topk}
 \empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png}[Baseline eigengap diagnostics for the first few rolling canonical roots.]{
 The eigengaps remain well below the credibility rule throughout the sample, suggesting that the leading roots 
 are not sharply separated from neighboring roots, which makes the associated canonical directions harder to 
-interpret as individually well-identified components.}{fig:emp-eigengap}
-\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png}[Outlier BG implied population signal strength and predicted cone-angle diagnostics.]{}{fig:emp-bg-diagnostics}
-\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png}[Cross-specification robustness comparison for spectral strength, stability, and held-out dependence.]{ }{fig:emp-robustness}
+interpret as individually well-identified components. Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-eigengap}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png}[Outlier BG implied population signal strength and predicted cone-angle diagnostics.]{Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-bg-diagnostics}
+\empfigure{../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png}[Cross-specification robustness comparison for spectral strength, stability, and held-out dependence.]{Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-robustness}
 
 %========================================================
 % APPENDIX
 %========================================================
 \chaptersnewpage
 \clearpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
 \phantomsection
 \addcontentsline{toc}{chapter}{Appendix}
 \chapter*{Appendix}\label{app:appendixA}
@@ -1854,12 +1872,13 @@ of the estimated canonical vectors.}{tab:mc-exp6-summary}
 }
 
 \resetresultnumbering{B}
-\emptablehere[0.55\textwidth]{imagenes/emp_baseline_sample.tex}[Baseline CRSP sample design used in the empirical rolling-window application.]{ }{tab:emp-baseline-sample}
-\emptablehere[0.42\textwidth]{imagenes/emp_full_spectrum_top10.tex}[Top ten squared canonical roots from the full-sample static spectrum, with the HDCCA bulk-edge classification.]{ }{tab:emp-full-spectrum}
-\empfigurehere{../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png}[Full-sample static canonical spectrum for the CRSP cyclical and defensive panels.]{ }{fig:emp-full-spectrum}
+\emptablehere[0.55\textwidth]{imagenes/emp_baseline_sample.tex}[Baseline CRSP sample design used in the empirical rolling-window application.]{Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{tab:emp-baseline-sample}
+\emptablehere[0.42\textwidth]{imagenes/emp_full_spectrum_top10.tex}[Top ten squared canonical roots from the full-sample static spectrum, with the HDCCA bulk-edge classification.]{Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{tab:emp-full-spectrum}
+\empfigurehere{../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png}[Full-sample static canonical spectrum for the CRSP cyclical and defensive panels.]{Source: Author's own elaboration based on CRSP daily stock data from WRDS.}{fig:emp-full-spectrum}
 \empfigurehere{../CRSP_Analysis/empirical_outputs_crsp/figures/figure10_full_sample_canonical_score_scatters.png}
 [Full-sample canonical score scatter plots for the first three outlying canonical signals.]{
 The first pair of canonical scores is tightly concentrated around the diagonal, indicating a very strong leading common component between the cyclical and defensive panels. The second and third score pairs remain positively associated but are visibly more diffuse, suggesting weaker additional canonical signals. This pattern is consistent with the Bykhovskaya-Gorin interpretation of a strong leading factor accompanied by weaker, less sharply separated additional factors.
+Source: Author's own elaboration based on CRSP daily stock data from WRDS.
 }{fig:emp-full-score-scatters}
 
 \end{document}
