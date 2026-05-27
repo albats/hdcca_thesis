@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.6)  27 MAY 2026 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.6)  27 MAY 2026 14:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1810,9 +1810,9 @@ Chapter 6.
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 1457.
+(Font)              scaled to size 10.95pt on input line 1471.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 1457.
+(Font)              scaled to size 10.95pt on input line 1471.
  (./imagenes/mc_main_results_summary.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 2.
@@ -1872,69 +1872,69 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 <imagenes/mc_exp1_histogram.pdf, id=451, 615.4992pt x 384.23503pt>
 File: imagenes/mc_exp1_histogram.pdf Graphic file (type pdf)
 <use imagenes/mc_exp1_histogram.pdf>
-Package pdftex.def Info: imagenes/mc_exp1_histogram.pdf  used on input line 1461.
+Package pdftex.def Info: imagenes/mc_exp1_histogram.pdf  used on input line 1475.
 (pdftex.def)             Requested size: 422.52057pt x 263.77397pt.
 <imagenes/mc_exp2_spectral.pdf, id=452, 658.86092pt x 384.23503pt>
 File: imagenes/mc_exp2_spectral.pdf Graphic file (type pdf)
 <use imagenes/mc_exp2_spectral.pdf>
-Package pdftex.def Info: imagenes/mc_exp2_spectral.pdf  used on input line 1467.
+Package pdftex.def Info: imagenes/mc_exp2_spectral.pdf  used on input line 1481.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 1467.
+(Font)              scaled to size 10.95pt on input line 1481.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 1467.
+(Font)              scaled to size 6.1pt on input line 1481.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.95pt on input line 1467.
+(Font)              scaled to size 10.95pt on input line 1481.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.1pt on input line 1467.
+(Font)              scaled to size 6.1pt on input line 1481.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.95pt on input line 1467.
+(Font)              scaled to size 10.95pt on input line 1481.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.1pt on input line 1467.
+(Font)              scaled to size 6.1pt on input line 1481.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 1467.
+(Font)              scaled to size 10.95pt on input line 1481.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 1467.
+(Font)              scaled to size 6.1pt on input line 1481.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.95pt on input line 1467.
+(Font)              scaled to size 10.95pt on input line 1481.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.1pt on input line 1467.
+(Font)              scaled to size 6.1pt on input line 1481.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.95pt on input line 1467.
+(Font)              scaled to size 10.95pt on input line 1481.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.1pt on input line 1467.
+(Font)              scaled to size 6.1pt on input line 1481.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.95pt on input line 1467.
+(Font)              scaled to size 10.95pt on input line 1481.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.1pt on input line 1467.
+(Font)              scaled to size 6.1pt on input line 1481.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.95pt on input line 1467.
+(Font)              scaled to size 10.95pt on input line 1481.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.1pt on input line 1467.
+(Font)              scaled to size 6.1pt on input line 1481.
 <imagenes/mc_exp3_detection.pdf, id=453, 658.8608pt x 384.23503pt>
 File: imagenes/mc_exp3_detection.pdf Graphic file (type pdf)
 <use imagenes/mc_exp3_detection.pdf>
-Package pdftex.def Info: imagenes/mc_exp3_detection.pdf  used on input line 1472.
+Package pdftex.def Info: imagenes/mc_exp3_detection.pdf  used on input line 1486.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
 <imagenes/mc_exp3_bg_root_correction.pdf, id=454, 658.85986pt x 384.23503pt>
 File: imagenes/mc_exp3_bg_root_correction.pdf Graphic file (type pdf)
 <use imagenes/mc_exp3_bg_root_correction.pdf>
-Package pdftex.def Info: imagenes/mc_exp3_bg_root_correction.pdf  used on input line 1477.
+Package pdftex.def Info: imagenes/mc_exp3_bg_root_correction.pdf  used on input line 1491.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
 <imagenes/mc_exp4_bg_component_correction.pdf, id=455, 658.8608pt x 384.23503pt>
 File: imagenes/mc_exp4_bg_component_correction.pdf Graphic file (type pdf)
 <use imagenes/mc_exp4_bg_component_correction.pdf>
-Package pdftex.def Info: imagenes/mc_exp4_bg_component_correction.pdf  used on input line 1483.
+Package pdftex.def Info: imagenes/mc_exp4_bg_component_correction.pdf  used on input line 1497.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
 <imagenes/mc_exp5_bg_root_correction.pdf, id=456, 658.8608pt x 384.23503pt>
 File: imagenes/mc_exp5_bg_root_correction.pdf Graphic file (type pdf)
 <use imagenes/mc_exp5_bg_root_correction.pdf>
-Package pdftex.def Info: imagenes/mc_exp5_bg_root_correction.pdf  used on input line 1490.
+Package pdftex.def Info: imagenes/mc_exp5_bg_root_correction.pdf  used on input line 1504.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
 <imagenes/mc_exp6_bg_root_correction.pdf, id=457, 745.58481pt x 398.68903pt>
 File: imagenes/mc_exp6_bg_root_correction.pdf Graphic file (type pdf)
 <use imagenes/mc_exp6_bg_root_correction.pdf>
-Package pdftex.def Info: imagenes/mc_exp6_bg_root_correction.pdf  used on input line 1495.
+Package pdftex.def Info: imagenes/mc_exp6_bg_root_correction.pdf  used on input line 1509.
 (pdftex.def)             Requested size: 422.52057pt x 225.94107pt.
  [21
 
@@ -1942,52 +1942,52 @@ Package pdftex.def Info: imagenes/mc_exp6_bg_root_correction.pdf  used on input 
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png, id=878, 673.3155pt x 383.9946pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png  used on input line 1526.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png  used on input line 1540.
 (pdftex.def)             Requested size: 422.52057pt x 240.9628pt.
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png, id=879, 673.0746pt x 383.9946pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png  used on input line 1530.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png  used on input line 1544.
 (pdftex.def)             Requested size: 422.52057pt x 241.05069pt.
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png, id=880, 673.3155pt x 383.9946pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png  used on input line 1534.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png  used on input line 1548.
 (pdftex.def)             Requested size: 422.52057pt x 240.9628pt.
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png, id=881, 673.3155pt x 383.9946pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png  used on input line 1538.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png  used on input line 1552.
 (pdftex.def)             Requested size: 422.52057pt x 240.9628pt.
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png, id=882, 673.3155pt x 586.3506pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png  used on input line 1542.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png  used on input line 1556.
 (pdftex.def)             Requested size: 422.52057pt x 367.94447pt.
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png, id=883, 673.3155pt x 383.9946pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png  used on input line 1546.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png  used on input line 1560.
 (pdftex.def)             Requested size: 422.52057pt x 240.9628pt.
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png, id=884, 673.0746pt x 571.8966pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png  used on input line 1547.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png  used on input line 1561.
 (pdftex.def)             Requested size: 422.52057pt x 359.00525pt.
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png, id=885, 745.3446pt x 557.4426pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png  used on input line 1548.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png  used on input line 1562.
 (pdftex.def)             Requested size: 422.52057pt x 316.01038pt.
  [25
 
 ] [26 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure1_leading_root_vs_bulk_and_null_main260.png> <../CRSP_Analysis/empirical_outputs_crsp/figures/figure2_outlier_count_main260.png>] [27 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure3_split_sample_stability_component1_main260.png> <../CRSP_Analysis/empirical_outputs_crsp/figures/figure7_insample_vs_heldout_main260.png>] [28 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure4_topk_subspace_stability_main260.png>] [29 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure5_eigengap_diagnostics_main260.png>] [30 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure6_bg_outlier_diagnostics_main260.png>] [31 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png>]
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 1574.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 1588.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 1574.
+(Font)              scaled to size 12.0pt on input line 1588.
  [1
 
 
@@ -1997,51 +1997,51 @@ LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
 <imagenes/mc_exp1_scree.pdf, id=977, 658.86086pt x 369.781pt>
 File: imagenes/mc_exp1_scree.pdf Graphic file (type pdf)
 <use imagenes/mc_exp1_scree.pdf>
-Package pdftex.def Info: imagenes/mc_exp1_scree.pdf  used on input line 1793.
+Package pdftex.def Info: imagenes/mc_exp1_scree.pdf  used on input line 1807.
 (pdftex.def)             Requested size: 422.52057pt x 237.13863pt.
  (./imagenes/mc_exp2_summary.tex)
 <imagenes/mc_exp2_stability.pdf, id=978, 658.86098pt x 384.23503pt>
 File: imagenes/mc_exp2_stability.pdf Graphic file (type pdf)
 <use imagenes/mc_exp2_stability.pdf>
-Package pdftex.def Info: imagenes/mc_exp2_stability.pdf  used on input line 1798.
+Package pdftex.def Info: imagenes/mc_exp2_stability.pdf  used on input line 1812.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
 <imagenes/mc_exp2_angles.pdf, id=979, 658.86092pt x 384.23503pt>
 File: imagenes/mc_exp2_angles.pdf Graphic file (type pdf)
 <use imagenes/mc_exp2_angles.pdf>
-Package pdftex.def Info: imagenes/mc_exp2_angles.pdf  used on input line 1802.
+Package pdftex.def Info: imagenes/mc_exp2_angles.pdf  used on input line 1816.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
  (./imagenes/mc_exp3_summary.tex)
 <imagenes/mc_exp3_strength.pdf, id=980, 658.86098pt x 384.23503pt>
 File: imagenes/mc_exp3_strength.pdf Graphic file (type pdf)
 <use imagenes/mc_exp3_strength.pdf>
-Package pdftex.def Info: imagenes/mc_exp3_strength.pdf  used on input line 1810.
+Package pdftex.def Info: imagenes/mc_exp3_strength.pdf  used on input line 1824.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
 <imagenes/mc_exp3_bg_outlier_map.pdf, id=981, 658.86086pt x 384.23503pt>
 File: imagenes/mc_exp3_bg_outlier_map.pdf Graphic file (type pdf)
 <use imagenes/mc_exp3_bg_outlier_map.pdf>
-Package pdftex.def Info: imagenes/mc_exp3_bg_outlier_map.pdf  used on input line 1812.
+Package pdftex.def Info: imagenes/mc_exp3_bg_outlier_map.pdf  used on input line 1826.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
 <imagenes/mc_exp3_bg_angle_comparison.pdf, id=982, 658.8603pt x 384.23503pt>
 File: imagenes/mc_exp3_bg_angle_comparison.pdf Graphic file (type pdf)
 <use imagenes/mc_exp3_bg_angle_comparison.pdf>
-Package pdftex.def Info: imagenes/mc_exp3_bg_angle_comparison.pdf  used on input line 1817.
+Package pdftex.def Info: imagenes/mc_exp3_bg_angle_comparison.pdf  used on input line 1831.
 (pdftex.def)             Requested size: 422.52057pt x 246.40793pt.
  (./imagenes/mc_exp4_summary.tex) (./imagenes/mc_exp4_correction_components.tex)
 <imagenes/mc_exp4_scree.pdf, id=983, 658.86086pt x 369.781pt>
 File: imagenes/mc_exp4_scree.pdf Graphic file (type pdf)
 <use imagenes/mc_exp4_scree.pdf>
-Package pdftex.def Info: imagenes/mc_exp4_scree.pdf  used on input line 1826.
+Package pdftex.def Info: imagenes/mc_exp4_scree.pdf  used on input line 1840.
 (pdftex.def)             Requested size: 422.52057pt x 237.13863pt.
  (./imagenes/mc_exp5_summary.tex)
 <imagenes/mc_exp5_low_rank_scree.pdf, id=984, 658.8684pt x 369.781pt>
 File: imagenes/mc_exp5_low_rank_scree.pdf Graphic file (type pdf)
 <use imagenes/mc_exp5_low_rank_scree.pdf>
-Package pdftex.def Info: imagenes/mc_exp5_low_rank_scree.pdf  used on input line 1833.
+Package pdftex.def Info: imagenes/mc_exp5_low_rank_scree.pdf  used on input line 1847.
 (pdftex.def)             Requested size: 422.52057pt x 237.13863pt.
 <imagenes/mc_exp5_diffuse_scree.pdf, id=985, 658.87059pt x 369.781pt>
 File: imagenes/mc_exp5_diffuse_scree.pdf Graphic file (type pdf)
 <use imagenes/mc_exp5_diffuse_scree.pdf>
-Package pdftex.def Info: imagenes/mc_exp5_diffuse_scree.pdf  used on input line 1839.
+Package pdftex.def Info: imagenes/mc_exp5_diffuse_scree.pdf  used on input line 1853.
 (pdftex.def)             Requested size: 422.52057pt x 237.13863pt.
  (./imagenes/mc_exp6_summary.tex) [8
 
@@ -2049,12 +2049,12 @@ Package pdftex.def Info: imagenes/mc_exp5_diffuse_scree.pdf  used on input line 
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png, id=1542, 644.4075pt x 369.5406pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png  used on input line 1882.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure_full_sample_static_spectrum.png  used on input line 1896.
 (pdftex.def)             Requested size: 422.52057pt x 242.30742pt.
 <../CRSP_Analysis/empirical_outputs_crsp/figures/figure10_full_sample_canonical_score_scatters.png, id=1543, 918.7926pt x 297.2706pt>
 File: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure10_full_sample_canonical_score_scatters.png Graphic file (type png)
 <use ../CRSP_Analysis/empirical_outputs_crsp/figures/figure10_full_sample_canonical_score_scatters.png>
-Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure10_full_sample_canonical_score_scatters.png  used on input line 1887.
+Package pdftex.def Info: ../CRSP_Analysis/empirical_outputs_crsp/figures/figure10_full_sample_canonical_score_scatters.png  used on input line 1901.
 (pdftex.def)             Requested size: 422.52057pt x 136.7053pt.
  [15
 
@@ -2078,7 +2078,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  92i,17n,117p,1362b,5185s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on memoria.pdf (59 pages, 3187989 bytes).
+Output written on memoria.pdf (59 pages, 3188429 bytes).
 PDF statistics:
  1645 PDF objects out of 1728 (max. 8388607)
  144 named destinations out of 1000 (max. 500000)

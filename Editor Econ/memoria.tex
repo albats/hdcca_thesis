@@ -547,7 +547,7 @@ during periods of stress, then the protection offered by the defensive part of t
 portfolio may be weaker than expected. For this reason, portfolio risk depends not only 
 on the individual investments selected, or on the amount of money assigned to each one, 
 but also on the relationships between them. These relationships can be understood as 
-patterns of co-movement, referring tothe extent to which asset returns 
+patterns of co-movement, referring to the extent to which asset returns 
 tend to rise or fall together. 
 A portfolio may appear diversified because it contains many stocks or several sectors, 
 but if those investments are all influenced by the same economic forces, 
@@ -610,8 +610,8 @@ rearranging investments that remain driven by the same underlying forces.
 Despite these advances, it remains unknown whether these high-dimensional phenomena 
 meaningfully describe the structure of \textit{real} equity markets. The present study seeks to 
 address such gap by answering the question: to what extent 
-does HDCCA theory accurately describe the spectral and geometric structure of 
-cross-sector return dependence in large equity panels? 
+can HDCCA theory describe the spectral and geometric structure of 
+cross-sector return dependence in real large equity panels? 
 
 This contribution is important for three reasons. First, it provides empirical evidence 
 of HDCCA theory in real financial markets. Second, it clarifies whether 
@@ -715,7 +715,7 @@ and the canonical directions are obtained by transforming the corresponding
 singular vectors back to the original coordinate systems.
 
 Equivalently, \cite[pp.~539--574]{johnson2007applied} demonstrate
-in Chapter 10, how solving this constrained maximization through the method of Lagrange multipliers 
+in Chapter 10 how solving this constrained maximization through the method of Lagrange multipliers 
 is equivalent to solving a generalized eigenvalue problem. 
 CCA can then be expressed as an ordinary symmetric eigenvalue problem for the matrix 
 \begin{equation}
@@ -1195,10 +1195,12 @@ unstable, the leading subspace may still be well-defined if there are several cl
 instability of the first vector may reflect either genuine noise or simple rotation within
 a weakly separated leading subspace.
 
-The fifth diagnostic is eigengap separation: $\lambda_1-\lambda_2$, $\lambda_2-\lambda_3$,
-and $\lambda_3-\lambda_4$. These show whether the leading root is sufficiently separated to be interpreted as 
-an individual component. This step is essential as, when eigengaps are too small, BG 
-inversion formulas cannot be applied credibly.
+The fifth diagnostic is eigengap separation $\lambda_i-\lambda_{i+1}$, evaluated via the 
+criterion $\lambda_{i}-\lambda_{i+1} \ge 5n^{-1/2}$, where $\lambda_{i}$ and $\lambda_{i+1}$
+are the squared sample canonical roots in the window with length \(n\).
+This determines whether the root is sufficiently separated to be interpreted as 
+an individual component and whether BG 
+inversion formulas can be applied credibly.
 
 Finally, out-of-sample performance is evaluated: canonical weights estimated in one part of the data are 
 applied to the other part, and the held-out leading squared canonical correlation is recorded. This shows whether 
@@ -1210,10 +1212,10 @@ with high-dimensional noise and instability.
 
 \section{Rolling-window design}
 
-The baseline specification uses rolling windows of a fixed length of 260 weeks and fixed step size of 4 weeks, yielding
-144 windows over the sample. This design allows the canonical spectrum to vary over time while keeping the empirical 
-setting explicitly high-dimensional. For each window, the six diagnostics are computed and a leading root is treated as
-credibly identified only if the first root is clearly separated from the second one.
+The baseline specification uses rolling windows of a fixed length of 260 weeks and step size of 4 weeks, yielding
+144 windows. This allows the canonical spectrum to vary over time while keeping the 
+setting explicitly high-dimensional. For each window, the diagnostics are computed and outlier roots are treated as
+credibly identified if sufficiently separated from the bulk and each other.
 
 \section{Robustness}
 
@@ -1260,7 +1262,7 @@ further shows that the evidence is not confined to a single isolated component a
 above the bulk in all windows. This suggests that the cross-panel dependence is multidimensional 
 at the spectral level, rather than being driven only by the first canonical relation. Overall, the 
 effect is strong enough to suggest that, at the level of the sample spectrum, cyclical and defensive 
-returns exhibit persistent and meaningful cross-panel dependence.
+returns exhibit persistent cross-panel dependence.
 
 The full-sample canonical score plots in Figure~\ref{fig:emp-full-score-scatters} provide 
 complementary visualization. The first score pair displays a much tighter linear 
@@ -1311,7 +1313,7 @@ dependence than with a sharply separated low-rank structure.
 
 Eigengap diagnostics reinforce this interpretation. Figure~\ref{fig:emp-eigengap} shows that the 
 gaps between the leading roots are too small to support credible leading-root inversion. In the 
-baseline run, there are zero credible leading windows out of 144, i.e.: no rolling window satisfies the 
+baseline run, there are zero credible leading windows out of 144, that is. no rolling window satisfies the 
 separation rule required to safely apply the Bykhovskaya-Gorin outlier formulas on a window-by-window basis.
 
 % Applying the inversion formulas mechanically would therefore overstate what can be learned about population canonical correlations.
@@ -1331,7 +1333,7 @@ whereas the third signal only appears in 83\%.
 For the two stronger signals the mean BG-corrected \(\rho^2\) values are large, at 0.929 and 
 0.767 respectively. The third signal shows much weaker BG-corrected values that seem to 
 blend with the next outliers.
-Thus, the data does show some evidence of persistent multi-dimensional dependence, 
+Thus, evidence suggests persistent multi-dimensional dependence, 
 but the lack of credible inversion and the weak directional stability suggest that this 
 dependence is not organized into clean, well-separated canonical components.
 
@@ -1339,7 +1341,7 @@ dependence is not organized into clean, well-separated canonical components.
 \section{Interpreting the spectrum}
 
 Taken together, the spectral and geometric evidence points to a strong and persistent cross-sector 
-dependence between cyclical and defensive stock returns whichis not plausibly attributable to noise alone. 
+dependence between cyclical and defensive stock returns which is not plausibly attributable to noise alone. 
 Nonetheless, the leading empirical canonical portfolio is not stable as the estimated 
 first direction changes materially across halves of the sample and fails to transport out of sample.
 
@@ -1402,30 +1404,42 @@ alternative specifications.
 \chapter{Discussion and Conclusion}
 \label{ch:Conclusion}
 
-This paper studied whether HDCCA provides a useful description of cross-sector dependence in large 
-stock-return panels. The empirical application suggests that HDCCA is useful as a 
-diagnostic framework, as the canonical spectrum 
-displays strong and persistent dependence between cyclical and defensive stocks. However, the leading canonical 
-directions are not recovered as a stable economic direction. Vector stability is low, out-of-sample performance 
-is weak, and the leading root is not sufficiently separated from nearby roots to support credible inversion.
+This paper studied if HDCCA provides a useful framework for describing 
+cross-sector dependence in large equity panels. The analysis focused on 
+the relationship between cyclical and defensive stock returns, 
+combining Monte Carlo simulations with an application to CRSP data.
 
-This distinction is central to the interpretation of classical CCA in high dimensions. A large in-sample canonical
-root can contain genuine information about cross-panel dependence even when the leading estimated
-direction is too fragile to support a clean economic interpretation. 
+The Monte Carlo simulations show that in high-dimensional settings, large sample 
+canonical roots may arise even when the two panels are independent. 
+Moreover, under true dependence spectral separation appears before 
+reliable directional recovery. This is central to the interpretation of HDCCA 
+as canonical roots may indicate the presence of cross-panel dependence even 
+when the associated canonical directions remain too unstable to support a 
+clear economic interpretation.
+
+This is precisely what the empirical application finds. In
+financial data, HDCCA provides a warning against naive diversification claims, as the 
+canonical spectrum displays persistent dependence between 
+cyclical and defensive stocks. However, the leading canonical 
+directions are not recovered as a stable economic direction. 
+Vector stability is low, out-of-sample performance weak, and the 
+leading root is not sufficiently separated from nearby roots to 
+recover.
 
 In practice, HDCCA helps explain why large canonical roots in 
-high-dimensional data must be interpreted cautiously. Specifically for large financial panels, classical CCA 
-should not be interpreted using in-sample fit alone. For portfolio construction, risk management, or factor
-interpretation, large canonical roots are only economically meaningful if they are also stable across
-samples and persist out of sample. Otherwise, the estimated canonical portfolio may reflect
+high-dimensional data must be interpreted cautiously. Notably for 
+portfolio construction, risk management, or factor interpretation,
+in-sample HDCCA outliers are not necessarily economically meaningful
+if they are not also stable across samples and persist out of sample. 
+Otherwise, the estimated canonical directions may reflect
 high-dimensional estimation error rather than a reliable source of common risk.
 
 More broadly, the results suggest that cross-sector dependence in equity markets may be real but
 more diffuse than a simple low-rank model would imply. The evidence is therefore more consistent
 with several weakly separated directions than with one clean and stable leading canonical factor.
 
-There are several limitations to the study as the empirical analysis focuses on one panel design, one frequency,
-and classical CCA interpreted through the HDCCA benchmark. It does not compare alternative
+Several limitations apply as the empirical analysis is narrow, focusing on a single panel design, 
+frequency, and the HDCCA benchmark. It does not compare alternative
 regularized estimators in detail, nor does it study other asset partitions or richer time-series
 structures. These limitations point naturally to future research. Future extensions could include
 a comparison of classical CCA with regularized or sparse alternatives and examine whether economically
