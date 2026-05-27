@@ -1438,8 +1438,13 @@ canonical vector.
 %========================================================
 \clearpage
 \addcontentsline{toc}{chapter}{Bibliography}
-
+\nocite{*}
+\begingroup
+\singlespacing
+\setlength{\bibitemsep}{0.25\baselineskip}
+\setlength{\bibparsep}{0pt}
 \printbibliography
+\endgroup
 
 %========================================================
 % MONTE CARLO FIGURES AND TABLES
