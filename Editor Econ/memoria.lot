@@ -9,13 +9,13 @@
 \contentsline {table}{\numberline {5.1}{\ignorespaces Baseline 260-week rolling summary for the CRSP empirical application.}}{25}{table.caption.15}%
 \contentsline {table}{\numberline {5.2}{\ignorespaces Rank-level summary of Bykhovskaya-Gorin diagnostics of outliers}}{25}{table.caption.16}%
 \contentsline {table}{\numberline {5.3}{\ignorespaces Robustness summary across alternative rolling-window lengths and subsamples.}}{25}{table.caption.17}%
-\contentsline {table}{\numberline {A.1}{\ignorespaces Experiment 1 summary statistics under the pure-noise benchmark.}}{VIII}{table.caption.28}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Experiment 2 summary table for the one-spike signal-strength sweep.}}{IX}{table.caption.30}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces Experiment 3 summary table around the near-critical region.}}{IX}{table.caption.33}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces Experiment 4 summary statistics for the three-spike low-rank design.}}{XII}{table.caption.37}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces Experiment 4 component-by-component recovery measures.}}{XII}{table.caption.38}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces Experiment 5 comparison of the low-rank and diffuse designs.}}{XII}{table.caption.40}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces Experiment 6 summary statistics across the robustness designs.}}{XIV}{table.caption.43}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Experiment 1: Summary statistics under the pure-noise benchmark.}}{VIII}{table.caption.28}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Experiment 2: Summary table for the one-spike signal-strength sweep.}}{IX}{table.caption.30}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Experiment 3: Summary table around the near-critical region.}}{IX}{table.caption.33}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces Experiment 4: Summary statistics for the three-spike low-rank design.}}{XII}{table.caption.37}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces Experiment 4: Component-by-component recovery measures.}}{XII}{table.caption.38}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces Experiment 5: Comparison of the low-rank and diffuse designs.}}{XII}{table.caption.40}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces Experiment 6: Summary statistics across the robustness designs.}}{XIV}{table.caption.43}%
 \contentsline {table}{\numberline {B.1}{\ignorespaces Baseline CRSP sample design used in the empirical rolling-window application.}}{XV}{table.caption.45}%
 \contentsline {table}{\numberline {B.2}{\ignorespaces Top ten squared canonical roots from the full-sample static spectrum, with the HDCCA bulk-edge classification.}}{XV}{table.caption.46}%
 \contentsfinish 

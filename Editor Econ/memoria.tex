@@ -576,7 +576,7 @@ a natural framework for this problem because it measures dependence between two 
 panels. In simple terms, CCA asks whether two groups of variables share 
 common patterns of movement by extracting linear combinations within each group that 
 maximize their cross-correlation. In this thesis, the two groups may be
-understood as teh different sets of stocks, cyclical and defensive.
+understood as the different sets of stocks, cyclical and defensive.
 
 However, applying this idea to financial data is not straightforward. Stock-market data 
 often contain many assets observed over a limited time span. For example, a 
@@ -1036,9 +1036,11 @@ First, the largest squared sample canonical correlation
 (the leading sample root) is 
 $\widehat{\lambda}_1=\widehat{\rho}_1^2=s_1(\widehat{M})^2$,
 % \widehat{M}=S_{XX}^{-1/2}S_{XY}S_{YY}^{-1/2}$
-and measures the strongest in-sample linear association between the two panels. 
+and measures the strongest in-sample\footnote{In-sample refers to estimations from observations in a given window.} linear association between the two panels. 
 
-Second, to assess whether this relation is stable, the in-sample root is compared to its out-of-sample 
+Second, to assess whether this relation is stable, the in-sample root is compared to its out-of-sample\footnote{Out-of-sample refers to 
+evaluation on observations outside the estimation window. These observations that are intentionally exclided from 
+estimation and reserved for such out-of-sample evaluation are called held-out data.} 
 counterpart. A canonical relation is considered stable when it produces a large 
 correlation both within the estimation window and in a held-out sample. Within each window, the 
 canonical directions are estimated on a training subsample and then applied to held-out observations 
@@ -1259,7 +1261,7 @@ mean number of roots above the bulk is 4.17. This is supported by Figure~\ref{fi
 where the leading root is consistently too large to be explained either by the HDCCA bulk edge or 
 by high-dimensional noise alone, as represented by the permutation null. Figure~\ref{fig:emp-outlier-count} 
 further shows that the evidence is not confined to a single isolated component as multiple roots lie 
-above the bulk in all windows. This suggests that the cross-panel dependence is multidimensional 
+above the bulk in all windows. This evidence indicates that the cross-panel dependence is multidimensional 
 at the spectral level, rather than being driven only by the first canonical relation. Overall, the 
 effect is strong enough to suggest that, at the level of the sample spectrum, cyclical and defensive 
 returns exhibit persistent cross-panel dependence.
@@ -1470,11 +1472,11 @@ canonical vector.
 % Main results summary table
 \mctable{imagenes/mc_main_results_summary.tex}[Summary of the main Monte Carlo results.]{}{tab:mc-main-results}
 % Experiment 1 - pure noise histogram
-\mcfigure{mc_exp1_histogram.pdf}[Experiment 1 pure-noise distribution of the leading sample 
+\mcfigure{mc_exp1_histogram.pdf}[Experiment 1: Pure-noise distribution of the leading sample 
 canonical correlation.]{The vertical lines report the 95th and 99th percentiles of the 
 leading-root distribution generated.}{fig:mc-exp1-hist}
 % Exp 2 - spectral response to one true spike
-\mcfigure{mc_exp2_spectral.pdf}[Experiment 2 in-sample spectral response to one true spike.]{
+\mcfigure{mc_exp2_spectral.pdf}[Experiment 2: In-sample spectral response to one true spike.]{
 The figure reports the mean leading and second sample canonical roots as the population canonical correlation \(\rho\) increases. 
 The leading root remains near the high-dimensional noise level for weak signals and separates from the bulk only above the 
 critical value \(\rho_c\) (represented by the vertical line). The second root remains close to the bulk level, consistent 
@@ -1490,7 +1492,7 @@ correlation moves further above the critical value.}{fig:mc-exp3-detection}
 The raw leading root is upward biased relative to the population value, especially near the threshold.
 In contrast, the BG-corrected root provides a much closer estimation of the population value.}{fig:mc_exp3_bg_root_correction}
 % Experiment 4 - multi-spike spectral response
-\mcfigure{mc_exp4_bg_component_correction.pdf}[Experiment 4 BG correction by canonical component]{The figure
+\mcfigure{mc_exp4_bg_component_correction.pdf}[Experiment 4: BG correction by canonical component]{The figure
 reports the mean leading root before and after applying the Bykhovskaya-Gorin correction for each of the three leading spikes.
 Additionally, the true population value is reported for reference. It can be seen that the raw leading roots are 
 upward biased relative to the population values. The BG-corrected roots are much closer to the population 
@@ -1795,7 +1797,7 @@ and the BG-corrected root look stronger than the recoverable canonical direction
 \resetresultnumbering{A}
 
 % Experiment 1 - summary statistics
-\mctable[0.45\textwidth]{imagenes/mc_exp1_summary.tex}[Experiment 1 summary statistics under 
+\mctable[0.45\textwidth]{imagenes/mc_exp1_summary.tex}[Experiment 1: Summary statistics under 
 the pure-noise benchmark.]{ }{tab:mc-exp1-summary}
 % Experiment 1 - scree plot
 \mcfigure{mc_exp1_scree.pdf}[Scree plot for the mean canonical roots for the pure-noise 
@@ -1807,17 +1809,17 @@ roots separate from the rest of the spectrum. In the pure-noise scenario it disp
 bulk-like structure.}{fig:mc-exp1-scree}
 
 % Experiment 2
-\mctable{imagenes/mc_exp2_summary.tex}[Experiment 2 summary table for the one-spike signal-strength 
+\mctable{imagenes/mc_exp2_summary.tex}[Experiment 2: Summary table for the one-spike signal-strength 
 sweep.]{ }{tab:mc-exp2-summary}
-\mcfigure{mc_exp2_stability.pdf}[Experiment 2 out-of-sample strength and split-sample stability.]{The figure reports the held-out leading canonical root and the split-sample directional overlaps. Both diagnostics remain close to zero for weak signals and become substantial only for sufficiently strong population canonical correlations, showing that in-sample separation alone does not guarantee stable or generalizable canonical structure.}{fig:mc-exp2-stability}
-\mcfigure{mc_exp2_angles.pdf}[Experiment 2 geometric recovery of the leading canonical vectors.]{
+\mcfigure{mc_exp2_stability.pdf}[Experiment 2: Out-of-sample strength and split-sample stability.]{The figure reports the held-out leading canonical root and the split-sample directional overlaps. Both diagnostics remain close to zero for weak signals and become substantial only for sufficiently strong population canonical correlations, showing that in-sample separation alone does not guarantee stable or generalizable canonical structure.}{fig:mc-exp2-stability}
+\mcfigure{mc_exp2_angles.pdf}[Experiment 2: Geometric recovery of the leading canonical vectors.]{
 The figure reports the angle between the estimated and the true leading canonical directions for the \(X\)- and \(Y\)-side panels. 
 Angles close to \(90^\circ\) indicate little directional recovery. Recovery improves only once the population signal moves 
 above the critical region (represented by the vertical line).}{fig:mc-exp2-angles}
 
 % Experiment 3
-\mctable{imagenes/mc_exp3_summary.tex}[Experiment 3 summary table around the near-critical region.]{ }{tab:mc-exp3-summary}
-\mcfigure{mc_exp3_strength.pdf}[Experiment 3 in-sample and out-of-sample strength near the threshold.]{
+\mctable{imagenes/mc_exp3_summary.tex}[Experiment 3: Summary table around the near-critical region.]{ }{tab:mc-exp3-summary}
+\mcfigure{mc_exp3_strength.pdf}[Experiment 3: In-sample and out-of-sample strength near the threshold.]{
 The figure compares the mean in-sample leading root with the mean out-of-sample leading root. 
 The in-sample root remains close to the high-dimensional pure-noise cutoff, while the out-of-sample root 
 stays close to zero, showing that near-threshold signals do not necessarily produce stable 
@@ -1831,27 +1833,27 @@ value \(\rho_c\), indicating weak directional recovery in the near-threshold reg
 the BG-predicted angles are close to the theoretical predictions.}{fig:mc-exp3-angles}
 
 % Experiment 4
-\mctable[0.85\textwidth]{imagenes/mc_exp4_summary.tex}[Experiment 4 summary statistics for the three-spike low-rank design.]{ }{tab:mc-exp4-summary}
-\mctable{imagenes/mc_exp4_correction_components.tex}[Experiment 4 component-by-component recovery measures.]{ }{tab:mc-exp4-components}
-\mcfigure{mc_exp4_scree.pdf}[Experiment 4 mean scree plot under the three-spike low-rank design.]{
+\mctable[0.85\textwidth]{imagenes/mc_exp4_summary.tex}[Experiment 4: Summary statistics for the three-spike low-rank design.]{ }{tab:mc-exp4-summary}
+\mctable{imagenes/mc_exp4_correction_components.tex}[Experiment 4: Component-by-component recovery measures.]{ }{tab:mc-exp4-components}
+\mcfigure{mc_exp4_scree.pdf}[Experiment 4: Mean scree plot under the three-spike low-rank design.]{
 The figure reports the mean ordered sample canonical roots. The spectrum displays a steep decline 
 at the leading ranks followed by a smoother decay across the remaining roots. This pattern is 
 consistent with dependence concentrated in a small number of canonical directions, although the 
 lower-ranked components merge progressively into the high-dimensional bulk.}{fig:mc-exp4-scree}
 
 % Experiment 5
-\mctable{imagenes/mc_exp5_summary.tex}[Experiment 5 comparison of the low-rank and diffuse designs.]{Note that the table reports mean values across simulations.}{tab:mc-exp5-summary}
-\mcfigure{mc_exp5_low_rank_scree.pdf}[Experiment 5A mean scree plot under the low-rank design.]{
+\mctable{imagenes/mc_exp5_summary.tex}[Experiment 5: Comparison of the low-rank and diffuse designs.]{Note that the table reports mean values across simulations.}{tab:mc-exp5-summary}
+\mcfigure{mc_exp5_low_rank_scree.pdf}[Experiment 5A: Mean scree plot under the low-rank design.]{
 The figure reports the mean ordered sample canonical roots where the leading roots are visibly 
 larger than the rest of the spectrum, after which the curve declines smoothly. This indicates 
 that the simulated dependence is concentrated in a limited number of directions.}{fig:mc-exp5-lowrank}
-\mcfigure{mc_exp5_diffuse_scree.pdf}[Experiment 5B mean scree plot under the diffuse design.]{
+\mcfigure{mc_exp5_diffuse_scree.pdf}[Experiment 5B: Mean scree plot under the diffuse design.]{
 The figure reports the mean ordered sample canonical roots. Unlike the low-rank case, the 
 spectrum declines gradually without a clear break between leading and non-leading roots. 
 This shows that diffuse dependence is harder to identify through isolated sample outliers, 
 since signal strength is spread across several directions rather than concentrated in a 
 small number of dominant roots.}{fig:mc-exp5-diffuse}
-\mctable{imagenes/mc_exp6_summary.tex}[Experiment 6 summary statistics across the robustness designs.]{
+\mctable{imagenes/mc_exp6_summary.tex}[Experiment 6: Summary statistics across the robustness designs.]{
 The table reports the main Monte Carlo diagnostics for three data-generating processes that keep the 
 same one-spike population signal, \(\rho=0.70\), but vary the distributional and covariance assumptions. 
 Note that the table reports mean values across simulations. Additionally we only report angle $X$ as $p$=$q$=80 
