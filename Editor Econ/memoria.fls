@@ -464,6 +464,10 @@ INPUT ./memoria.lot
 INPUT ./memoria.lot
 INPUT memoria.lot
 OUTPUT memoria.lot
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
@@ -482,11 +486,11 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxsy.vf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxmi7.vf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/NewTXMI7.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
@@ -670,10 +674,6 @@ INPUT ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary
 INPUT ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png
 INPUT ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png
 INPUT ../CRSP_Analysis/empirical_outputs_crsp/figures/figure8_robustness_summary_across_specs.png
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
-INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxtt.fd
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
 INPUT ./imagenes/mc_exp1_summary.tex
 INPUT ./imagenes/mc_exp1_summary.tex
 INPUT imagenes/mc_exp1_summary.tex

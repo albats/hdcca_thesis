@@ -4,8 +4,8 @@
 \contentsline {section}{\numberline {2.1}Classical Canonical Correlation Analysis}{4}{section.2.1}%
 \contentsline {paragraph}{Conceptual Overview.}{4}{section.2.1}%
 \contentsline {paragraph}{Eigenvalue Representation.}{5}{equation.2.2}%
-\contentsline {paragraph}{Statistical Properties.}{6}{equation.2.6}%
-\contentsline {paragraph}{Practical Implications and Limitations.}{7}{equation.2.6}%
+\contentsline {paragraph}{Statistical Properties.}{6}{equation.2.7}%
+\contentsline {paragraph}{Practical Implications and Limitations.}{7}{equation.2.7}%
 \contentsline {section}{\numberline {2.2}Breakdown in High Dimensions}{7}{section.2.2}%
 \contentsline {paragraph}{Eigenvalue Distortion and Spurious Correlations.}{7}{section.2.2}%
 \contentsline {paragraph}{The High-Dimensional CCA Framework.}{8}{section.2.2}%
@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {4.2}Empirical setting}{13}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Empirical diagnostics}{13}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Rolling-window design}{14}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Robustness}{14}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Robustness}{15}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Empirical Application to Stock Return Panels}{15}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Data description}{15}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Main result}{15}{section.5.2}%

@@ -514,7 +514,7 @@ reducing dependence on any one investment; and it is essentially the theoretical
 equivalent to \textit{Don’t Put All Your Eggs in One Basket}. Effective diversification 
 therefore requires attention to the relationships between investments, whether they tend to 
 move together, move differently, and how they respond to changing conditions.
-For this reason, the statistical problem relies both on the number of assets held and on 
+Thus, the statistical problem relies on the number of assets held and on 
 the dependence structure among their returns.
 
 One important source of changing conditions is the business cycle, the pattern of expansion 
@@ -547,11 +547,11 @@ during periods of stress, then the protection offered by the defensive part of t
 portfolio may be weaker than expected. For this reason, portfolio risk depends not only 
 on the individual investments selected, or on the amount of money assigned to each one, 
 but also on the relationships between them. These relationships can be understood as 
-patterns of co-movement, referring to the extent to which asset returns 
+patterns of co-movement, the extent to which asset returns 
 tend to rise or fall together. 
 A portfolio may appear diversified because it contains many stocks or several sectors, 
 but if those investments are all influenced by the same economic forces, 
-then the portfolio may still be exposed to a common source of risk. 
+then it is still be exposed to a common source of risk. 
 
 Consider, for example, two portfolios that both allocate 60\% of their value to cyclical 
 stocks and 40\% to defensive stocks. At first glance, they appear equally diversified 
@@ -630,8 +630,10 @@ can be found in Appendix A.
 The simulations act as a stepping stone to \autoref{ch:Methodology}, 
 providing the intuition behind the benchmarks and the diagnostic framework in the 
 empirical application. The results of the empirical application to large equity panels are 
-reported in \autoref{ch:EmpiricalApplication}. Finally, \autoref{ch:Conclusion} concludes 
-with a discussion of implications and final remarks.
+reported in \autoref{ch:EmpiricalApplication}. 
+Both the empirical analysis and simulation results are supported by reproducible code 
+which can be found at \texttt{\url{https://github.com/albats/hdcca_thesis}}.
+Finally, \autoref{ch:Conclusion} concludes with a discussion of implications and final remarks.
 
 \chapter{Literature Review}
 \label{ch:LitRev}
@@ -705,10 +707,7 @@ M =
 \Sigma_{XY}
 \Sigma_{YY}^{-1/2}.
 \]
-Since
-\[
-\mathcal{C} = MM^\top,
-\]
+Since $\mathcal{C} = MM^\top$,
 the eigenvalues of \(\mathcal{C}\) are the squared singular values of \(M\).
 Thus, the canonical correlations \(\rho_k\) are the singular values of \(M\),
 and the canonical directions are obtained by transforming the corresponding
@@ -728,8 +727,24 @@ The eigenvalues of this matrix $\mathcal{C}$ correspond to the squared canonical
 $\rho_k^2$, and the canonical directions for $X_t$ correspond to its eigenvectors. 
 Let $u_k$ denote the eigenvector associated with the $k$-th largest eigenvalue $\rho_k^2$ 
 (such that $\mathcal{C} u_k = \rho_k^2 u_k$.) Then the canonical directions for $X_t$ are 
-obtained as $a_k = \Sigma_{XX}^{-1/2} u_k$ and the canonical directions for $Y_t$ 
-as $b_k = \Sigma_{YY}^{-1/2} v_k$.
+obtained as $a_k = \Sigma_{XX}^{-1/2} u_k$.
+
+Analogously, the canonical directions for the \(Y_t\)-side are obtained from the
+symmetric eigenvalue problem
+\begin{equation}
+\mathcal{D}
+=
+\Sigma_{YY}^{-1/2}
+\Sigma_{YX}
+\Sigma_{XX}^{-1}
+\Sigma_{XY}
+\Sigma_{YY}^{-1/2}.
+\end{equation}
+Where the eigenvalues of \(\mathcal{D}\) are the same squared canonical
+correlations \(\rho_k^2\). If \(v_k\) denotes the eigenvector associated with
+\(\rho_k^2\), so that $\mathcal{D}v_k = \rho_k^2 v_k$, then the corresponding canonical direction for \(Y_t\) is
+$b_k = \Sigma_{YY}^{-1/2}v_k$. Subsequently, Together with $a_k$ these represent
+the \(k\)-th pair of population canonical directions.
 
 In empirical applications, population covariance matrices are unknown and replaced by their 
 sample counterparts:
@@ -1013,7 +1028,6 @@ provides a useful structural description of cross-sector dependence.
 % the classical estimator when dimensionality is large. The empirical relevance of these 
 % predictions remains largely unexplored in financial markets.
 
-\clearpage
 \chapter{Monte Carlo Simulations}
 \label{ch:MonteCarlo}
 
@@ -1161,12 +1175,13 @@ performance jointly.
 
 \section{Empirical setting}
 
-The empirical application uses weekly stock returns constructed from CRSP data. The stocks are divided into 
+The empirical application uses weekly stock returns constructed from CRSP data (details in Chapter 5). 
+The stocks are divided into 
 two balanced panels, cyclical and defensive, based on FF12 industry groups derived from SIC codes. 
 This partition is economically motivated by the business-cycle distinction and 
 is related to Bykhovskaya and Gorin’s own empirical illustration. Cyclical stocks are defined as firms in durable goods, 
 manufacturing, energy, chemicals, and retail or services, while defensive stocks are defined as firms 
-in non-durables, health, telecom, and utilities. Further data details and sample composition are reported in Chapter 5.
+in non-durables, health, telecom, and utilities.
 
 \section{Empirical diagnostics}
 
@@ -1182,12 +1197,15 @@ and with a permutation-based null to determine whether the leading root is large
 expected under high-dimensional noise. The permutation null refers to the distribution of the leading 
 root obtained by randomly permuting the time ordering of one panel relative to the other, which 
 breaks any genuine cross-panel dependence while preserving the marginal structure of each panel. 
-Additionally, the number of canonical roots above the bulk edge in each window is also used as a diagnostic. 
-This second diagnostic helps distinguish a single dominant factor from broader multi-direction dependence.
+Second, the number of canonical roots above the bulk edge in each window is used
+to distinguish a single dominant factor from broader multi-direction dependence.
 
 Roots above this threshold provide evidence of cross-panel dependence relative to the specified 
-high-dimensional benchmark; however, the corresponding vectors must also be stable. To measure 
-such directional stability each window is split into two halves and the leading canonical 
+high-dimensional benchmark; however, the corresponding vectors must also be stable. 
+A stable canonical direction would identify a reproducible long-short combination of 
+cyclical stocks and a corresponding combination of defensive stocks that investors 
+could monitor, hedge, or use for sector rotation. 
+To measure such directional stability, each window is split into two halves and the leading canonical 
 vectors across the two subsamples are compared. Low overlap would 
 indicate that the leading canonical portfolio is unstable.
 
@@ -1201,12 +1219,11 @@ The fifth diagnostic is eigengap separation $\lambda_i-\lambda_{i+1}$, evaluated
 criterion $\lambda_{i}-\lambda_{i+1} \ge 5n^{-1/2}$, where $\lambda_{i}$ and $\lambda_{i+1}$
 are the squared sample canonical roots in the window with length \(n\).
 This determines whether the root is sufficiently separated to be interpreted as 
-an individual component and whether BG 
-inversion formulas can be applied credibly.
-
-Finally, out-of-sample performance is evaluated: canonical weights estimated in one part of the data are 
-applied to the other part, and the held-out leading squared canonical correlation is recorded. This shows whether 
-the apparent dependence survives out of sample.
+an individual component and whether BG inversion formulas can be applied credibly.  
+Finally, out-of-sample performance is evaluated: canonical weights estimated in one part of 
+the data are applied to the other 
+% and the held-out leading squared canonical correlation is recorded 
+to show whether the apparent dependence survives.
 
 By relying on these six diagnostics jointly, the empirical analysis can evaluate whether large in-sample canonical 
 roots are accompanied by stable and economically meaningful canonical directions, or whether they are more consistent 
@@ -1231,7 +1248,6 @@ depend on a particular market period.
 % By splitting the sample around this period, we can assess 
 % whether the observed phenomena are robust to such structural breaks.
 
-\clearpage
 \chapter{Empirical Application to Stock Return Panels}
 \label{ch:EmpiricalApplication}
 
@@ -1256,15 +1272,15 @@ stepped every four weeks, resulting in 144 rolling windows. The settings are the
 with $p$=$q$=80 and $n$=260, allowing the use of HDCCA. 
 
 The leading empirical root is large, with a mean value of 0.9731 across windows, compared with a 
-mean HDCCA bulk edge of 0.8521. The leading root exceeds the bulk edge in  every window, and the 
+mean HDCCA bulk edge of 0.8521. It exceeds the bulk edge in every window, and the 
 mean number of roots above the bulk is 4.17. This is supported by Figure~\ref{fig:emp-leading-root-null}
-where the leading root is consistently too large to be explained either by the HDCCA bulk edge or 
-by high-dimensional noise alone, as represented by the permutation null. Figure~\ref{fig:emp-outlier-count} 
+where the leading root is consistently too large to be explained
+by high-dimensional noise alone, as represented by the permutation null. 
+This indicates that cyclical and defensive stocks share strong common variation, so the 
+two groups are not independent sources of portfolio risk. Figure~\ref{fig:emp-outlier-count} 
 further shows that the evidence is not confined to a single isolated component as multiple roots lie 
-above the bulk in all windows. This evidence indicates that the cross-panel dependence is multidimensional 
-at the spectral level, rather than being driven only by the first canonical relation. Overall, the 
-effect is strong enough to suggest that, at the level of the sample spectrum, cyclical and defensive 
-returns exhibit persistent cross-panel dependence.
+above the bulk in all windows, indicating that the cross-panel dependence is multidimensional 
+at the spectral level, rather than being driven only by the first canonical relation.
 
 The full-sample canonical score plots in Figure~\ref{fig:emp-full-score-scatters} provide 
 complementary visualization. The first score pair displays a much tighter linear 
@@ -1282,6 +1298,12 @@ The same instability appears out of sample as the mean held-out leading squared 
 which is very small relative to the mean in-sample value of 0.9731, as depicted in Figure~\ref{fig:emp-insample-heldout}.
 This is precisely the gap highlighted by the Monte Carlo analysis. A large in-sample canonical root is not enough
 to be economically meaningful; it must also survive out of sample.
+The lack of stability implies that the estimated canonical directions should not be treated 
+as reliable portfolio signals. The co-movement found in the historical data may be driven 
+by temporary macroeconomic conditions or noise, rather than by stable relationships 
+between cyclical and defensive stocks. Given that canonical directions estimated in one 
+period do not hold out of sample, their usefulness for building a reliable rotation 
+strategy between the two groups is limted.
 
 The overall implication is that the leading empirical root is observed as a spectral phenomenon, but the 
 leading empirical vector is not recoverable as a stable economic portfolio. In other words, the 
@@ -1352,23 +1374,43 @@ dependence, but no single one is stably estimated as the dominant direction. Tha
 Monte Carlo comparison between concentrated low-rank and diffuse dependence designs, where broad nonzero 
 spectra can coexist with weak directional recovery.
 
+Economically, this entails that the cyclical-defensive classification remains relevant as
+the persistent spectral outliers show that cyclical and defensive stocks are linked by 
+common market forces. For a diversified investor, this weakens the interpretation of 
+defensive stocks as an independent hedge against cyclical exposure. 
+Even when the portfolio is split across economically different sectors, part of the risk 
+remains shared across the two panels.
+
+At the same time, the instability of the canonical directions limits the usefulness of CCA 
+as a direct portfolio-construction tool. If the leading direction were stable, it could be 
+interpreted as a reproducible consistent relationship between specific combinations of 
+cyclical and defensive stocks. Such weights could then be applied to monitor cross-sector 
+risk. However, the empirical results do not support this 
+interpretation as the leading directions change substantially 
+across samples and does not generalize out of sample. Moreover, the failure to apply the 
+BG correction formulas credibly reinforces the same point, the leading canonical component is 
+not sufficiently well separated to be treated as a robust economic relationship.
+
+The practical implication is therefore that, while HDCCA 
+reveals that diversification between cyclical and defensive stocks may be 
+less effective than the sector labels suggest, it is not useful here as a stable 
+signal-extraction device for identifying a single tradable cross-sector factor. 
+
 \section{Robustness}
 
 The robustness exercises show that the main conclusion is not driven by the baseline window length or 
 by the specific pre-/post-2020 sample split as seen 
 in Table~\ref{tab:emp-robustness-summary} and Figure~\ref{fig:emp-robustness}.
+They confirm the baseline message that the spectrum consistently indicates cross-sector 
+dependence, but the leading canonical portfolio is not a well-identified economic direction under reasonable 
+alternative specifications.
 
-With shorter 208-week windows, the leading root remains an outlier in every window, but vector stability, 
-top-5 subspace overlap, and held-out performance all remain very weak, with no credible 
-leading windows. 
-
-With longer 364-week windows, spectral separation becomes stronger and the mean held-out 
-root rises materially to 0.3385, well above the baseline value of 0.0128. Longer windows allow a larger part 
+Both with shorter 208-week windows and longer 364-week windows, the leading root remains an 
+outlier in every window, but vector stability, top-5 subspace overlap, and held-out performance all remain very weak, with no credible 
+leading windows. Stronger spectral separation is found in longer windows. These allow a larger part 
 of the broad cross-panel dependence to survive out of sample, which is consistent with lower estimation noise and 
-with more persistent low-frequency co-movement being captured over longer horizons. However, this improvement does 
-not solve the main identification problem. First-vector overlap remains very low, top-5 overlap stays near 0.10, 
-and the number of credible leading windows is still zero, failing to deliver stable leading canonical components 
-that could be interpreted. 
+with more persistent low-frequency co-movement over longer horizons. Nonetheless, tehy still
+fail to deliver stable leading canonical components that could be interpreted
 
 The subsample analysis leads to the same conclusion. In both the pre-2020 and post-2020 samples
 overlap measures remain low, held-out roots remain small, and no credible leading windows emerge. 
@@ -1380,12 +1422,7 @@ shows stronger evidence of dependence across several leading directions.
 Financially, this pattern is consistent with the idea that crisis and post-crisis market 
 conditions compress diversification benefits, meaning that cyclical and defensive stocks become 
 more jointly driven by common aggregate shocks so dependence appears not only in the 
-leading canonical relation but also in weaker ranks such as ranks 3 to 5. 
-Although the main conclusion is unchanged, this pattern can provide financial intuition.
-
-Overall, the robustness results confirm the baseline message that the spectrum consistently indicates cross-sector 
-dependence, but the leading canonical portfolio is not a well-identified economic direction under reasonable 
-alternative specifications.
+leading canonical relation but also in weaker ranks. 
 
 
 %% \section{Concluding assessment}
@@ -1402,7 +1439,6 @@ alternative specifications.
 % in large stock panels well, but the empirical dependence structure itself looks broader, more weakly 
 % separated, and more rotationally unstable than a clean low-rank factor model would suggest.
 
-\clearpage
 \chapter{Discussion and Conclusion}
 \label{ch:Conclusion}
 
@@ -1422,7 +1458,9 @@ clear economic interpretation.
 This is precisely what the empirical application finds. In
 financial data, HDCCA provides a warning against naive diversification claims, as the 
 canonical spectrum displays persistent dependence between 
-cyclical and defensive stocks. However, the leading canonical 
+cyclical and defensive stocks. The strong spectrum suggests that cyclical and 
+defensive allocations should not be treated as automatically diversified, 
+especially when aggregate shocks affect both groups. However, the leading canonical 
 directions are not recovered as a stable economic direction. 
 Vector stability is low, out-of-sample performance weak, and the 
 leading root is not sufficiently separated from nearby roots to 
@@ -1452,7 +1490,6 @@ canonical vector.
 %========================================================
 %	BIBLIOGRAPHY
 %========================================================
-\clearpage
 \addcontentsline{toc}{chapter}{Bibliography}
 \nocite{*}
 \begingroup

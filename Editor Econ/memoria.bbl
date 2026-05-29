@@ -58,52 +58,6 @@
       \verb 2306.16393
       \endverb
     \endentry
-    \entry{chava_2019_does}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=0055024da843597059cd48157349c21f}{%
-           family={Chava},
-           familyi={C\bibinitperiod},
-           given={Sudheer},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=aa217cbe9384b64551c8ad4003d303cd}{%
-           family={Hsu},
-           familyi={H\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=61333241ec35488a80c8c973d39246a0}{%
-           family={Zeng},
-           familyi={Z\bibinitperiod},
-           given={Linghang},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{ab816694328203b2a03cd7f9d53775e5}
-      \strng{fullhash}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{fullhashraw}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{bibnamehash}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{authorbibnamehash}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{authornamehash}{ab816694328203b2a03cd7f9d53775e5}
-      \strng{authorfullhash}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{authorfullhashraw}{98e4950368f5ae4d127fa406301cdcd6}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Monetary Economics}
-      \field{month}{10}
-      \field{title}{Does history repeat itself? Business cycle and industry returns}
-      \field{volume}{116}
-      \field{year}{2019}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.1016/j.jmoneco.2019.10.005
-      \endverb
-    \endentry
     \entry{deLongisZaninEllis2022}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=2409a3dca1597e14cd0ed859ce97754f}{%
@@ -333,62 +287,6 @@
       \field{year}{1936}
       \field{pages}{321\bibrangedash 377}
       \range{pages}{57}
-    \endentry
-    \entry{10.1145/3533271.3561715}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=7d8d8f2fbe63e87f6ebddc5bc7f5a518}{%
-           family={Huynh},
-           familyi={H\bibinitperiod},
-           given={Kevin},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ddd5fd3e29372fe3dc19f967bf00e9bd}{%
-           family={Lenhard},
-           familyi={L\bibinitperiod},
-           given={Gregor},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
-      \strng{namehash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{fullhash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{fullhashraw}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{bibnamehash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{authorbibnamehash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{authornamehash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{authorfullhash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{authorfullhashraw}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Estimating high dimensional covariance matrices for portfolio optimization is challenging because the number of parameters to be estimated grows quadratically in the number of assets. When the matrix dimension exceeds the sample size, the sample covariance matrix becomes singular. A possible solution is to impose a (latent) factor structure for the cross-section of asset returns as in the popular capital asset pricing model. Recent research suggests dimension reduction techniques to estimate the factors in a data-driven fashion. We present an asymmetric autoencoder neural network-based estimator that incorporates the factor structure in its architecture and jointly estimates the factors and their loadings. We test our method against well established dimension reduction techniques from the literature and compare them to observable factors as benchmark in an empirical experiment using stock returns of the past five decades. Results show that the proposed estimator is very competitive, as it significantly outperforms the benchmark across most scenarios. Analyzing the loadings, we find that the constructed factors are related to the stocks’ sector classification.}
-      \field{isbn}{9781450393768}
-      \field{journaltitle}{Proceedings of the Third ACM International Conference on AI in Finance}
-      \field{series}{ICAIF '22}
-      \field{title}{Asymmetric Autoencoders for Factor-Based Covariance Matrix Estimation}
-      \field{year}{2022}
-      \true{nocite}
-      \field{pages}{403\bibrangedash 410}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1145/3533271.3561715
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3533271.3561715
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3533271.3561715
-      \endverb
-      \keyw{Autoencoder neural networks,Covariance matrix estimation,Factor modeling,Portfolio optimization}
     \endentry
     \entry{johnson2007applied}{book}{}{}
       \name{author}{2}{}{%
@@ -731,51 +629,6 @@
       \verb{doi}
       \verb 10.1214/aos/1176345134
       \endverb
-    \endentry
-    \entry{Witten2009}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=6fa979c8f308c55db8450be4216e4531}{%
-           family={Witten},
-           familyi={W\bibinitperiod},
-           given={Daniela\bibnamedelima M},
-           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=88eea600247d798f8b2ce0b2dc614492}{%
-           family={Tibshirani},
-           familyi={T\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
-           family={Hastie},
-           familyi={H\bibinitperiod},
-           given={Trevor},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{912fd22bd6db676caab68bf6caa6eb72}
-      \strng{fullhash}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{fullhashraw}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{bibnamehash}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{authorbibnamehash}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{authornamehash}{912fd22bd6db676caab68bf6caa6eb72}
-      \strng{authorfullhash}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{authorfullhashraw}{33e8145beb4ae80051cce469af6b6caf}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biostatistics}
-      \field{number}{3}
-      \field{title}{A penalized matrix decomposition, with applications to sparse principal components and canonical correlation analysis}
-      \field{volume}{10}
-      \field{year}{2009}
-      \true{nocite}
-      \field{pages}{515\bibrangedash 534}
-      \range{pages}{20}
     \endentry
     \entry{yang2023sectorrotationfactormodel}{article}{}{}
       \name{author}{2}{}{%
@@ -863,52 +716,6 @@
       \verb 2306.16393
       \endverb
     \endentry
-    \entry{chava_2019_does}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=0055024da843597059cd48157349c21f}{%
-           family={Chava},
-           familyi={C\bibinitperiod},
-           given={Sudheer},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=aa217cbe9384b64551c8ad4003d303cd}{%
-           family={Hsu},
-           familyi={H\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=61333241ec35488a80c8c973d39246a0}{%
-           family={Zeng},
-           familyi={Z\bibinitperiod},
-           given={Linghang},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{ab816694328203b2a03cd7f9d53775e5}
-      \strng{fullhash}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{fullhashraw}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{bibnamehash}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{authorbibnamehash}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{authornamehash}{ab816694328203b2a03cd7f9d53775e5}
-      \strng{authorfullhash}{98e4950368f5ae4d127fa406301cdcd6}
-      \strng{authorfullhashraw}{98e4950368f5ae4d127fa406301cdcd6}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Monetary Economics}
-      \field{month}{10}
-      \field{title}{Does history repeat itself? Business cycle and industry returns}
-      \field{volume}{116}
-      \field{year}{2019}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.1016/j.jmoneco.2019.10.005
-      \endverb
-    \endentry
     \entry{deLongisZaninEllis2022}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=2409a3dca1597e14cd0ed859ce97754f}{%
@@ -1138,62 +945,6 @@
       \field{year}{1936}
       \field{pages}{321\bibrangedash 377}
       \range{pages}{57}
-    \endentry
-    \entry{10.1145/3533271.3561715}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=7d8d8f2fbe63e87f6ebddc5bc7f5a518}{%
-           family={Huynh},
-           familyi={H\bibinitperiod},
-           given={Kevin},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ddd5fd3e29372fe3dc19f967bf00e9bd}{%
-           family={Lenhard},
-           familyi={L\bibinitperiod},
-           given={Gregor},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
-      \strng{namehash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{fullhash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{fullhashraw}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{bibnamehash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{authorbibnamehash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{authornamehash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{authorfullhash}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \strng{authorfullhashraw}{dcf0ec5b497ede27ce63f3e0b57c5a43}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Estimating high dimensional covariance matrices for portfolio optimization is challenging because the number of parameters to be estimated grows quadratically in the number of assets. When the matrix dimension exceeds the sample size, the sample covariance matrix becomes singular. A possible solution is to impose a (latent) factor structure for the cross-section of asset returns as in the popular capital asset pricing model. Recent research suggests dimension reduction techniques to estimate the factors in a data-driven fashion. We present an asymmetric autoencoder neural network-based estimator that incorporates the factor structure in its architecture and jointly estimates the factors and their loadings. We test our method against well established dimension reduction techniques from the literature and compare them to observable factors as benchmark in an empirical experiment using stock returns of the past five decades. Results show that the proposed estimator is very competitive, as it significantly outperforms the benchmark across most scenarios. Analyzing the loadings, we find that the constructed factors are related to the stocks’ sector classification.}
-      \field{isbn}{9781450393768}
-      \field{journaltitle}{Proceedings of the Third ACM International Conference on AI in Finance}
-      \field{series}{ICAIF '22}
-      \field{title}{Asymmetric Autoencoders for Factor-Based Covariance Matrix Estimation}
-      \field{year}{2022}
-      \true{nocite}
-      \field{pages}{403\bibrangedash 410}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1145/3533271.3561715
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3533271.3561715
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3533271.3561715
-      \endverb
-      \keyw{Autoencoder neural networks,Covariance matrix estimation,Factor modeling,Portfolio optimization}
     \endentry
     \entry{johnson2007applied}{book}{}{}
       \name{author}{2}{}{%
@@ -1536,51 +1287,6 @@
       \verb{doi}
       \verb 10.1214/aos/1176345134
       \endverb
-    \endentry
-    \entry{Witten2009}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=6fa979c8f308c55db8450be4216e4531}{%
-           family={Witten},
-           familyi={W\bibinitperiod},
-           given={Daniela\bibnamedelima M},
-           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=88eea600247d798f8b2ce0b2dc614492}{%
-           family={Tibshirani},
-           familyi={T\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
-           family={Hastie},
-           familyi={H\bibinitperiod},
-           given={Trevor},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{912fd22bd6db676caab68bf6caa6eb72}
-      \strng{fullhash}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{fullhashraw}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{bibnamehash}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{authorbibnamehash}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{authornamehash}{912fd22bd6db676caab68bf6caa6eb72}
-      \strng{authorfullhash}{33e8145beb4ae80051cce469af6b6caf}
-      \strng{authorfullhashraw}{33e8145beb4ae80051cce469af6b6caf}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biostatistics}
-      \field{number}{3}
-      \field{title}{A penalized matrix decomposition, with applications to sparse principal components and canonical correlation analysis}
-      \field{volume}{10}
-      \field{year}{2009}
-      \true{nocite}
-      \field{pages}{515\bibrangedash 534}
-      \range{pages}{20}
     \endentry
     \entry{yang2023sectorrotationfactormodel}{article}{}{}
       \name{author}{2}{}{%
